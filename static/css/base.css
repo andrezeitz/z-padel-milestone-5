@@ -1,11 +1,9 @@
 html {
     height: 100%;
-    color: aqua;
 }
 
 body {
-    color: #555;
-    height: calc(100vh - 164px);
+    color: black;
     font-family: 'Lato';
 }
 
@@ -33,4 +31,12 @@ body {
 
 .fa-check {
     font-size: 12px;
+}
+
+.nav-link:hover {
+    border-bottom: 3px solid black;
+}
+
+.dropdown-menu {
+    min-width: 0 !important;
 }

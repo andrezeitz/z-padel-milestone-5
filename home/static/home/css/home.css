@@ -1,0 +1,28 @@
+.home-hero {
+    background: url('/media/home-hero.jpg') no-repeat center;
+    background-size: cover;
+    height: 500px;
+    padding-top: 80px;
+    color: var(--color-white);
+    letter-spacing: 2px;
+}
+
+.hero-text {
+    color: white;
+    font-weight: 900;
+}
+
+.hero-small-text {
+    color: white;
+    font-weight: 500;
+}
+
+.shop-now-button {
+    padding: 15px;
+    color: white;
+    border: 2px solid white;
+}
+
+.shop-now-button:hover {
+    background: white;
+}

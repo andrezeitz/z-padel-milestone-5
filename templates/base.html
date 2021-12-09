@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
     {% endblock %}
 
     {% block extra_css %}
@@ -35,7 +36,7 @@
     <title>Z Padel{% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="container-fluid fixed-top">
+    <header class="container-fluid">
         <div id="top-banner" class="row text-center">
             <div class="col bg-black text-white text-top-banner">
                 <span class="free-delivery"><i class="fas fa-check"></i> Free delivery from 49€<span>
@@ -91,9 +92,9 @@
                                 <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
+                                        {{ grand_total|floatformat:2 }} €
                                     {% else %}
-                                        $0.00
+                                        0.00 €
                                     {% endif %}
                                 </p>
                             </div>
@@ -117,11 +118,11 @@
         <div class="message-container"></div>
     {% endif %}
 
-    {% block page_header %}
-    {% endblock %}
-
-    {% block content %}
-    {% endblock %}
+    <main class="flex-shrink-0 main-bg">
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+    </main>
 
     {% block postloadjs %}
     {% endblock %}
