@@ -1,0 +1,36 @@
+html {
+    height: 100%;
+    color: aqua;
+}
+
+body {
+    color: #555;
+    height: calc(100vh - 164px);
+    font-family: 'Lato';
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+
+.bg-black {
+    background: #000 !important;
+}
+
+/* Top banner */
+
+.text-top-banner {
+    padding: 10px;
+}
+
+.free-delivery {
+    margin: 0 15px 0 15px;
+}
+
+.fa-check {
+    font-size: 12px;
+}
