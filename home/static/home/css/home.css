@@ -91,10 +91,9 @@
 
 #mc_embed_signup {
     background: rgb(243, 243, 243) !important;
-    clear:left;
-    font:14px;
-    width:100%;
-    padding: 2rem 0 2rem 0;
+    font: 14px;
+    width: 100%;
+    padding: 2rem 0 1rem 0;
     margin: 2.5rem 0 2.5rem 0;
 }
 

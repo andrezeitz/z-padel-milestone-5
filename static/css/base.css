@@ -63,3 +63,56 @@ body {
     background: black;
     color: white;
 }
+
+/* Footer */
+
+footer {
+    background: rgb(243, 243, 243) !important;
+    height: 100px;
+}
+
+.footer-topic {
+    text-align: center;
+    padding: 20px 0 5px 0;
+    text-transform: uppercase;
+}
+
+.footer-social {
+    list-style-type: none;
+    text-align: center;
+}
+
+.fa-facebook,
+.fa-instagram {
+    color: black;
+    font-size: 25px;
+    padding: 0 5px 0 5px;
+}
+
+.fa-facebook:hover {
+    color: rgb(15, 15, 252);
+    transform: scale(1.35);
+}
+
+.fa-instagram:hover {
+    color: #d60d49;
+    transform: scale(1.35);
+}
+
+.footer-contact {
+    text-align: center;
+}
+
+.mail {
+    list-style: none;
+    display: block;
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+}
+
+.fa-envelope {
+    font-size: 17px;
+    padding-right: 5px;
+}
+
