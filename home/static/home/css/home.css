@@ -27,9 +27,12 @@
     background: white;
 }
 
-.padel-items-pictures {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+/* Padel Items */
+
+.padel-items-topic {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2rem 0 2rem 0;
 }
 
 .padelrack-picture {
@@ -83,3 +86,15 @@
     text-transform: uppercase;
     color: white;
 }
+
+/* Mail Chimp */
+
+#mc_embed_signup {
+    background: rgb(243, 243, 243) !important;
+    clear:left;
+    font:14px;
+    width:100%;
+    padding: 2rem 0 2rem 0;
+    margin: 2.5rem 0 2.5rem 0;
+}
+
