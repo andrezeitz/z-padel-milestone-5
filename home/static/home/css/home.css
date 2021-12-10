@@ -26,3 +26,60 @@
 .shop-now-button:hover {
     background: white;
 }
+
+.padel-items-pictures {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.padelrack-picture {
+    background: url('/media/Babolat_se_PadelRacket.jpeg') no-repeat center;
+    background-size: cover;
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 100%;
+    height: 375px;
+    padding: 1rem;
+    filter: brightness(100%);
+}
+
+.padelballs-picture {
+    background: url('/media/20-0323_EMEA_Wilsondotcom_Padel_Category_Banners_PD_WB_Balls_FNL.jpeg') no-repeat center;
+    background-size: cover;
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 100%;
+    height: 375px;
+    padding: 1rem;
+    filter: brightness(100%);
+}
+
+.padelshoes-picture {
+    background: url('/media/stycon-500.jpeg') no-repeat center;
+    background-size: cover;
+    border: 1px black solid;
+    border-radius: 10px;
+    width: 100%;
+    height: 375px;
+    padding: 1rem;
+    filter: brightness(100%);
+}
+
+.padelshoes-picture:hover,
+.padelrack-picture:hover,
+.padelballs-picture:hover {
+    transform: scale(1.03);
+    filter: brightness(70%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.padel-items-text {
+    position: absolute;
+    bottom: 5%;
+    text-transform: uppercase;
+    color: white;
+}
