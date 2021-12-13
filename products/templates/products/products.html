@@ -1,13 +1,50 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col">
-            {{ products }}
+    <div class="container">
+        
+            <div class="row">
+                
+                <div class="col-sm-8">
+                
+                
+                <p class="product-header-text">
+                    Paddle rack from well-known brands such as Bullpadel, Adidas, Head, and Wilson. All our racks are carefully selected and tested, to ensure the quality of the rack.
+                    We have paddle racks for all types of players from beginners to advanced players. Develop your own game with one of our paddle rackets and take yourself to new levels.
+                    The better & more confident you become in your game, you should think about whether to change paddle rack.
+                </p>
+                </div>
+                <div class="col-sm-4">
+                <button class="btn btn-primary">HEj</button>
+                </div>    
+                <hr class="w-100 mb-1">
+            </div>
+        </div>
+        <div class="row">
+            <div class="product-container">
+                <div class="row">
+                    {% for product in products %}
+                        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+                            <div class="card h-100 border-0">
+                                {% if product.image %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
+                                </a>
+                                {% else %}
+                                <a href="">
+                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                </a>
+                                {% endif %}
+                                <div class="product-name">
+                                    <p class="mb-0">{{ product.name }}</p>
+                                    <p class="mb-0">{{ product.price }} €</p>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
-</div>
-
 {% endblock %}
