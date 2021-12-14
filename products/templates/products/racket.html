@@ -3,18 +3,18 @@
 
 {% block content %}
     <div class="container">
+        <h2 class="product-header">PADEL RACKET</h2>
             <div class="row">
                 <div class="col-sm-8">
                     <p class="product-header-text">
                         Paddle rack from well-known brands such as Bullpadel, Adidas, Head, and Wilson. All our racks are carefully selected and tested, to ensure the quality of the rack.
                         We have paddle racks for all types of players from beginners to advanced players. Develop your own game with one of our paddle rackets and take yourself to new levels.
-                        The better & more confident you become in your game, you should think about whether to change paddle rack.
                     </p>
                 </div>
                 <div class="col-sm-4">
                     <div class="dropdown product-filter-price">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Chosen
+                        <button class="btn btn-outline-dark btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          SORT BY
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#">Populars</a>
@@ -24,10 +24,15 @@
                             <a class="dropdown-item" href="#">Newest to oldest</a>
                         </div>
                     </div>
-                </div>    
-                <hr class="w-100 mb-1">
+                </div>
+                <div class="col">
+                    <button type="button" class="btn btn-outline-dark">Adidas</button>
+                    <button type="button" class="btn btn-outline-dark">Bullpadel</button>
+                    <button type="button" class="btn btn-outline-dark">Head</button>
+                    <button type="button" class="btn btn-outline-dark">Wilson</button>
+                </div>
+            <hr class="w-100 mb-1">
             </div>
-        
         <div class="row">
             <div class="product-container">
                 <div class="row">
@@ -35,11 +40,11 @@
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
                                 {% if product.image %}
-                                <a href="">
+                                <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 {% else %}
-                                <a href="">
+                                <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                                 </a>
                                 {% endif %}

@@ -5,7 +5,7 @@
                 Racket <i class="fas fa-angle-down"></i>
             </a>
             <div class="dropdown-menu" aria-labelledby="racket-link">
-                <a href="" class="dropdown-item">All Rackets</a>
+                <a href="{% url 'products' %}?category=padel_racket_all" class="dropdown-item">All Rackets</a>
                 <a href="" class="dropdown-item">Adidas</a>
                 <a href="" class="dropdown-item ">Bullpadel</a>
                 <a href="" class="dropdown-item ">Head</a>
@@ -14,7 +14,7 @@
         </li>
 
         <li class="nav-item">
-            <a class="logo-font text-uppercase nav-link text-black mr-5" href="#" id="balls-link" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font text-uppercase nav-link text-black mr-5" href="{% url 'products' %}?category=padel_balls" id="balls-link" aria-haspopup="true" aria-expanded="false">
                 Balls
             </a>
         </li>
