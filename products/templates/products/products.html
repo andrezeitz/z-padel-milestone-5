@@ -3,7 +3,6 @@
 
 {% block content %}
     <div class="container">
-        {% if current_categories|length == 1 %}
         {% for category in current_categories %}
         <h2 class="product-header">{{ category.friendly_name }}</h2>
         <div class="row">
@@ -27,10 +26,8 @@
                     </div>
                 </div>
             <hr class="w-100 mb-1">
-        {% endfor %}
-        {% endif %}
         </div>
-
+        {% endfor %}
         <div class="row">
             <div class="product-container">
                 <div class="row">
