@@ -9,7 +9,7 @@
                 <a href="{% url 'products' %}?category=padel_racket_adidas" class="dropdown-item">Adidas</a>
                 <a href="{% url 'products' %}?category=padel_racket_bullpadel" class="dropdown-item ">Bullpadel</a>
                 <a href="{% url 'products' %}?category=padel_racket_head" class="dropdown-item ">Head</a>
-                <a href="{% url 'products' %}?category=padel_racket_wilson" class="dropdown-item">Wilson</a>
+                <a href="{% url 'products' %}?category=padel_racket_starvie" class="dropdown-item">Starvie</a>
             </div>
         </li>
 
@@ -24,44 +24,33 @@
                 Shoes <i class="fas fa-angle-down"></i>
             </a>
             <div class="dropdown-menu" aria-labelledby="shoes-link">
-                <a href="" class="dropdown-item">Man</a>
-                <a href="" class="dropdown-item">Woman</a>
-                <a href="" class="dropdown-item">Kids</a>
+                <a href="{% url 'products' %}?category=padel_shoes_all" class="dropdown-item">All Shoes</a>
+                <a href="{% url 'products' %}?category=padel_shoes_man" class="dropdown-item">Man</a>
+                <a href="{% url 'products' %}?category=padel_shoes_woman" class="dropdown-item">Woman</a>
             </div>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font text-uppercase nav-link text-black mr-5" href="#" id="bags-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Bags <i class="fas fa-angle-down"></i>
+        <li class="nav-item">
+            <a class="logo-font text-uppercase nav-link text-black mr-5" href="{% url 'products' %}?category=padel_bags_all" id="balls-link" aria-haspopup="true" aria-expanded="false">
+                Padel Bags
             </a>
-            <div class="dropdown-menu" aria-labelledby="bags-link">
-                <a href="" class="dropdown-item">Padel Bag</a>
-                <a href="" class="dropdown-item">Case</a>
-            </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font text-uppercase nav-link text-black mr-5" href="#" id="cloths-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Cloths <i class="fas fa-angle-down"></i>
+            <a class="logo-font text-uppercase nav-link text-black mr-5" href="#" id="clothes-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Clothes <i class="fas fa-angle-down"></i>
             </a>
             <div class="dropdown-menu" aria-labelledby="cloths-link">
-                <a href="" class="dropdown-item">Man</a>
-                <a href="" class="dropdown-item">Woman</a>
-                <a href="" class="dropdown-item">Hats</a>
-                <a href="" class="dropdown-item">Socks</a>
+                <a href="{% url 'products' %}?category=padel_clothes_all" class="dropdown-item">All Clothes</a>
+                <a href="{% url 'products' %}?category=padel_clothes_man" class="dropdown-item">Man</a>
+                <a href="{% url 'products' %}?category=padel_clothes_woman" class="dropdown-item">Woman</a>
             </div>
         </li>
 
-        <li class="nav-item dropdown">
-            <a class="logo-font text-uppercase nav-link text-black" href="#" id="accessories-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Accessories <i class="fas fa-angle-down"></i>
+        <li class="nav-item">
+            <a class="logo-font text-uppercase nav-link text-black mr-5" href="{% url 'products' %}?category=padel_accessories_all" id="balls-link" aria-haspopup="true" aria-expanded="false">
+                Accessories
             </a>
-            <div class="dropdown-menu" aria-labelledby="accessories-link">
-                <a href="" class="dropdown-item">Over Grip</a>
-                <a href="" class="dropdown-item">Hesacore</a>
-                <a href="" class="dropdown-item">Protection Tape</a>
-                <a href="" class="dropdown-item">Specials</a>
-            </div>
         </li>
     </ul>
 </div>
