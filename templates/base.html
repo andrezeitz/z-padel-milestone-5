@@ -46,8 +46,8 @@
             </div>            
         </div>
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="">
+            <div class="col-12 col-lg-4 my-auto">
+                <form method="GET" action="{% url 'products' %}">
                     <div class="input-group">
                         <input class="form-control border-input rounded-0" type="text" name="q" placeholder="Find your product">
                         <div class="input-group-append">
@@ -63,7 +63,6 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="main-logo">
                     <div class="main-logo-link"></div>
-                    <!-- <h2 class="logo-font text-black my-0"><strong>Z</strong> Padel</h2> -->
                 </a>
             </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">

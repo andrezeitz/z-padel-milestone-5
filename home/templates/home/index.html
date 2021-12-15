@@ -26,19 +26,25 @@
     <h2 class="padel-items-topic">Our most visited categorys</h2>
     <div class="row">
         <div class="col-sm">
-            <button class="padelrack-picture">
-                <h5 class="padel-items-text ">Padel Racks</h3>
-            </button>
+            <a href="{% url 'products' %}?category=padel_racket_all">
+                <button class="padelrack-picture">
+                    <h5 class="padel-items-text ">Padel Racks</h3>
+                </button>
+            </a>
         </div>
         <div class="col-sm">
-            <button class="padelballs-picture">
-                <h5 class="padel-items-text ">Padel Balls</h3>
-            </button>
+            <a href="{% url 'products' %}?category=padel_balls">
+                <button class="padelballs-picture">
+                    <h5 class="padel-items-text ">Padel Balls</h3>
+                </button>
+            </a>
         </div>
         <div class="col-sm">
-            <button class="padelshoes-picture">
-                <h5 class="padel-items-text ">Padel Shoes</h3>
-            </button>
+            <a href="{% url 'products' %}?category=padel_shoes_all">
+                <button class="padelshoes-picture">
+                    <h5 class="padel-items-text ">Padel Shoes</h3>
+                </button>
+            </a>
         </div>
     </div>
 </div>

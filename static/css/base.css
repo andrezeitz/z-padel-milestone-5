@@ -59,6 +59,13 @@ body {
     text-align: center;
 }
 
+.navbar {
+    height: 40px;
+}
+.nav-link {
+    padding: 0 0.5rem 0 0.5rem !important;
+}
+
 .nav-link:hover {
     border-bottom: 3px solid black;
 }
