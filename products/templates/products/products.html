@@ -3,12 +3,17 @@
 
 {% block content %}
     <div class="container">
-        <h2 class="product-header">PADEL RACKET</h2>
+        <h2 class="product-header">
+            {% if current_categories|length == 1 %}
+            {% for category in current_categories %}
+            {{ category.friendly_name }}</h2>
             <div class="row">
                 <div class="col-sm-8">
                     <p class="product-header-text">
-                        Paddle rack from well-known brands such as Bullpadel, Adidas, Head, and Wilson. All our racks are carefully selected and tested, to ensure the quality of the rack.
-                        We have paddle racks for all types of players from beginners to advanced players. Develop your own game with one of our paddle rackets and take yourself to new levels.
+                        
+                        {{ category.category_text }}
+                        {% endfor %}
+                        {% endif %}
                     </p>
                 </div>
                 <div class="col-sm-4">
@@ -33,21 +38,16 @@
                 </div>
             <hr class="w-100 mb-1">
             </div>
+
         <div class="row">
             <div class="product-container">
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
-                                {% else %}
-                                <a href="{% url 'product_detail' product.id %}">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
-                                </a>
-                                {% endif %}
                                 <div class="product-name">
                                     <p class="mb-0">{{ product.name }}</p>
                                     <p class="mb-0">{{ product.price }} €</p>
