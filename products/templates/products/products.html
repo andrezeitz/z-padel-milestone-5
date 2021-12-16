@@ -6,15 +6,12 @@
     <div class="container">
         {% for category in current_categories %}
         <h2 class="product-header">{{ category.friendly_name }}</h2>
-        {% endfor %}
         <div class="row">
-            {% for category in current_categories %}
             <div class="col-sm-8">
                 <p class="product-header-text">   
                     {{ category.category_text }}
                 </p>
             </div>
-            
                 <div class="col-sm-4">
                     <div class="dropdown product-filter-price">
                         <button class="btn btn-outline-dark btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -30,8 +27,8 @@
                     </div>
                 </div>
             <hr class="w-100 mb-1">
-            {% endfor %}
         </div>
+        {% endfor %}
         <div class="row">
             <div class="product-container">
                 <div class="row">
