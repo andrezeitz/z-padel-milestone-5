@@ -21,7 +21,7 @@
                           SORT BY
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Populars</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?sort=popular&direction=asc&category={{ category.name }}">Populars</a>
                             <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc&category={{ category.name }}">Price: low to high</a>
                             <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc&category={{ category.name }}">Price: hight to low</a>
                             <a class="dropdown-item" href="{% url 'products' %}?sort=sku&direction=asc&category={{ category.name }}">Oldest to newest</a>
