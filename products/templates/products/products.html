@@ -2,15 +2,19 @@
 {% load static %}
 
 {% block content %}
+
     <div class="container">
         {% for category in current_categories %}
         <h2 class="product-header">{{ category.friendly_name }}</h2>
+        {% endfor %}
         <div class="row">
+            {% for category in current_categories %}
             <div class="col-sm-8">
                 <p class="product-header-text">   
                     {{ category.category_text }}
                 </p>
             </div>
+            
                 <div class="col-sm-4">
                     <div class="dropdown product-filter-price">
                         <button class="btn btn-outline-dark btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -18,23 +22,23 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="#">Populars</a>
-                            <a class="dropdown-item" href="#">Price: low to high</a>
-                            <a class="dropdown-item" href="#">Price: hight to low</a>
-                            <a class="dropdown-item" href="#">Oldest to newest</a>
-                            <a class="dropdown-item" href="#">Newest to oldest</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=asc&category={{ category.name }}">Price: low to high</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?sort=price&direction=desc&category={{ category.name }}">Price: hight to low</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?sort=sku&direction=asc&category={{ category.name }}">Oldest to newest</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?sort=sku&direction=desc&category={{ category.name }}">Newest to oldest</a>
                         </div>
                     </div>
                 </div>
             <hr class="w-100 mb-1">
+            {% endfor %}
         </div>
-        {% endfor %}
         <div class="row">
             <div class="product-container">
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
-                                <a href="{% url 'product_detail' product.id %}">
+                                <a href="{{ product.get_absolute_url }}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 <div class="product-name">
