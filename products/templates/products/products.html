@@ -4,6 +4,32 @@
 {% block content %}
 
     <div class="container">
+        {% if search_term %}
+        <h2 class="product-header">Search for {{ search_term }}</h2>
+        <div class="row">
+            <div class="col-sm-8">
+                <p class="product-header-text">   
+                    We could find {{ products|length }} products that matched your search <strong>"{{ search_term }}"</strong>
+                </p>
+            </div>
+                <div class="col-sm-4">
+                    <div class="dropdown product-filter-price">
+                        <button class="btn btn-outline-dark btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            SORT BY
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="{% url 'products' %}?sort=popular&direction=asc">Populars</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?q={{ search_term }}&sort=price&direction=asc">Price: low to high</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?q={{ search_term }}&sort=price&direction=desc">Price: hight to low</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?q={{ search_term }}&sort=sku&direction=asc">Oldest to newest</a>
+                            <a class="dropdown-item" href="{% url 'products' %}?q={{ search_term }}&sort=sku&direction=desc">Newest to oldest</a>
+                        </div>
+                    </div>
+                </div>
+            <hr class="w-100 mb-1">
+        </div>
+        {% endif %}
+
         {% for category in current_categories %}
         <h2 class="product-header">{{ category.friendly_name }}</h2>
         <div class="row">
@@ -12,6 +38,7 @@
                     {{ category.category_text }}
                 </p>
             </div>
+                
                 <div class="col-sm-4">
                     <div class="dropdown product-filter-price">
                         <button class="btn btn-outline-dark btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -26,6 +53,7 @@
                         </div>
                     </div>
                 </div>
+                
             <hr class="w-100 mb-1">
         </div>
         {% endfor %}
