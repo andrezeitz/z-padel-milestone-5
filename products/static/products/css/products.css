@@ -1,3 +1,13 @@
+.breadcrumb {
+    background: white;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.breadcrumb-item {
+    font-size: 13px;
+}
+
 .product-header {
     margin: 1rem 0 1rem 0;
     text-transform: uppercase;
