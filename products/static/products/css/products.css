@@ -2,6 +2,7 @@
     background: white;
     text-transform: uppercase;
     padding: 0;
+    margin: 0;
 }
 
 .breadcrumb-item {

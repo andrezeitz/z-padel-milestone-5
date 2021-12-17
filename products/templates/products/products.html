@@ -5,6 +5,12 @@
 
     <div class="container">
         {% if search_term %}
+        <div class="breadcrumb">
+            <ol class="breadcrumb mt-md-5">
+              <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{ search_term }}</li>
+            </ol>
+        </div>
         <h2 class="product-header">Search for {{ search_term }}</h2>
         <div class="row">
             <div class="col-sm-8">
@@ -31,6 +37,12 @@
         {% endif %}
         
         {% for category in current_categories %}
+            <div class="breadcrumb">
+                <ol class="breadcrumb mt-md-5">
+                  <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">{{ category.friendly_name }}</li>
+                </ol>
+            </div>
         <h2 class="product-header">{{ category.friendly_name }}</h2>
         <div class="row">
             <div class="col-sm-8">

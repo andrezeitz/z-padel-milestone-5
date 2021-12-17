@@ -7,7 +7,14 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
-                <div class="image-container my-5">
+                <div class="breadcrumb">
+                    <ol class="breadcrumb mt-md-5">
+                      <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                      <li class="breadcrumb-item"><a href="{% url 'products' %}?category={{ product.category }}">{{ product.category }}</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
+                    </ol>
+                </div>
+                <div class="image-container">
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
@@ -15,16 +22,8 @@
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
-
-                <div class="breadcrumb" style="--bs-breadcrumb-divider: '|';">
-                    <ol class="breadcrumb mt-md-5">
-                      <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-                      <li class="breadcrumb-item"><a href="{% url 'products' %}?category={{ product.category }}">{{ product.category }}</a></li>
-                      <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
-                    </ol>
-                </div>
                   
-                <div class="product-details-container">
+                <div class="product-details-container mt-md-5">
                     <h4 class="mb-0">{{ product.name }}<h4>
                     <p class="lead mb-0 text-left font-weight-bold">{{ product.price }} €</p>
                     <hr class="w-100 mb-1">
