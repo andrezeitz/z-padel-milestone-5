@@ -1,0 +1,42 @@
+.ibox {
+  clear: both;
+  margin-bottom: 25px;
+  margin-top: 0;
+  padding: 0;
+}
+
+.products-title {
+
+  border-color: #e7eaec;
+  border-image: none;
+  border-style: solid solid none;
+  border-width: 2px 0 0;
+  margin-bottom: 0;
+  padding: 20px 0 10px 0;
+  min-height: 48px;
+}
+
+.ibox-footer {
+  border-top: 1px solid #e7eaec;
+  font-size: 90%;
+  background: #ffffff;
+  padding: 10px 15px;
+}
+
+.items-right {
+    position: absolute;
+    right: 0%;
+}
+
+.items-in-cart {
+    text-transform: uppercase;
+}
+
+.total-container,
+.support-container {
+    margin-left: 20px;
+}
+
+.form-control {
+    text-align: center;
+}

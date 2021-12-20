@@ -2,32 +2,117 @@
 {% load static %}
 
 {% block content %}
-
-<div class="container mb-2">
-    <div class="row">
-        <div class="col">
-            <hr>
-            <h2 class="logo-font mb-4">Shopping Bag</h2>
-            <hr>
+<div class="container-fluid" id="products-main-container">
+    <div class="container">
+        <div class="row mb-3">
+            <!--Breadcrumbs-->
+            <div class="col-sm-6 col-12">
+                <div class="breadcrumb" style="--bs-breadcrumb-divider: '|';">
+                    <a href="{% url 'home' %}"
+                        class="breadcrumb-item text-dark text-uppercase text-decoration-none">Home</a>
+                    <a href="{% url 'products' %}"
+                        class="breadcrumb-item text-dark text-uppercase text-decoration-none">Shop</a>
+                    <a href="#"
+                        class="breadcrumb-item active text-dark fw-bold text-uppercase text-decoration-none">Your
+                        bag</a>
+                </div>
+            </div>
         </div>
     </div>
-
-    <div class="row">
-        <div class="col">
-            {% if bag_items %}
-                <div class="table-responsive rounded">
-                    {{ bag_items }}
+  
+    <div class="container">
+        <div class="wrapper wrapper-content">
+            <div class="row">
+                <div class="col-md-9">
+                    {% if bag_items %}
+                        <div class="bag-container">
+                            <div class="products-title">
+                                <h6 class="items-in-cart">Items in your cart ({{ product_count }} items)</h6>
+                            </div>
+                            {% for item in bag_items %}
+                                <div class="products-content">
+                                    <div class="table-responsive">
+                                        <table class="table shoping-cart-table">
+                                            <tbody>
+                                            <tr>
+                                                <td width="90">
+                                                    <div class="cart-product-imitation">
+                                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                                    </div>
+                                                </td>
+                                                <td width="300">
+                                                    <h6>
+                                                    <a href="#" class="text-navy">
+                                                        {{ item.product.name }}
+                                                    </a>
+                                                    </h5>
+                                                    <div class="m-t-sm">
+                                                        <a href="#" class="text-muted"><i class="fas fa-sync"></i> Update</a>
+                                                        |
+                                                        <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove</a>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    {{ item.product.price }} €
+                                                </td>
+                                                <td width="70">
+                                                    <input type="text" class="form-control" placeholder="{{ item.quantity }}">
+                                                </td>
+                                                <td>
+                                                    <h4>{{ item.product.price }} €</h4>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            <div class="checkout-container">
+                                <button class="btn btn-black"><i class="fa fa-arrow-left"></i> Continue shopping</button>
+                                <button class="btn btn-primary pull-right"><i class="fa fa fa-shopping-cart"></i> Checkout</button>
+                            </div>
+                        </div>
+                    </div>
+                {% else %}
+                    <p class="lead mb-5">Your bag is empty.</p>
+                        <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Keep Shopping</span>
+                        </a>
+                {% endif %}    
+                <div class="col-md-3">
+                        <div class="total-container">
+                            <div class="products-title">
+                                <h5 class="items-in-cart">Cart Summary</h5>
+                            </div>
+                            <div class="products-content">
+                                <span>
+                                    Total
+                                </span>
+                                <h3 class="font-bold">
+                                    {{ total|floatformat:2 }} €
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="support-container">
+                            <div class="products-title">
+                                <h5 class="items-in-cart">Support</h5>
+                            </div>
+                            <div class="products-content">
+                                <h5><i class="fa fa-phone"></i> +46 100 200 300</h5>
+                                <span class="small">
+                                    Please contact with us if you have any questions.
+                                </span>
+                            </div>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            {% else %}
-                <p class="lead mb-5">Your bag is empty.</p>
-                <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
-                    <span class="icon">
-                        <i class="fas fa-chevron-left"></i>
-                    </span>
-                    <span class="text-uppercase">Keep Shopping</span>
-                </a>
-            {% endif %}
-        </div>
+            </div>
+        </div> 
     </div>
 </div>
 
