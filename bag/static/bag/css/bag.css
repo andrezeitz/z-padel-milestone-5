@@ -6,21 +6,10 @@
 }
 
 .products-title {
-
-  border-color: #e7eaec;
-  border-image: none;
-  border-style: solid solid none;
-  border-width: 2px 0 0;
   margin-bottom: 0;
-  padding: 20px 0 10px 0;
+  padding: 20px 0 5px 0;
   min-height: 48px;
-}
-
-.ibox-footer {
-  border-top: 1px solid #e7eaec;
-  font-size: 90%;
-  background: #ffffff;
-  padding: 10px 15px;
+  margin: 0 !important;
 }
 
 .items-right {
@@ -39,4 +28,13 @@
 
 .form-control {
     text-align: center;
+}
+
+.table td {
+    padding: 1.25rem 0.75rem 0 0.75rem;
+}
+
+.checkout-container {
+    padding: 20px;
+    text-transform: uppercase;
 }
