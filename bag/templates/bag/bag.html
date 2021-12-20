@@ -18,9 +18,7 @@
                                         <table class="table shoping-cart-table">
                                             <tbody>
                                             <tr>
-                                            <form action="{% url 'adjust_bag' item.item_id %}" class="form my-3 update-form" method="POST">
-                                                {% csrf_token %}    
-                                                <td width="100">
+                                                <td width="100" style="padding: 0 0.75rem 0 0.75rem;">
                                                     <div class="cart-product-imitation">
                                                         <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                                                     </div>
@@ -31,30 +29,28 @@
                                                         {{ item.product.name }}
                                                     </a>
                                                     </h6>
-                                                    <button class="decr-btn btn border-none" data-item_id="{{ item.item_id }}" id="decr-btn_{{ item.item_id }}">
-                                                        <span><i class="fas fa-sync"></i></span>
-                                                    </button>
-                                                    <button class="incr-btn btn border-none" data-item_id="{{ item.item_id }}" id="incr-btn_{{ item.item_id }}">
-                                                        <span><i class="fa fa-trash"></i></span>
-                                                    </button>
-                                                    <!-- <div class="m-t-sm">
-                                                        <a href="#" class="text-muted"><i class="fas fa-sync"></i> Update</a>
-                                                        |
-                                                        <a href="#" class="text-muted"><i class="fa fa-trash"></i> Remove</a>
-                                                    </div> -->
+                                                    <a href="{% url 'remove_from_bag' item.item_id %}">
+                                                        <span><i class="fa fa-trash text-danger"></i></span></a>
                                                 </td>
                                                 <td width="100">
-                                                    € {{ item.product.price }}
+                                                    <p>€ {{ item.product.price }}</p>
                                                 </td>
-                                                <td width="60">
-                                                    <input type="text" class="form-control" placeholder="{{ item.quantity }}" name="quantity" value="{{ item.quantity }}"
-                                                    min="1" max="10" data-item_id="{{ item.item_id }}"
-                                                    id="id_qty_{{ item.item_id }}">
-                                                </td>
+                                                <form action="{% url 'adjust_bag' item.item_id %}" class="form my-3 update-form" method="POST">
+                                                    {% csrf_token %}
+                                                    <td width="40">
+                                                        <button class="btn btn border-none">
+                                                            <span><i class="fas fa-sync"></i></span>
+                                                        </button>
+                                                    </td>   
+                                                    <td width="60">
+                                                        <input type="text" class="form-control" placeholder="{{ item.quantity }}" name="quantity" value="{{ item.quantity }}"
+                                                        min="1" max="10" data-item_id="{{ item.item_id }}"
+                                                        id="id_qty_{{ item.item_id }}">
+                                                    </td>
+                                                </form>
                                                 <td>
-                                                    <h5>€ {{ item.product.price }}</h5>
+                                                    <p>€ {{ item.product.price }}</p>
                                                 </td>
-                                            </form>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -110,5 +106,4 @@
         </div> 
     </div>
 </div>
-
 {% endblock %}
