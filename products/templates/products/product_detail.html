@@ -31,7 +31,7 @@
                 <form method="POST" action="{% url 'add_to_bag' product.id %}" class="product-form-add">
                     {% csrf_token %}
                     <h6>QUANTITY</h6>
-                    <input class="form-input" type="text" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id}}">
+                    <input class="form-input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id}}">
                     <div class="form-action">
                         <input type="submit" class="btn btn-add-to-cart" value="BUY NOW">
                     </div>

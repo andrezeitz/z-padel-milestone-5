@@ -19,11 +19,9 @@
 }
 
 .form-input {
-    padding: 9px 15px;
-    width: 100%;
+    width: 52px;
     height: 44px;
     border: 1px solid #ebebeb;
-    max-width: 45px;
     text-align: center;
     background-color: #fff;
     color: #333;

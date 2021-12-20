@@ -14,10 +14,6 @@
     margin-left: 20px;
 }
 
-.form-control {
-    text-align: center;
-}
-
 .table td {
     padding: 1.25rem 0.75rem 0 0.75rem;
 }
@@ -30,4 +26,9 @@
 .price-item {
     font-size: 19px;
     margin: 0;
+}
+
+.form-control {
+    width: 60px;
+    height: 40px;
 }
