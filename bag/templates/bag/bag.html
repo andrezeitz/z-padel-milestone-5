@@ -3,12 +3,12 @@
 {% load bag_tools %}
 
 {% block content %}
-<div class="container-fluid" id="products-main-container">
     <div class="container mt-md-5">
         <div class="wrapper wrapper-content">
             <div class="row">
                 <div class="col-md-9">
                     {% if bag_items %}
+                        <!-- Added products to the bag -->
                         <div class="bag-container">
                             <div class="products-title">
                                 <h6 class="items-in-cart">Items in your cart ({{ product_count }} items)</h6>
@@ -18,12 +18,14 @@
                                     <div class="table-responsive">
                                         <table class="table shoping-cart-table">
                                             <tbody>
+                                                <!-- Product image -->
                                             <tr>
                                                 <td width="100" style="padding: 0 0.75rem 0 0.75rem;">
                                                     <div class="cart-product-imitation">
                                                         <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                                                     </div>
                                                 </td>
+                                                <!-- Product name and size if product has size -->
                                                 <td width="250">
                                                     <h6>
                                                     <a href="{{ item.product.get_absolute_url }}" class="product-name-link">
@@ -35,19 +37,24 @@
                                                         {% endif %}
                                                     </p>
                                                     </h6>
+                                                    <!-- Delete product -->
                                                     <a href="{% url 'remove_from_bag' item.item_id %}">
                                                         <span><i class="fa fa-trash text-danger"></i></span></a>
                                                 </td>
+                                                <!-- Product price -->
                                                 <td width="100">
                                                     <p>€ {{ item.product.price }}</p>
                                                 </td>
+                                                <!-- Update quantity of product form -->
                                                 <form action="{% url 'adjust_bag' item.item_id %}" class="form my-3 update-form" method="POST">
                                                     {% csrf_token %}
                                                     <td width="40" style="padding: 0.85rem 0.75rem 0 0.75rem;;">
+                                                        <!-- Update button -->
                                                         <button class="btn btn border-none">
                                                             <span><i class="fas fa-sync"></i></span>
                                                         </button>
-                                                    </td>   
+                                                    </td>
+                                                    <!-- Product quantity field -->   
                                                     <td width="60" style="padding: 0.85rem 0.75rem 0 0.75rem;;">
                                                         <input type="number" class="form-control" placeholder="{{ item.quantity }}" name="quantity" value="{{ item.quantity }}"
                                                         min="1" max="20" data-item_id="{{ item.item_id }}"
@@ -57,6 +64,7 @@
                                                         <input type="hidden" name="product_size" value="{{ item.size }}">
                                                     {% endif %}
                                                 </form>
+                                                <!-- Product total price -->
                                                 <td>
                                                     <h6 class="price-item">€ {{ item.product.price | calc_subtotal:item.quantity }}</h6>
                                                 </td>
@@ -66,62 +74,61 @@
                                     </div>
                                 </div>
                             {% endfor %}
-                            
                             <hr>
-                            <div class="continue-shopping">
-                                <a href="{% url 'products' %}" class="btn btn-outline-dark btn-lg"><i class="fa fa-arrow-left"></i> Continue shopping</a>
+                                <!-- Continue shopping button -->
+                                <div class="continue-shopping">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-dark btn-lg"><i class="fa fa-arrow-left"></i> Continue shopping</a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </div>  
                     {% else %}
-                
+                    <!-- If bag is empty -->
                     <div class="bag-container">
                         <div class="products-title">
                             <h6 class="items-in-cart">Items in your cart ({{ product_count }} items)</h6>
                         </div>
                         <hr>
+                        <!-- Text if bag is empty -->
                         <p class="lead mb-5">Your bag is still empty. </p>
                         <hr>
+                        <!-- Continue shopping button -->
                         <div class="continue-shopping">
-                        <a href="{% url 'products' %}" class="btn btn-outline-dark btn-lg"><i class="fa fa-arrow-left"></i> Continue shopping</a>
+                            <a href="{% url 'products' %}" class="btn btn-outline-dark btn-lg"><i class="fa fa-arrow-left"></i> Continue shopping</a>
                         </div>
                     </div>
                 </div>
-            
+                <!-- Cart summary and support -->
                 {% endif %}    
                 <div class="col-md-3">
-                        <div class="total-container">
-                            <div class="products-title">
-                                <h5 class="items-in-cart">Cart Summary</h5>
-                            </div>
-                            <div class="products-content">
-                                <span>
-                                    Total:
-                                </span>
-                                <h3 class="font-bold">
-                                    € {{ total|floatformat:2 }}
-                                </h3>
-                            </div>
+                    <div class="total-container">
+                        <div class="products-title">
+                            <h5 class="items-in-cart">Cart Summary</h5>
                         </div>
-                        <div class="support-container">
-                            <div class="">
-                                <hr>
-                                <h5 class="items-in-cart">Support</h5>
+                        <div class="products-content">
+                            <span>Total:</span>
+                                <!-- Total price for bag -->
+                                <h3 class="font-bold">€ {{ total|floatformat:2 }}</h3>
                             </div>
-                            <div class="products-content">
-                                <h5><i class="fa fa-phone"></i> +46 100 200 300</h5>
-                                <span class="small">
-                                    Please contact with us if you have any questions.
-                                </span>
-                            </div>
+                    </div>
+                    <!-- Support number -->
+                    <div class="support-container">
+                        <div class="">
+                            <hr>
+                            <h5 class="items-in-cart">Support</h5>
                         </div>
-                        <div class="checkout-container">
-                            <a href="#" class="btn btn-dark btn-lg" role="button" aria-pressed="true"><i class="fas fa-lock"></i> Checkout</a>
-                        </div>  
-                </div>
-                 
+                        <div class="products-content">
+                            <h5><i class="fa fa-phone"></i> +46 100 200 300</h5>
+                            <span class="small">
+                                Please contact with us if you have any questions.
+                            </span>
+                        </div>
+                    </div>
+                    <!-- Checkout button -->
+                    <div class="checkout-container">
+                        <a href="#" class="btn btn-dark btn-lg" role="button" aria-pressed="true"><i class="fas fa-lock"></i> Checkout</a>
+                    </div>
+                </div>  
             </div>
         </div> 
     </div>
-</div>
 {% endblock %}
