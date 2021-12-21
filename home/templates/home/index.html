@@ -2,70 +2,66 @@
 {% load static %}
 
 {% block content %}
-
-
-<div class="home-hero">
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="hero-text">
-                    CO-DESIGNED BY A LEGEND TO INSPIRE LEGENDS
-                </h1>
-                <h4 class="hero-small-text">Bela Pro and full Wilson x Bela collection available now!</h4>
-                <div class="my-5">
-                    <h4>
-                        <a href="" class="shop-now-button btn btn-lg">LEARN MORE</a>
-                    </h4>
+    <div class="home-hero">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-7 col-md-6 my-auto">
+                    <!-- Hero header -->
+                    <h1 class="hero-text">
+                        CO-DESIGNED BY A LEGEND TO INSPIRE LEGENDS
+                    </h1>
+                    <!-- Hero text -->
+                    <h4 class="hero-small-text">Bela Pro and full Wilson x Bela collection available now!</h4>
+                    <!-- Hero button to rackets -->
+                    <div class="my-5">
+                        <h4><a href="{% url 'products' %}?category=padel_racket_all" class="shop-now-button btn btn-lg">LEARN MORE</a></h4>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<div class="container h-80 padel-items-pictures">
-    <h2 class="padel-items-topic">Our most visited categorys</h2>
-    <div class="row">
-        <div class="col-sm">
-            <a href="{% url 'products' %}?category=padel_racket_all">
-                <button class="padelrack-picture">
-                    <h5 class="padel-items-text ">Padel Racks</h3>
-                </button>
-            </a>
-        </div>
-        <div class="col-sm">
-            <a href="{% url 'products' %}?category=padel_balls">
-                <button class="padelballs-picture">
-                    <h5 class="padel-items-text ">Padel Balls</h3>
-                </button>
-            </a>
-        </div>
-        <div class="col-sm">
-            <a href="{% url 'products' %}?category=padel_shoes_all">
-                <button class="padelshoes-picture">
-                    <h5 class="padel-items-text ">Padel Shoes</h3>
-                </button>
-            </a>
+    <!-- 3 big buttons of most visited categorys -->
+    <div class="container h-80 padel-items-pictures">
+        <h2 class="padel-items-topic">Our most visited categorys</h2>
+        <div class="row">
+            <div class="col-sm">
+                <a href="{% url 'products' %}?category=padel_racket_all">
+                    <button class="padelrack-picture">
+                        <h5 class="padel-items-text ">Padel Racks</h3>
+                    </button>
+                </a>
+            </div>
+            <div class="col-sm">
+                <a href="{% url 'products' %}?category=padel_balls">
+                    <button class="padelballs-picture">
+                        <h5 class="padel-items-text ">Padel Balls</h3>
+                    </button>
+                </a>
+            </div>
+            <div class="col-sm">
+                <a href="{% url 'products' %}?category=padel_shoes_all">
+                    <button class="padelshoes-picture">
+                        <h5 class="padel-items-text ">Padel Shoes</h3>
+                    </button>
+                </a>
+            </div>
         </div>
     </div>
-</div>
-
-<!-- Begin Mailchimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7_dtp.css" rel="stylesheet" type="text/css">
-
-<div id="mc_embed_signup">
-    <form action="https://hotmail.us20.list-manage.com/subscribe/post?u=c783c5f92f34b005ea9d34249&amp;id=704c8960f1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-        <label for="mce-EMAIL">DO YOU WANT SPECIAL OFFERS?</label>
-        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter email" required>
-        <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c783c5f92f34b005ea9d34249_704c8960f1" tabindex="-1" value=""></div>
-            <div class="clear foot">
-               <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+    <!-- Begin Mailchimp Signup Form -->
+    <div id="mc_embed_signup">
+        <form action="https://hotmail.us20.list-manage.com/subscribe/post?u=c783c5f92f34b005ea9d34249&amp;id=704c8960f1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+            <label for="mce-EMAIL">DO YOU WANT SPECIAL OFFERS?</label>
+            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Enter email" required>
+            <!-- Real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c783c5f92f34b005ea9d34249_704c8960f1" tabindex="-1" value=""></div>
+                <div class="clear foot">
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                </div>
+            <p><a href="http://eepurl.com/hPIE4v" title="Mailchimp - email marketing made easy and fun"><img class="referralBadge" src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
             </div>
-        <p><a href="http://eepurl.com/hPIE4v" title="Mailchimp - email marketing made easy and fun"><img class="referralBadge" src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg"></a></p>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
     
     <!--End mc_embed_signup-->
 {% endblock %}

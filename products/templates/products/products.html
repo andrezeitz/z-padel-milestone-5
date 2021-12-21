@@ -2,24 +2,28 @@
 {% load static %}
 
 {% block content %}
-
     <div class="container">
+        <!-- If using the search field--> 
         {% if search_term %}
+        <!-- Breadcrumb --> 
         <div class="breadcrumb">
             <ol class="breadcrumb mt-md-5">
               <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
               <li class="breadcrumb-item active" aria-current="page">{{ search_term }}</li>
             </ol>
         </div>
+        <!-- Search header --> 
         <h2 class="product-header">Search for {{ search_term }}</h2>
         <div class="row">
             <div class="col-sm-8">
+                <!-- Search text --> 
                 <p class="product-header-text">   
                     We could find {{ products|length }} products that matched your search <strong>"{{ search_term }}"</strong>
                 </p>
             </div>
                 <div class="col-sm-4">
                     <div class="dropdown product-filter-price">
+                        <!-- Sort by button --> 
                         <button class="btn btn-outline-dark btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             SORT BY
                         </button>
@@ -35,23 +39,27 @@
             <hr class="w-100 mb-1">
         </div>
         {% endif %}
-        
+        <!-- If using a category -->
         {% for category in current_categories %}
+            <!-- Breadcrumb --> 
             <div class="breadcrumb">
                 <ol class="breadcrumb mt-md-5">
                   <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
                   <li class="breadcrumb-item active" aria-current="page">{{ category.friendly_name }}</li>
                 </ol>
             </div>
-        <h2 class="product-header">{{ category.friendly_name }}</h2>
-        <div class="row">
-            <div class="col-sm-8">
-                <p class="product-header-text">   
-                    {{ category.category_text }}
-                </p>
-            </div>
+            <!-- Category name --> 
+            <h2 class="product-header">{{ category.friendly_name }}</h2>
+            <div class="row">
+                <div class="col-sm-8">
+                    <!-- Text for each category --> 
+                    <p class="product-header-text">   
+                        {{ category.category_text }}
+                    </p>
+                </div>
                 <div class="col-sm-4">
                     <div class="dropdown product-filter-price">
+                        <!-- Sort by button --> 
                         <button class="btn btn-outline-dark btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           SORT BY
                         </button>
@@ -64,20 +72,24 @@
                         </div>
                     </div>
                 </div>
+            </div>
             <hr class="w-100 mb-1">
-        </div>
         {% endfor %}
         <div class="row">
+            <!-- Product container --> 
             <div class="product-container">
                 <div class="row">
                     {% for product in products %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card h-100 border-0">
+                                <!-- Product image --> 
                                 <a href="{{ product.get_absolute_url }}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
                                 <div class="product-name">
+                                    <!-- Product name --> 
                                     <p class="mb-0">{{ product.name }}</p>
+                                    <!-- Product price --> 
                                     <p class="lead mb-0 text-left font-weight-bold">€ {{ product.price }}</p>
                                 </div>
                             </div>

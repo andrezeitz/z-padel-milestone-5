@@ -12,15 +12,15 @@ body {
 }
 
 .border-input {
-    border-bottom: 2px solid rgb(19, 17, 17) !important;
-    border-left: 2px solid rgb(19, 17, 17) !important;
-    border-top: 2px solid rgb(19, 17, 17) !important;
+    border-bottom: 1px solid rgb(19, 17, 17) !important;
+    border-left: 1px solid rgb(19, 17, 17) !important;
+    border-top: 1px solid rgb(19, 17, 17) !important;
 }
 
 .border-icon {
-    border-bottom: 2px solid rgb(19, 17, 17) !important;
-    border-right: 2px solid rgb(19, 17, 17) !important;
-    border-top: 2px solid rgb(19, 17, 17) !important;
+    border-bottom: 1px solid rgb(19, 17, 17) !important;
+    border-right: 1px solid rgb(19, 17, 17) !important;
+    border-top: 1px solid rgb(19, 17, 17) !important;
 }
 
 .bg-black {
@@ -83,6 +83,11 @@ body {
 .btn-black:hover {
     background: black;
     color: white;
+}
+
+.account-link {
+    text-transform: uppercase;
+    font-size: 14px;
 }
 
 /* Footer */
