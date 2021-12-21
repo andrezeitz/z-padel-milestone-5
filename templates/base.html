@@ -99,10 +99,10 @@
                         </li>
                         <!-- Shopping bag --> 
                         <li class="list-inline-item">
-                            <a class="{% if grand_total %}text-success {% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                            <a class="nav-link" href="{% url 'view_bag' %}">
                                 <div class="text-center">
-                                    <div><i class="fas fa-shopping-bag fa-lg"></i> ({{ product_count }})</div>
-                                    <p class="my-0">
+                                    <div><i class="{% if grand_total %}text-success {% else %}text-black{% endif %} fas fa-shopping-bag fa-lg"></i><span class="text-black"> ({{ product_count }})</span></div>
+                                    <p class="my-0 text-black">
                                         {% if grand_total %}
                                             {{ grand_total|floatformat:2 }} €
                                         {% else %}
@@ -126,8 +126,22 @@
                 </nav>
             </div>
         </header>
-        {% if messages %}
-            <div class="message-container"></div>
+        {% if messages %}   
+            <div class="message-container">
+                {% for message in messages %}
+                    {% with message.level as level %}
+                        {% if level == 40 %}
+                            {% include 'includes/toasts/toast_error.html' %}
+                        {% elif level == 30 %}
+                            {% include 'includes/toasts/toast_warning.html' %}
+                        {% elif level == 25 %}
+                            {% include 'includes/toasts/toast_success.html' %}
+                        {% else %}
+                            {% include 'includes/toasts/toast_info.html' %}
+                        {% endif %}
+                    {% endwith %}
+                {% endfor %}
+            </div>
         {% endif %}
         <main>
             {% block content %}
