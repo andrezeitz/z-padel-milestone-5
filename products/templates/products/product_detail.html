@@ -27,15 +27,54 @@
                     <p class="lead mb-0 text-left font-weight-bold">€ {{ product.price }}</p>
                     <hr class="w-100 mb-1">
                 </div>
-
+                 
                 <form method="POST" action="{% url 'add_to_bag' product.id %}" class="product-form-add">
                     {% csrf_token %}
-                    <h6>QUANTITY</h6>
+                    {% with product.cloth_sizes as size %}
+                        {% if size %}
+                        <h6>SIZE</h6>
+                            <select class="form-input" name="cloth_size" id='id_cloth_size'>
+                                <option value="xs">XS</option>
+                                <option value="s">S</option>
+                                <option value="m" selected>M</option>
+                                <option value="l">L</option>
+                                <option value="xl">XL</option>
+                            </select>
+                        {% endif %}
+                    
+                    {% with product.shoe_size_man as shoe_man %}
+                        {% if shoe_man %}
+                        <h6>SIZE</h6>
+                            <select class="form-input" name="shoe_size_man" id='id_shoe_size_man'>
+                                <option value="40">40</option>
+                                <option value="41">41</option>
+                                <option value="42" selected>42</option>
+                                <option value="43">43</option>
+                                <option value="44">44</option>
+                            </select>
+                        {% endif %}
+                    
+                    {% with product.shoe_size_woman as shoe_woman %}
+                        {% if shoe_woman %}
+                        <h6>SIZE</h6>
+                            <select class="form-input" name="shoe_size_woman" id='id_shoe_size_woman'>
+                                <option value="36">36</option>
+                                <option value="37">37</option>
+                                <option value="38" selected>38</option>
+                                <option value="39">39</option>
+                                <option value="40">40</option>
+                            </select>
+                        {% endif %}
+                              
+                    <h6 class="quantity-topic">QUANTITY</h6>
                     <input class="form-input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id}}">
                     <div class="form-action">
                         <input type="submit" class="btn btn-add-to-cart" value="BUY NOW">
                     </div>
                     <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    {% endwith %}
+                    {% endwith %}
+                    {% endwith %}
                 </form>
                 
 
