@@ -178,15 +178,15 @@ footer {
     height: 2px;
 }
 
-.success-topic {
+.toast-topic {
     text-transform: uppercase;
-    font-size: 17px;
+    font-size: 15px;
     margin-top: 10px;
     padding-left: 10px;
 }
 
 .fa-check-circle {
-    font-size: 30px;
+    font-size: 27px;
 }
 
 .fa-shopping-cart {
