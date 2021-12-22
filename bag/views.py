@@ -15,6 +15,7 @@ def add_to_bag(request, item_id):
 
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
+    redirect_url = request.POST.get('redirect_url')
     size = None
     if 'cloth_size' in request.POST:
         size = request.POST['cloth_size']
@@ -28,19 +29,24 @@ def add_to_bag(request, item_id):
         if item_id in list(bag.keys()):
             if size in bag[item_id]['items_by_size'].keys():
                 bag[item_id]['items_by_size'][size] += quantity
+                messages.success(request, f'{product.name} added to cart')
             else:
                 bag[item_id]['items_by_size'][size] = quantity
+                messages.success(request, f'{product.name} added to cart')
         else:
             bag[item_id] = {'items_by_size': {size: quantity}}
+            messages.success(request, f'{product.name} added to cart')
     else:
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
+            messages.success(request, f'{product.name} added to cart')
         else:
             bag[item_id] = quantity
-            messages.success(request, f'Your item was put in the bag')
+            messages.success(request, f'{product.name} added to cart')
+            
 
     request.session['bag'] = bag
-    return render(request, 'bag/bag.html')
+    return redirect(redirect_url)
 
 
 def adjust_bag(request, item_id):

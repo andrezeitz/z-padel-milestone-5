@@ -39,7 +39,8 @@
                                                     </h6>
                                                     <!-- Delete product -->
                                                     <a href="{% url 'remove_from_bag' item.item_id %}">
-                                                        <span><i class="fa fa-trash text-danger"></i></span></a>
+                                                        <span><i class="fa fa-trash text-danger"></i></span>
+                                                    </a>
                                                 </td>
                                                 <!-- Product price -->
                                                 <td width="100">
@@ -60,7 +61,7 @@
                                                         min="1" max="20" data-item_id="{{ item.item_id }}"
                                                         id="id_qty_{{ item.item_id }}">
                                                     </td>
-                                                    {% if item.product.has_sizes %}
+                                                    {% if item.product.cloth_sizes or item.product.shoe_size_man or item.product.shoe_size_woman %}
                                                         <input type="hidden" name="product_size" value="{{ item.size }}">
                                                     {% endif %}
                                                 </form>

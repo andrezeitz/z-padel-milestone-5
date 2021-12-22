@@ -1,10 +1,20 @@
-html {
+html, body {
     height: 100%;
 }
 
+/* Body to keep footer as sticky */
 body {
     color: black;
     font-family: 'Lato';
+    display: flex;
+    flex-direction: column;
+  
+}
+
+/* To keep footer as sticky */
+.main-bg {
+    flex: 1 0 auto;
+    margin-bottom: 1rem;
 }
 
 .text-black {
@@ -30,6 +40,8 @@ body {
 .logo-link {
     text-align: center;
 }
+
+/* Main logo */
 
 .main-logo-link {
     background: url('/media/z-padel-logo.png') no-repeat center;
@@ -95,6 +107,7 @@ body {
 footer {
     background: rgb(243, 243, 243) !important;
     height: 100px;
+    flex-shrink: 0;
 }
 
 .footer-topic {
@@ -142,8 +155,66 @@ footer {
     padding-right: 5px;
 }
 
+.toast {
+    max-width: 300px !important;
+}    
+
+.message-container {
+    position: fixed;
+    top: 130px;
+    right: 5px;
+    z-index: 99;
+}
+
+.message-container {
+    align-items: center;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+.success-topic {
+    text-transform: uppercase;
+    font-size: 17px;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.fa-check-circle {
+    font-size: 30px;
+}
+
+.fa-shopping-cart {
+    padding-left: 10px;
+}
+
+.toast-body {
+    padding-top: 0;
+}
+
+@media (max-width: 1380px) {
+.message-container {
+    position: fixed;
+    top: 185px;
+    right: 5px;
+    z-index: 99;
+    }
+}
+
 @media (max-width: 991px) {
     .navbar {
         height: 60px;
+    }
+
+    .message-container {
+        position: unset;
+        align-self: center;
+        margin-top: 0.5rem;
+        }
     }
 }

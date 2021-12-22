@@ -52,3 +52,16 @@
 .quantity-topic {
     margin-top: 10px;
 }
+
+.btn-add-to-cart {
+    padding: 15px;
+    color: black;
+    border: 2px solid black;
+    margin-top: 1rem;
+}
+    
+.btn-add-to-cart:hover {
+    background: black;
+    color: white;
+}
+
