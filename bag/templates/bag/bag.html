@@ -28,19 +28,25 @@
                                                 <!-- Product name and size if product has size -->
                                                 <td width="250">
                                                     <h6>
-                                                    <a href="{{ item.product.get_absolute_url }}" class="product-name-link">
-                                                        {{ item.product.name }}
-                                                    </a>
-                                                    <p class="my-0 mt-md-1">
-                                                        {% if item.product.cloth_sizes or item.product.shoe_size_man or item.product.shoe_size_woman %}
-                                                        Size: {{ item.size|upper }}
-                                                        {% endif %}
-                                                    </p>
+                                                        <a href="{{ item.product.get_absolute_url }}" class="product-name-link">
+                                                            {{ item.product.name }}
+                                                        </a>
+                                                        <p class="my-0 mt-md-1">
+                                                            {% if item.product.cloth_size or item.product.shoe_size_man or item.product.shoe_size_woman %}
+                                                            Size: {{ item.size|upper }}
+                                                            {% endif %}
+                                                        </p>
                                                     </h6>
                                                     <!-- Delete product -->
-                                                    <a href="{% url 'remove_from_bag' item.item_id %}">
-                                                        <span><i class="fa fa-trash text-danger"></i></span>
-                                                    </a>
+                                                    <form action="{% url 'remove_from_bag' item.item_id %}" class="form my-3 update-form" method="POST">
+                                                        {% csrf_token %}
+                                                        <button class="btn btn border-none">
+                                                            <span><i class="fa fa-trash text-danger"></i></span>
+                                                        </button>
+                                                        {% if item.product.cloth_size or item.product.shoe_size_man or item.product.shoe_size_woman %}
+                                                        <input type="hidden" name="product_size" value="{{ item.size }}">
+                                                        {% endif %}
+                                                    </form>
                                                 </td>
                                                 <!-- Product price -->
                                                 <td width="100">
@@ -58,10 +64,10 @@
                                                     <!-- Product quantity field -->   
                                                     <td width="60" style="padding: 0.85rem 0.75rem 0 0.75rem;;">
                                                         <input type="number" class="form-control" placeholder="{{ item.quantity }}" name="quantity" value="{{ item.quantity }}"
-                                                        min="1" max="20" data-item_id="{{ item.item_id }}"
+                                                        min="0" max="20" data-item_id="{{ item.item_id }}"
                                                         id="id_qty_{{ item.item_id }}">
                                                     </td>
-                                                    {% if item.product.cloth_sizes or item.product.shoe_size_man or item.product.shoe_size_woman %}
+                                                    {% if item.product.cloth_size or item.product.shoe_size_man or item.product.shoe_size_woman %}
                                                         <input type="hidden" name="product_size" value="{{ item.size }}">
                                                     {% endif %}
                                                 </form>

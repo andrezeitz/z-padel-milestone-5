@@ -34,7 +34,7 @@
                 <form method="POST" action="{% url 'add_to_bag' product.id %}" class="product-form-add">
                     {% csrf_token %}
                     <!-- Size for cloth -->  
-                    {% with product.cloth_sizes as size %}
+                    {% with product.cloth_size as size %}
                         {% if size %}
                             <h6>SIZE</h6>
                             <select class="form-input" name="cloth_size" id='id_cloth_size'>
@@ -47,8 +47,8 @@
                         {% endif %}
                     {% endwith %}
                     <!-- Size for man shoes -->  
-                    {% with product.shoe_size_man as shoe_man %}
-                        {% if shoe_man %}
+                    {% with product.shoe_size_man as size %}
+                        {% if size %}
                             <h6>SIZE</h6>
                             <select class="form-input" name="shoe_size_man" id='id_shoe_size_man'>
                                 <option value="40">40</option>
@@ -60,8 +60,8 @@
                         {% endif %}
                     {% endwith %}
                     <!-- Size for woman shoes -->  
-                    {% with product.shoe_size_woman as shoe_woman %}
-                        {% if shoe_woman %}
+                    {% with product.shoe_size_woman as size %}
+                        {% if size %}
                             <h6>SIZE</h6>
                             <select class="form-input" name="shoe_size_woman" id='id_shoe_size_woman'>
                                 <option value="36">36</option>
@@ -74,7 +74,7 @@
                     {% endwith %}         
                     <h6 class="quantity-topic">QUANTITY</h6>
                     <!-- Quantity input-->  
-                    <input class="form-input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id}}">
+                    <input class="form-input" type="number" name="quantity" value="1" min="1" max="99" data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                         <div class="form-action">
                             <!-- Buy now button -->  
                             <input type="submit" class="btn btn-add-to-cart" value="BUY NOW">

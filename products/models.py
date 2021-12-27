@@ -24,7 +24,7 @@ class Product(models.Model):
     description = models.TextField()
     specification = models.TextField(null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
-    cloth_sizes = models.BooleanField(default=False, null=True, blank=True)
+    cloth_size = models.BooleanField(default=False, null=True, blank=True)
     shoe_size_man = models.BooleanField(default=False, null=True, blank=True)
     shoe_size_woman = models.BooleanField(default=False, null=True, blank=True)
     slug = models.SlugField(max_length=200, unique=True, null=True, blank=True)
