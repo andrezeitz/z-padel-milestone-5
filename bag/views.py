@@ -90,7 +90,7 @@ def remove_from_bag(request, item_id):
     else:
         bag.pop(item_id)
     
-    messages.error(request, f'{product.name} removed from cart')
+    messages.error(request, f'{product.name} was removed from cart')
     request.session['bag'] = bag
     
     return redirect(reverse('view_bag'))

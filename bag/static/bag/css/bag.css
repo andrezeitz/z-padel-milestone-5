@@ -32,3 +32,8 @@
     width: 60px;
     height: 40px;
 }
+
+.trash-delete {
+    border: none;
+    background: none;
+}

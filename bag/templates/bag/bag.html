@@ -26,7 +26,7 @@
                                                     </div>
                                                 </td>
                                                 <!-- Product name and size if product has size -->
-                                                <td width="250">
+                                                <td width="200">
                                                     <h6>
                                                         <a href="{{ item.product.get_absolute_url }}" class="product-name-link">
                                                             {{ item.product.name }}
@@ -38,9 +38,9 @@
                                                         </p>
                                                     </h6>
                                                     <!-- Delete product -->
-                                                    <form action="{% url 'remove_from_bag' item.item_id %}" class="form my-3 update-form" method="POST">
+                                                    <form action="{% url 'remove_from_bag' item.item_id %}" class="update-form" method="POST">
                                                         {% csrf_token %}
-                                                        <button class="btn btn border-none">
+                                                        <button class="trash-delete">
                                                             <span><i class="fa fa-trash text-danger"></i></span>
                                                         </button>
                                                         {% if item.product.cloth_size or item.product.shoe_size_man or item.product.shoe_size_woman %}
