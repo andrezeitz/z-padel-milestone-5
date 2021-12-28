@@ -41,16 +41,18 @@
     </div>
 </li>
 <li class="list-inline-item">
-    <a class="nav-link" href="{% url 'view_bag' %}">
+    <a class="text-black nav-link d-block d-lg-none" href="{% url 'view_bag' %}">
         <div class="text-center">
             <div><i class="{% if grand_total %}text-success {% else %}text-black{% endif %} fas fa-shopping-bag fa-lg"></i><span class="text-black"> ({{ product_count }})</span></div>
-            <p class="my-0 text-black">
+            <p class="my-0">
                 {% if grand_total %}
-                    €{{ grand_total|floatformat:2 }}
+                    ${{ grand_total|floatformat:2 }}
                 {% else %}
-                    €0.00
+                    $0.00
                 {% endif %}
             </p>
         </div>
     </a>
 </li>
+
+

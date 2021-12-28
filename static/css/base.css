@@ -8,7 +8,6 @@ body {
     font-family: 'Lato';
     display: flex;
     flex-direction: column;
-  
 }
 
 /* To keep footer as sticky */
@@ -70,14 +69,6 @@ body {
 
 .input-group {
     width: 80%;
-}
-
-.logo-font {
-    text-align: center;
-}
-
-.navbar {
-    height: 40px;
 }
 
 .nav-link {
@@ -211,14 +202,23 @@ footer {
 }
 
 @media (max-width: 991px) {
-    .navbar {
-        height: 60px;
-    }
 
     .message-container {
         position: unset;
         align-self: center;
         margin-top: 0.5rem;
+    }
+
+    .nav-link {
+        padding: 5px!important;
+    }
+
+    .nav-link:hover {
+        border: none;
+    }
+
+    .dropdown-menu {
+        border: none;
     }
 }
 

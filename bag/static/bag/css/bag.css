@@ -44,11 +44,11 @@
 
 @media (max-width: 768px) {
     .product-name-link {
-        font-size: 13px;
+        font-size: 12px;
     }
 
     .product-price-text {
-        font-size: 13px;
+        font-size: 12px;
     }
     
     .form-control-small {
@@ -57,7 +57,11 @@
     }
 
     .price-item {
-        font-size: 17px;
+        font-size: 16px;
+    }
+
+    .size-text {
+        font-size: 13px;
     }
 
     .picture-td {
