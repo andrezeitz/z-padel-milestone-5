@@ -28,7 +28,7 @@
     margin: 0;
 }
 
-.form-control {
+.form-control-small {
     width: 60px;
     height: 40px;
 }
@@ -36,4 +36,31 @@
 .trash-delete {
     border: none;
     background: none;
+}
+
+.picture-td {
+    padding: 0 0.75rem 0 0.75rem
+}
+
+@media (max-width: 768px) {
+    .product-name-link {
+        font-size: 13px;
+    }
+
+    .product-price-text {
+        font-size: 13px;
+    }
+    
+    .form-control-small {
+        width: 35px;
+        height: 35px;
+    }
+
+    .price-item {
+        font-size: 17px;
+    }
+
+    .picture-td {
+        display: none;
+    }
 }

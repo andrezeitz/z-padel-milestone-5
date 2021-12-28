@@ -219,6 +219,12 @@ footer {
         position: unset;
         align-self: center;
         margin-top: 0.5rem;
-        }
+    }
+}
+
+@media (max-width: 768px) {
+    .free-delivery {
+        font-size: 11.5px;
+        margin: 0 10px 0 10px;
     }
 }

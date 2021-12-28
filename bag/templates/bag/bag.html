@@ -6,7 +6,7 @@
     <div class="container mt-md-5">
         <div class="wrapper wrapper-content">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-12 col-lg-9">
                     {% if bag_items %}
                         <!-- Added products to the bag -->
                         <div class="bag-container">
@@ -20,7 +20,7 @@
                                             <tbody>
                                                 <!-- Product image -->
                                             <tr>
-                                                <td width="100" style="padding: 0 0.75rem 0 0.75rem;">
+                                                <td width="100" class="picture-td">
                                                     <div class="cart-product-imitation">
                                                         <img class="img-fluid rounded" src="{{ item.product.image.url }}">
                                                     </div>
@@ -50,7 +50,7 @@
                                                 </td>
                                                 <!-- Product price -->
                                                 <td width="100">
-                                                    <p>€ {{ item.product.price }}</p>
+                                                    <p class="product-price-text">€{{ item.product.price }}</p>
                                                 </td>
                                                 <!-- Update quantity of product form -->
                                                 <form action="{% url 'adjust_bag' item.item_id %}" class="form my-3 update-form" method="POST">
@@ -63,7 +63,7 @@
                                                     </td>
                                                     <!-- Product quantity field -->   
                                                     <td width="60" style="padding: 0.85rem 0.75rem 0 0.75rem;;">
-                                                        <input type="number" class="form-control" placeholder="{{ item.quantity }}" name="quantity" value="{{ item.quantity }}"
+                                                        <input type="number" class="form-control-small" placeholder="{{ item.quantity }}" name="quantity" value="{{ item.quantity }}"
                                                         min="0" max="20" data-item_id="{{ item.item_id }}"
                                                         id="id_qty_{{ item.item_id }}">
                                                     </td>
@@ -73,7 +73,7 @@
                                                 </form>
                                                 <!-- Product total price -->
                                                 <td>
-                                                    <h6 class="price-item">€ {{ item.product.price | calc_subtotal:item.quantity }}</h6>
+                                                    <h6 class="price-item">€{{ item.product.price | calc_subtotal:item.quantity }}</h6>
                                                 </td>
                                             </tr>
                                             </tbody>
@@ -106,7 +106,7 @@
                 </div>
                 <!-- Cart summary and support -->
                 {% endif %}    
-                <div class="col-md-3">
+                <div class="col-12 col-lg-3">
                     <div class="total-container">
                         <div class="products-title">
                             <h5 class="items-in-cart">Cart Summary</h5>
@@ -132,7 +132,7 @@
                     </div>
                     <!-- Checkout button -->
                     <div class="checkout-container">
-                        <a href="#" class="btn btn-dark btn-lg" role="button" aria-pressed="true"><i class="fas fa-lock"></i> Checkout</a>
+                        <a href="{% url 'checkout' %}" class="btn btn-dark btn-lg" role="button" aria-pressed="true"><i class="fas fa-lock"></i> Checkout</a>
                     </div>
                 </div>  
             </div>

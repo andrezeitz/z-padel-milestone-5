@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %}
+{% load bag_tools %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+
+            <h3 class="logo-font mb-4 mt-5">CHECKOUT</h3>
+            <hr>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-lg-6 order-lg-last mb-5">
+            <h6 class="items-in-cart">Items in your cart ({{ product_count }} items)</h6>
+            {% for item in bag_items %}
+            <div class="products-content">
+                <div class="table-responsive">
+                    <table class="table shoping-cart-table">
+                        <tbody>
+                            <!-- Product image -->
+                        <tr>
+                            <td width="100" style="padding: 0 0.75rem 0 0.75rem;">
+                                <div class="cart-product-imitation">
+                                    <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                </div>
+                            </td>
+                            <!-- Product name and size if product has size -->
+                            <td width="170">
+                                <h6>
+                                    <a href="{{ item.product.get_absolute_url }}" class="product-name-link">
+                                        {{ item.product.name }}
+                                    </a>
+                                    <p class="my-0 mt-md-1">
+                                        {% if item.product.cloth_size or item.product.shoe_size_man or item.product.shoe_size_woman %}
+                                        Size: {{ item.size|upper }}
+                                        {% endif %}
+                                    </p>
+                                </h6>
+                            </td>
+                            <!-- Product price -->
+                            <td width="80">
+                                <p>Qty: {{ item.quantity }}</p>
+                            </td>
+                            <!-- Product total price -->
+                            <td>
+                                <h6 class="price-item">€{{ item.product.price | calc_subtotal:item.quantity }}</h6>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        {% endfor %}
+        <hr>
+        <div class="row text-black text-right">
+            <div class="col-6 offset-2">
+                <p class="my-0">Order Total:</p>
+                <p class="my-0">Delivery:</p>
+                <h5 class="my-0">Grand Total:<h5>
+            </div>
+            <div class="col-3">
+                <p class="my-0">€{{ total | floatformat:2 }}</p>
+                <p class="my-0">€{{ delivery | floatformat:2 }}</p>
+                <h5 class="my-0">€{{ grand_total | floatformat:2 }}</h5>
+            </div>
+        </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <p>Please fill out the form below to complete your order<p>
+            <form action="{% url 'checkout' %}" method="POST" id="payment-form">
+                {% csrf_token %}
+                <fieldset class="rounded px-3 mb-5">
+                    {{ order_form.full_name | as_crispy_field }}
+                    {{ order_form.email | as_crispy_field }}
+                    {{ order_form.phone_number | as_crispy_field }}
+                    {{ order_form.street_address | as_crispy_field }}
+                    {{ order_form.city | as_crispy_field }}
+                    {{ order_form.postcode | as_crispy_field }}
+                    <div class="form-check form-check-inline float-right mr-0">
+                        {% if user.is_authenticated %}
+                            <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
+                            <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
+                        {% else %}
+                            <label class="form-check-label" for="id-save-info">
+                                <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
+                                <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                            </label>
+                        {% endif %}
+                    </div>
+                </fieldset>
+                
+
+                <div class="submit-button text-right mt-5 mb-2">                    
+                    <a href="{% url 'home' %}" class="btn btn-outline-dark"><i class="fa fa-arrow-left"></i> Back to bag</a>
+                    <button id="submit-button" class="btn btn-outline-dark">
+                        <span class="font-weight-bold">Complete Order</span>
+                        <span class="icon">
+                            <i class="fas fa-lock"></i>
+                        </span>
+                    </button>
+                    <p class="small text-danger my-0">
+                        <span class="icon">
+                            <i class="fas fa-exclamation-circle"></i>
+                        </span>
+                        <span>Your card will be charged <strong>${{ grand_total|floatformat:2 }}</strong></span>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

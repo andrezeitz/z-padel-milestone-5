@@ -22,6 +22,7 @@
             <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
             <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
             <link rel="stylesheet" href="{% static 'bag/css/bag.css' %}">
+            <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
             <!-- Mailchimp Signup Form -->
             <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7_dtp.css" rel="stylesheet" type="text/css">
         {% endblock %}
@@ -104,9 +105,9 @@
                                     <div><i class="{% if grand_total %}text-success {% else %}text-black{% endif %} fas fa-shopping-bag fa-lg"></i><span class="text-black"> ({{ product_count }})</span></div>
                                     <p class="my-0 text-black">
                                         {% if grand_total %}
-                                            {{ grand_total|floatformat:2 }} €
+                                            €{{ grand_total|floatformat:2 }}
                                         {% else %}
-                                            0.00 €
+                                            €0.00
                                         {% endif %}
                                     </p>
                                 </div>
