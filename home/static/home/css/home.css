@@ -115,6 +115,11 @@
     .padelshoes-picture {
         height: 300px;
     }
+
+    .custom-toast {
+        margin-bottom: 1rem;
+        max-width: 400px !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -131,4 +136,9 @@
     .padelshoes-picture {
         height: 150px;
     }
+
+    /* .custom-toast {
+        margin-bottom: 1rem;
+        max-width: 400px !important;
+    } */
 }
