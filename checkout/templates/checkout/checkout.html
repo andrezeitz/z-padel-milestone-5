@@ -6,14 +6,14 @@
 <div class="container">
     <div class="row">
         <div class="col">
-            <h3 class="logo-font mb-4 mt-5">CHECKOUT</h3>
+            <h3 class="text-center mb-4 mt-4">CHECKOUT</h3>
             <hr>
         </div>
     </div>
 
     <div class="row">
         <div class="col-12 col-lg-6 order-lg-last mb-5">
-            <h6 class="items-in-cart">Items in your cart ({{ product_count }} items)</h6>
+            <h6 class="items-in-cart">Order Summary ({{ product_count }} items)</h6>
             {% for item in bag_items %}
             <div class="products-content">
                 <div class="table-responsive">
@@ -56,9 +56,9 @@
         <hr>
         <div class="row text-black text-right">
             <div class="col-6 offset-2">
-                <p class="my-0">Order Total:</p>
+                <p class="my-0">Subtotal:</p>
                 <p class="my-0">Delivery:</p>
-                <h5 class="my-0">Grand Total:<h5>
+                <h5 class="my-0">Total:<h5>
             </div>
             <div class="col-3">
                 <p class="my-0">€{{ total | floatformat:2 }}</p>

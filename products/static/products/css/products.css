@@ -65,3 +65,8 @@
     color: white;
 }
 
+@media (max-width: 575px) {
+    .product-name {
+        align-self: center;
+    }
+}
