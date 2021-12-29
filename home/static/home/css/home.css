@@ -97,3 +97,38 @@
     margin: 2.5rem 0 2.5rem 0;
 }
 
+@media (max-width: 991px) {
+    .home-hero {
+        padding-top: 5px;
+    }
+
+    .hero-text {
+        font-size: 2rem;
+    }
+
+    .hero-small-text {
+        font-size: 1rem;
+    }
+
+    .padelrack-picture,
+    .padelballs-picture,
+    .padelshoes-picture {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .padelrack-picture,
+    .padelballs-picture,
+    .padelshoes-picture {
+        height: 200px;
+    }
+}
+
+@media (max-width: 575px) {
+    .padelrack-picture,
+    .padelballs-picture,
+    .padelshoes-picture {
+        height: 150px;
+    }
+}
