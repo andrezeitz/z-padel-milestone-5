@@ -120,6 +120,9 @@
         margin-bottom: 1rem;
         max-width: 400px !important;
     }
+
+    .toast-body {
+        padding-top: 0.50rem;
 }
 
 @media (max-width: 768px) {
