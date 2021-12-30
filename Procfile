@@ -1,0 +1,1 @@
+web: gunicorn z-padel.wsgi:application
