@@ -1,0 +1,932 @@
+[
+{
+    "model": "products.category",
+    "pk": 1,
+    "fields": {
+        "name": "padel_racket_all",
+        "friendly_name": "All Padel Racket",
+        "category_text": "Paddle rack from well-known brands such as Bullpadel, Adidas, Head, and Starvie. All our racks are carefully selected and tested, to ensure the quality of the rack.\r\nWe have paddle racks for all types of players from beginners to advanced players. Develop your own game with one of our paddle rackets and take yourself to new levels."
+    }
+},
+{
+    "model": "products.category",
+    "pk": 2,
+    "fields": {
+        "name": "padel_balls",
+        "friendly_name": "Padel Balls",
+        "category_text": "Here you will find the best in paddle balls, for example Head Padel Pro which is the official ball in the World Padel Tour. We also have balls from Wilson, RS and Adidas that is of very good quality."
+    }
+},
+{
+    "model": "products.category",
+    "pk": 3,
+    "fields": {
+        "name": "padel_shoes_all",
+        "friendly_name": "All Padel Shoes",
+        "category_text": "Are you tired of your old padel shoes? Or are you going to start playing this sport soon and don't know what kind of shoes you should wear? If you are thinking about changing your padel shoes and enjoying your games and training, you have come to the right place. If you're going to start playing padel but don't know which padel shoes are better, you're also in the right store. Discover the best padel trainers and play hard."
+    }
+},
+{
+    "model": "products.category",
+    "pk": 4,
+    "fields": {
+        "name": "padel_bags_all",
+        "friendly_name": "Padel Bags",
+        "category_text": "Your padel rackets bags have been designed to guarantee the player's capacity with the most comfortable transport to your padel matches. Among the collection we have some mid-size padel racket bag which you can carry all you need for padel matches with complete comfort."
+    }
+},
+{
+    "model": "products.category",
+    "pk": 5,
+    "fields": {
+        "name": "padel_clothes_all",
+        "friendly_name": "Padel Clothes",
+        "category_text": "The new pieces of clothes ensure us the best comfort on the padel courts. In addition, they have into account our skins' necessities. They avoid erosions. The new fabrics allow the padel woman player to move around the court with complete freedom of movements, providing the best experience of game."
+    }
+},
+{
+    "model": "products.category",
+    "pk": 6,
+    "fields": {
+        "name": "padel_accessories_all",
+        "friendly_name": "Padel Accessories",
+        "category_text": "The accessories for padel are those complements which enlarge the useful life of a padel racket or protect us from padel injuries. Among the most demanding padel accessories we can find overgrips, wristbands, protectors, kneepads, baskets of balls, etc."
+    }
+},
+{
+    "model": "products.category",
+    "pk": 7,
+    "fields": {
+        "name": "padel_racket_adidas",
+        "friendly_name": "Padel Racket Adidas",
+        "category_text": "Paddle rack from well-known brands such as Bullpadel, Adidas, Head, and Starvie. All our racks are carefully selected and tested, to ensure the quality of the rack.\r\nWe have paddle racks for all types of players from beginners to advanced players. Develop your own game with one of our paddle rackets and take yourself to new levels."
+    }
+},
+{
+    "model": "products.category",
+    "pk": 8,
+    "fields": {
+        "name": "padel_racket_bullpadel",
+        "friendly_name": "Padel Racket Bullpadel",
+        "category_text": "Paddle rack from well-known brands such as Bullpadel, Adidas, Head, and Starvie. All our racks are carefully selected and tested, to ensure the quality of the rack.\r\nWe have paddle racks for all types of players from beginners to advanced players. Develop your own game with one of our paddle rackets and take yourself to new levels."
+    }
+},
+{
+    "model": "products.category",
+    "pk": 9,
+    "fields": {
+        "name": "padel_racket_head",
+        "friendly_name": "Padel Racket Head",
+        "category_text": "Paddle rack from well-known brands such as Bullpadel, Adidas, Head, and Starvie. All our racks are carefully selected and tested, to ensure the quality of the rack.\r\nWe have paddle racks for all types of players from beginners to advanced players. Develop your own game with one of our paddle rackets and take yourself to new levels."
+    }
+},
+{
+    "model": "products.category",
+    "pk": 10,
+    "fields": {
+        "name": "padel_racket_starvie",
+        "friendly_name": "Padel Racket Starvie",
+        "category_text": "Paddle rack from well-known brands such as Bullpadel, Adidas, Head, and Starvie. All our racks are carefully selected and tested, to ensure the quality of the rack.\r\nWe have paddle racks for all types of players from beginners to advanced players. Develop your own game with one of our paddle rackets and take yourself to new levels."
+    }
+},
+{
+    "model": "products.category",
+    "pk": 11,
+    "fields": {
+        "name": "padel_shoes_man",
+        "friendly_name": "Padel Shoes Man",
+        "category_text": "Are you tired of your old padel shoes? Or are you going to start playing this sport soon and don't know what kind of shoes you should wear? If you are thinking about changing your padel shoes and enjoying your games and training, you have come to the right place. If you're going to start playing padel but don't know which padel shoes are better, you're also in the right store. Discover the best padel trainers and play hard."
+    }
+},
+{
+    "model": "products.category",
+    "pk": 12,
+    "fields": {
+        "name": "padel_shoes_woman",
+        "friendly_name": "Padel Shoes Woman",
+        "category_text": "Are you tired of your old padel shoes? Or are you going to start playing this sport soon and don't know what kind of shoes you should wear? If you are thinking about changing your padel shoes and enjoying your games and training, you have come to the right place. If you're going to start playing padel but don't know which padel shoes are better, you're also in the right store. Discover the best padel trainers and play hard."
+    }
+},
+{
+    "model": "products.category",
+    "pk": 14,
+    "fields": {
+        "name": "padel_clothes_man",
+        "friendly_name": "Padel Clothes Man",
+        "category_text": "The new pieces of clothes ensure us the best comfort on the padel courts. In addition, they have into account our skins' necessities. They avoid erosions. The new fabrics allow the padel woman player to move around the court with complete freedom of movements, providing the best experience of game."
+    }
+},
+{
+    "model": "products.category",
+    "pk": 15,
+    "fields": {
+        "name": "padel_clothes_woman",
+        "friendly_name": "Padel Clothes Woman",
+        "category_text": "The new pieces of clothes ensure us the best comfort on the padel courts. In addition, they have into account our skins' necessities. They avoid erosions. The new fabrics allow the padel woman player to move around the court with complete freedom of movements, providing the best experience of game."
+    }
+},
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "sku": "10000",
+        "name": "Adidas Metalbone 2021",
+        "description": "Metalbone from adidas is a new top racket that adds a whole new dimension to the offensive game. The rigid surface layer consisting of most carbon fiber provides outstanding precision, in combination with the softer core you also get an extreme gear ratio in your attacks without the racket feeling too stiff against the arm. The diamond shape and the top-heavy balance are complemented by strategically placed reinforcements on top of the racket and in the racket neck, the reinforcements make the racket more torsionally rigid and stable when you have to decide the point. Metalbone is also designed with adidas' new weight and balance system located on the racket neck. This allows you to easily adjust the weight and balance of the racket and thus adapt them to your needs and requirements. A powerful racket aimed at the advanced player who wants to take his offensive game to a new level.",
+        "specification": "Weight: 345-360 gr\r\n\r\nFrame profile: 38 mm \r\n\r\nShape: Diamond\r\n\r\nBalance: High\r\n\r\nCase: Not included",
+        "price": "400.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "adidas-metalbone-2021",
+        "rating": null,
+        "image": "metalbone2_420x.jpeg",
+        "category": [
+            1,
+            7
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "sku": "10001",
+        "name": "Adidas Adipower Ctrl 3.0",
+        "description": "Adipower CTRL 3.0 is a powerful racket for you who use the offensive to your advantage and at the same time prioritize control. The racket's round shape provides a large central sweetspot for increased control, while the Power Embossed Ridge technology in combination with the hard EVA High Memory core contributes to speed and good pressure in the strokes when needed.\r\n\r\nThe surface layer consists of carbon fiber and aluminum fiber, which together with the integrated 3D structure in the racket surface provides a responsive ball hit and good spinning effect in cut strokes. The signature racket for the adidas Ambassador and World Padel Tour player Alex Ruiz.\r\n\r\nLike all models from Adidas, the handle has a wrist strap that ensures a secure grip when playing.\r\n\r\nA control racket for the discerning paddle player.",
+        "specification": "Weight: 360-375 g\r\n\r\nFrame profile: 38 mm \r\n\r\nShape: Round\r\n\r\nBalance: Medium\r\n\r\nPaddle case: Not included",
+        "price": "339.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "adidas-adipower-ctrl",
+        "rating": null,
+        "image": "adipower2021_420x.jpeg",
+        "category": [
+            1,
+            7
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "sku": "10002",
+        "name": "Adidas Adipower Light 3.0",
+        "description": "Adipower Light 3.0 is a fantastic top racket from Adidas that has the latest technology to give the player maximum control and precision. The model is suitable for everything from discerning beginners and exercisers to competition players such as Martita Ortega who prioritize control in the game. The racket has a large sweetspot thanks to its round shape, which means that even hits a little further out towards the frame deliver good speed and feeling in the battle. The surface of this paddle racket is equipped with 3D Spin Blade technology that will generate maximum spin for increased screw in strokes.",
+        "specification": "Weight: 360-375 gr\r\n\r\nFrame profile: 38 mm\r\n\r\nShape: Round\r\n\r\nBalance: Medium\r\n\r\nCase: Included",
+        "price": "199.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "adidas-adipower-light",
+        "rating": null,
+        "image": "adipowerlight_420x.jpeg",
+        "category": [
+            1,
+            7
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "sku": "10003",
+        "name": "Head Flash Green 2021",
+        "description": "Head Flash Green 2021 is the paddle racket for the beginner or exerciser who wants a good paddle rack to develop with. The racket has a nice design in green and a cruel finish. It has a durable frame with an integrated frame protection for extra protection. \r\n\r\nThe racket has a good mix of speed and control with a soft and gentle core that gives free speed in the strokes, which is good for a new player. There is a bit more focus on control than the sibling Head Flash Pro 2021 which is a bit more aggressive. The racket has Heads Innegra technology which gives a little more speed and less vibration during blows. \r\n\r\nThe paddle experts recommend this paddle rack to a player with a smaller budget and want a versatile rack to develop their paddle with.",
+        "specification": "Weight: 350-370 g\r\n\r\nFrame profile: 38 mm \r\n\r\nForm: Drop\r\n\r\nBalance: Medium\r\n\r\nCase: Not included",
+        "price": "79.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "head-flash-green",
+        "rating": null,
+        "image": "flashgreen_420x.jpeg",
+        "category": [
+            1,
+            9
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "sku": "10004",
+        "name": "Head Delta Hybrid 360+",
+        "description": "Head Delta Hybrid Graphene 360+ is a paddle racket that was developed and developed together with former world setter Fernando Belasteguín, a living legend and dominant in paddle. This paddle racket has an extra large sweetspot, this thanks to the racket's shape, technology and Graphene material. This gives a strong surface in combination with a slightly softer core, a perfect combination of speed and control.\r\n\r\nThe difference from the predecessor Head Graphene Touch Delta Hybrid, is that they have now applied the new, updated material Graphene 360+. This new material improves the racket's ability to reduce vibrations when hitting the ball for a more forgiving and comfortable feeling.\r\n\r\nPower Foam technology is a soft material that will respond extra quickly to give the player a more powerful ball hit. Finally, this model has Head`s Extreme Spin technology, which is a roughened surface to increase spin and screw in the ball hit. Graphene 360+ also means that the racket offers better control compared to the previous version",
+        "specification": "Weight: 375 grams\r\n\r\nFrame profile: 38 mm\r\n\r\nShape: Diamond\r\n\r\nBalance: Medium\r\n\r\nCase: Included",
+        "price": "139.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "head-delta-hybrid-graphene",
+        "rating": null,
+        "image": "DeltaHybridGraphene360_420x.jpeg",
+        "category": [
+            1,
+            9
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "sku": "10005",
+        "name": "Bullpadel Hack 02 2021",
+        "description": "Bullpadel Hack 02 2021 is a hybrid shaped paddle racket for maximum speed without losing control.\r\n\r\nHack 02 contains a completely new surface layer Tricarbon which consists of thinner and lighter carbon fiber layers that are interwoven in three different directions. This allows the ball to be caught faster and better than before!\r\n\r\nThe inner core Adaptiva is a foam rubber core of the Multieva type which is a mixture of materials with different densities. The outer layer has a higher density which acts on fast balls and gives them higher force, while the inner layer with a lower density acts on slower balls and improves the control in the ball hit. The racket  has a Vibradrive technology that absorbs vibrations to reduce damage. To protect the rack against blows and marks, the Metalshield frame guard is also available.",
+        "specification": "Weight: 365-380 g\r\n\r\nFrame profile: 38 mm \r\n\r\nForm: Hybrid\r\n\r\nBalance: High\r\n\r\nPaddle case: Included\r\n\r\nSurface layer: Tricarbon\r\n\r\nCore: Multieva Adaptia",
+        "price": "159.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "bullpadel-hack-02",
+        "rating": null,
+        "image": "hack02_beef7c28-7d3f-4b08-9bbf-051975e690f1_420x.jpeg",
+        "category": [
+            1,
+            8
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+        "sku": "10005",
+        "name": "Bullpadel Vertex 03 Ctrl",
+        "description": "New for Vertex 3 Control is that the racket comes with a completely new aerodynamic frame, Air React Channel. Thanks to the new frame, there will be a greater energy surcharge, which results in a higher ball speed.\r\n\r\nBullpadel Vertex 3 Control is Bullpadel's complement to Maxi Sanchez's diamond-shaped Vertex 3 and the sequel to Bullpadel's top seller Vertex 2 Control. Vertex 3 is a rack that fits all types of players thanks to the round shape of the rack. The round shape means that the racket is suitable for players who are looking for a good balance between control and speed. Bullpadel Vertex 3 Control has a surface layer of carbon fiber 12K that is faster and more responsive than the regular 3K.\r\n\r\nVertex 3 Control comes with a sandpaper surface that allows it to grip the ball in slippery strokes. Vertex 3 Control has the popular MultiEva core ADAPTIA which is a mixture of different materials with different densities. The outer layer has a higher density that acts on fast balls and gives them more power, while the inner layer with a lower density that acts on slower balls and improves control.",
+        "specification": "Weight: 365 - 380 g\r\n\r\nFrame profile: 38 mm\r\n\r\nBalance: Low\r\n\r\nShape: Round\r\n\r\nCase: Included\r\n\r\nSurface: Xtend Carbon 12K\r\n\r\nCore: Multieva Adaptia",
+        "price": "259.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "bullpadel-vertex-control",
+        "rating": null,
+        "image": "vertex_420x.jpeg",
+        "category": [
+            1,
+            8
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+        "sku": "10014",
+        "name": "Head Padel Pro S",
+        "description": "Head Padel Pro S is a little faster and more nimble than the regular Head Padel Pro ball.\r\nPadel Pro S Delivered in a 1 tube with 3 balls.",
+        "specification": "",
+        "price": "11.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "head-padel-pro-s",
+        "rating": null,
+        "image": "HeadPadelProS_420x.jpeg",
+        "category": [
+            2
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+        "sku": "10006",
+        "name": "Adidas Speed RX",
+        "description": "The Adidas Speed ​​RX Padel is a specially developed paddle ball from Adidas that focuses on comfort and control.\r\n\r\nThe ball is made of a responsive natural rubber for increased feeling and a felt surface with 50% wool for the highest possible comfort. Completely free of PVC.",
+        "specification": "",
+        "price": "10.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "adidas-speed-rx",
+        "rating": null,
+        "image": "adidasspeedrx_840x.jpeg",
+        "category": [
+            2
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+        "sku": "10013",
+        "name": "Wilson Padel X3 Ball",
+        "description": "Wilson Padel x3 Ball is a completely newly developed paddle ball from Wilson. The ball is designed to offer the best mix between quality, durability and game feel. \r\n\r\nWilson has also thought of using the lid on the pipe, which is made of smaller plastic to protect the environment.\r\n\r\nWilson is the official partner with the Swedish Paddle Association, where this ball is used at SPT and Swedish Championships.",
+        "specification": "",
+        "price": "10.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "wilson-padel-x3-ball",
+        "rating": null,
+        "image": "wilsonx3_840x.jpeg",
+        "category": [
+            2
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 11,
+    "fields": {
+        "sku": "10007",
+        "name": "RS Champions Choise",
+        "description": "RS Champions Choice is RS Padel's advanced paddle ball for you  who want to take your game to the next level. Simon Vasquez and Robin Söderling were commissioned to develop the ultimate professional ball. And here is the result: Champions Choice.\r\n\r\nIt is the perfect paddle ball for advanced and fast paddle. The speed is two levels faster than the Padel Tour X and the ball has a new rubber technology that gives the player a soft and unique feeling without losing speed.",
+        "specification": "",
+        "price": "10.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "rs-champions-choise",
+        "rating": null,
+        "image": "champion123_840x.jpeg",
+        "category": [
+            2
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 12,
+    "fields": {
+        "sku": "10009",
+        "name": "RS Padel Tour X",
+        "description": "RS Padel Tour X is a newly developed ball developed by former tennis star Robin Söderling together with Sweden's Simon Vasquez\r\n\r\nPadel Tour X is a premium paddle ball with a huge feel and a great durability. The ball is made with the best blanket available on the market.\r\n\r\nThe ball plays at a regular speed with a comfortable feeling to hit but still has enough speed to be sent off the field in smash modes.",
+        "specification": "",
+        "price": "10.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "rs-padel-tour-x",
+        "rating": null,
+        "image": "padeltourx_840x.jpeg",
+        "category": [
+            2
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 13,
+    "fields": {
+        "sku": "10008",
+        "name": "Bullpadel Hack M",
+        "description": "Bullpadel Hack Hybrid has  a  Hybrid  sole that is 100% specially developed for just padel. The sole is divided in the middle with one half consisting of a herringbone pattern, Herringbone Sole  and the other half with \"stopping points\", Dots Sole . This means that the shoe is very suitable for both the older artificial turf with straight standing fiber (and relatively much sand on the surface) and the newer \"curling grass\" (with significantly less sand) which is used on the World Padel Tour.",
+        "specification": "",
+        "price": "109.00",
+        "cloth_size": false,
+        "shoe_size_man": true,
+        "shoe_size_woman": false,
+        "slug": "bullpadel-hack--m",
+        "rating": null,
+        "image": "hackhybridvitsvart21_840x.jpeg",
+        "category": [
+            3,
+            11
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 14,
+    "fields": {
+        "sku": "10010",
+        "name": "RS Classic Padel Bag",
+        "description": "RS Classic Padel Bag is a stylish bag from RS that can be combined nicely with all of the RS racket models. A delicious and classic design that has plenty of space and is incredibly practical. Thanks to the classic look, this is a bag that can also be combined with Padel rackets from other brands.",
+        "specification": "",
+        "price": "89.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "rs-classic-padel-bag",
+        "rating": null,
+        "image": "RSRS_840x.jpeg",
+        "category": [
+            4
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 15,
+    "fields": {
+        "sku": "10011",
+        "name": "Bullpadel Vigia",
+        "description": "A nice training / match jersey in functional material from Bullpadel.",
+        "specification": "",
+        "price": "29.00",
+        "cloth_size": true,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "bullpadel--vigia",
+        "rating": null,
+        "image": "Vigiagra_420x.jpeg",
+        "category": [
+            14
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 16,
+    "fields": {
+        "sku": "10012",
+        "name": "Bullpadel Yali Blue",
+        "description": "Stylish and stylish tank top from Bullpadel's World Padel Tour 2021 collection. The functional material makes you feel dry and mobile during the entire training session.\r\n\r\nMade of 80% nylon and 20% elastane.",
+        "specification": "",
+        "price": "29.00",
+        "cloth_size": true,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "bullpadel-yali-blue",
+        "rating": "0.00",
+        "image": "yalibla_420x.jpeg",
+        "category": [
+            5,
+            15
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 17,
+    "fields": {
+        "sku": "10015",
+        "name": "Starvie Basalto Osiris",
+        "description": "This year's edition of the popular StarVie Basalto Osiris 2021 is back in a new design. StarVie Basalto is a teardrop-shaped paddle racket with a good balance between power and control. The racket has a soft and forgiving core that gives a good bounce in the ball when struck.\r\n\r\nBasalto is made of 100% carbon fiber and the exclusive material is basalt. The combination gives a longer durability and resilience while giving more control. The ribbed surface  Star-Shaped Relief gives increased effect and spin and because it is cast, the ribbed surface does not disappear.",
+        "specification": "Weight: 350-385 gr\r\n\r\nFrame profile: 38 mm\r\n\r\nForm: Drop\r\n\r\nBalance: Medium\r\n\r\nCase: Bag",
+        "price": "199.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "starvie-basalto-osiris-2021",
+        "rating": null,
+        "image": "basalto_420x.jpeg",
+        "category": [
+            1,
+            10
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 18,
+    "fields": {
+        "sku": "10016",
+        "name": "Starvie Titania Kepler",
+        "description": "Kepler, this is perfect for the average player who is ready to take his paddle to the next level. Kepler is a stable rack that offers the player a lot of comfort, control and speed in every stroke. The rack has a core in fiberglass that is softer than carbon fiber and therefore easier to play with, and that it is more gentle on the elbow. To be extra gentle on the elbow, the rack also has Starvies Titania Core, for increased stability.\r\n\r\nKepler also has Starvie's own Tubular extreme technology, for an extended sweetspot that results in a more forgiving rack.",
+        "specification": "Weight: 350-385 gr\r\n\r\nFrame profile: 38 mm\r\n\r\nShape: Round\r\n\r\nBalance: Medium\r\n\r\nCase: Included",
+        "price": "119.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "starvie-titania-kepler",
+        "rating": null,
+        "image": "starvie1_420x.jpeg",
+        "category": [
+            1,
+            10
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 19,
+    "fields": {
+        "sku": "10017",
+        "name": "Starvie Triton 2021",
+        "description": "StarVie Triton 2021 is this year's new model. Triton has the popular hybrid shape between diamond and drop shape together with Star Balance technology at the heart for a cruel balance and stability. The rack has a sweetspot that sits slightly higher up in the rack's hitting surface and together with their Full Plane Effect, which gives a structure to the surface, you get a good kick in your strokes. \r\n\r\nUnlike the StarVie Triton Pro, this rack has a softer core for increased bounce and impact power. The hitting surface consists of 100% carbon fiber which gives the rack a good elasticity and durability. This year's edition has 1 cm longer handle than before to be able to use double socket in backhand. A real top racket for the aggressive player in the medium and advanced levels",
+        "specification": "Weight: 350-385 gr\r\n\r\nFrame profile: 38 mm\r\n\r\nForm: Drop\r\n\r\nBalance: High\r\n\r\nCore: Eva Soft\r\n\r\nCase: Bag",
+        "price": "179.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "starvie-trition-2021",
+        "rating": null,
+        "image": "triton123_420x.jpeg",
+        "category": [
+            1,
+            10
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 20,
+    "fields": {
+        "sku": "10019",
+        "name": "Head Evo Sanyo 2021",
+        "description": "Head Evo Sanyo - the simplified version of the fantastic Alpha Pro- Sanyo Gutierrez weapon on WPT. \r\n\r\nThe racket has a large sweet spot and a soft hitting surface, which makes the racket very forgiving and rewarding to play with. This also makes the rack more gentle and dampens vibrations to ensure that your first racket that you are to develop with is easy to handle and that the playability is high. \r\n\r\nThe frame is made of carbon fiber, which makes the rack more durable and protects it against any cracks and other things.",
+        "specification": "Weight: 365 gr\r\n\r\nFrame profile: 38 mm \r\n\r\nForm: Drop\r\n\r\nBalance: Medium\r\n\r\nCase: Not included",
+        "price": "89.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "head-evo-sanyo-2021",
+        "rating": null,
+        "image": "evosanyo_420x.jpeg",
+        "category": [
+            1,
+            9
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 21,
+    "fields": {
+        "sku": "10020",
+        "name": "Bullpadel Libra 2021",
+        "description": "Bullpadel Libra 21 is an easy-to-play paddle racket that is suitable for most exercisers and beginners who are looking for a quality racket to develop their game.\r\n\r\nLibra 21 weighs less than the standard weight, this together with the round shape and low balance point makes this a good all-round racket that offers the player a balanced mix of speed and control with very forgiving qualities.",
+        "specification": "Specifications:\r\n\r\nWeight: 350-360 Grams\r\n\r\nShape: Round\r\n\r\nBalance: Low\r\n\r\nControl: 60/70",
+        "price": "79.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "bullpadel-libra-2021",
+        "rating": null,
+        "image": "libra_420x.jpeg",
+        "category": [
+            1,
+            8
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 22,
+    "fields": {
+        "sku": "10018",
+        "name": "Starvie Warrior",
+        "description": "Awesome paddle bag from Starvie!\r\n\r\nThe paddle bag that Matí \"The Warrior\" Díaz uses! \r\n\r\nHigh quality with cushioning cushions on the back for comfort. \r\nLarge central compartment with 2 independent side compartments. \r\n\r\nSeparate and ventilating shoe compartment. \r\n\r\nExtra pocket on top for phone, keys and wallet. \r\n\r\n60 x 33 x 34 cm",
+        "specification": "",
+        "price": "59.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "starvie-warrior",
+        "rating": null,
+        "image": "warriorbag_420x.jpeg",
+        "category": [
+            4
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 23,
+    "fields": {
+        "sku": "10021",
+        "name": "Head Tour Team",
+        "description": "Head Tour Team MC is a spacious paddle bag with space for rackets, shoes, some clothes and accessories. The bag is equipped with a thermo-protected compartment and a backpack function.",
+        "specification": "",
+        "price": "79.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "head-tour-team-monstercombi",
+        "rating": null,
+        "image": "tourteammonstercombi_420x.jpeg",
+        "category": [
+            4
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 24,
+    "fields": {
+        "sku": "10022",
+        "name": "Bullpadel Mid Capacity",
+        "description": "Bullpadel Mid Capacity is a delicious and practical paddle bag from Bullpadel where you can fit all your equipment. The bag is made of a durable nylon material with a large middle compartment and a side compartment with thermal lining that holds two rackets and protects them from blows and temperature differences. There is also a separate shoe compartment. Shoulder straps and padded surfaces allow the bag to be carried comfortably as a backpack.\r\n\r\nDimensions: 59.5 x 30 x 30 cm",
+        "specification": "",
+        "price": "69.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "bullpadel-mid-capacity",
+        "rating": null,
+        "image": "midcap_420x.jpeg",
+        "category": [
+            4
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 25,
+    "fields": {
+        "sku": "10023",
+        "name": "Bullpadel Hesacore Grip",
+        "description": "In a very short time, the new innovative ergonomic grip HESACORE, which is\r\nmade of a silicone material, has become very popular. You remove the base wrap of the racket and step on the HESACORE.\r\n\r\nAny number of overgrips are then wound on this grip. HESACORE\r\nconsists of a number of hexagonal squares that give rise to more contact surfaces for the fingers and thus relieve the pressure. This reduces the vibrations that may give rise to the\r\npaddle elbow. Thanks to its grid pattern, air zones are also created, which means that many people\r\nfeel that the abuse is not as sweaty.",
+        "specification": "",
+        "price": "19.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "bullpadel-hesacore-grip",
+        "rating": null,
+        "image": "hesacore_420x.png",
+        "category": [
+            6
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 26,
+    "fields": {
+        "sku": "10024",
+        "name": "Wilson Overgrip 3-pack",
+        "description": "Wilson's best-selling abuses.\r\n\r\nIs one of the most popular on the market. Nice absorption with a reasonably sticky feeling. A staff favorite with us at Padelexperterna.",
+        "specification": "",
+        "price": "12.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "wilson-pro-overgrip-3pack",
+        "rating": null,
+        "image": "wilson_420x.png",
+        "category": [
+            6
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 27,
+    "fields": {
+        "sku": "10025",
+        "name": "Bullpadel Custom Weight",
+        "description": "PROTECTOR CUSTOM WEIGHT gives the player the opportunity to individually adjust the rack's weight and balance for the top models HACK 2, HACK CONTROL 2, VERTEX-3 and VERTEX-3 CONTROL by being able to put on 1-3 weights of 3 grams.",
+        "specification": "",
+        "price": "13.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "bullpadel-protector-custom-weight",
+        "rating": null,
+        "image": "3x3_420x.png",
+        "category": [
+            6
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 28,
+    "fields": {
+        "sku": "10026",
+        "name": "Pascal Box",
+        "description": "Do you think that the pressure in your paddle balls does not last long enough? Then you can do something about it now! With Pascal Box, you keep the pressure in the balls for a longer time compared to having them in the regular tube.",
+        "specification": "",
+        "price": "29.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "pascal-box",
+        "rating": null,
+        "image": "pascal_420x.jpeg",
+        "category": [
+            6
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 29,
+    "fields": {
+        "sku": "10028",
+        "name": "Total Grip",
+        "description": "TotalGrip is a non-slip cream that is perfect for you who need to stabilize your grip & reduce sweating in your hands. \r\n\r\nThe cream is made & developed for the sport Padel, but works well in other sports contexts. \r\n\r\nTotalGrip's unique properties repel water, prevent sweat and leave maximum grip and friction in wet, sweaty & hot conditions. \r\n\r\nTotalGrip gives you superior grip and maximum control so you can perform at the top.",
+        "specification": "",
+        "price": "17.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "total-grip",
+        "rating": null,
+        "image": "4oon_420x.jpeg",
+        "category": [
+            6
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 30,
+    "fields": {
+        "sku": "10025",
+        "name": "Bullpadel Hack W",
+        "description": "Bullpadel Hack Hybrid has a Hybrid sole that is 100% specially developed for just padel. The sole is divided in the middle with one half consisting of a herringbone pattern, Herringbone Sole and the other half with \"stopping points\", Dots Sole . This means that the shoe is very suitable for both the older artificial turf with straight standing fiber (and relatively much sand on the surface) and the newer \"curling grass\" (with significantly less sand) which is used on the World Padel Tour.",
+        "specification": "",
+        "price": "109.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": true,
+        "slug": "bullpadel-hack-w",
+        "rating": null,
+        "image": "flowhybrid1_420x.jpeg",
+        "category": [
+            3,
+            12
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 31,
+    "fields": {
+        "sku": "10027",
+        "name": "Bullpadel Vichada Polo",
+        "description": "A nice functional polo from Bullpadel. It is part of Bullpadel's World Padel Tour collection. Made of 90% Polyester and 10% Elastane.",
+        "specification": "",
+        "price": "39.00",
+        "cloth_size": true,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "bullpadel-vichada-polo",
+        "rating": null,
+        "image": "vichadapolo_420x.jpeg",
+        "category": [
+            5,
+            14
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 32,
+    "fields": {
+        "sku": "10030",
+        "name": "Bullpadel Vetas",
+        "description": "Trendy paddle shorts from Bullpadel's popular World Padel Tour collection. The trousers consist of 92% polyester which means that the sweat is transported away from the body and does not stick to the trousers. The pants come with two outer pockets that are perfect to put the balls in.",
+        "specification": "",
+        "price": "19.00",
+        "cloth_size": true,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "bullpadel-vetas",
+        "rating": null,
+        "image": "vetas_1_420x.jpeg",
+        "category": [
+            5,
+            14
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 33,
+    "fields": {
+        "sku": "10029",
+        "name": "Bullpadel Viota",
+        "description": "Bullpadel Viota is a stylish hoodie from  Bullpadel´s World Padel Tour collection.",
+        "specification": "",
+        "price": "49.00",
+        "cloth_size": true,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "bullpadel-viota",
+        "rating": null,
+        "image": "viota_420x.jpeg",
+        "category": [
+            5,
+            14
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 34,
+    "fields": {
+        "sku": "10031",
+        "name": "Bullpadel Yotoco",
+        "description": "Stylish and stylish skirt from Bullpadel's World Padel Tour 2021 collection. The functional material makes you feel dry and mobile during the entire training session.",
+        "specification": "",
+        "price": "29.00",
+        "cloth_size": true,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "bullpadel-yotoco",
+        "rating": null,
+        "image": "yotoco_420x.jpeg",
+        "category": [
+            5,
+            15
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 35,
+    "fields": {
+        "sku": "10032",
+        "name": "Bullpadel Yondo",
+        "description": "Bullpadel Yondo is a stylish hoodie for ladies from Bullpadel that is part of  Bullpadel´s World Padel Tour collection. \r\n\r\nThe hoodie has a hood, zipper and a pocket on each side with a zipper.",
+        "specification": "",
+        "price": "49.00",
+        "cloth_size": true,
+        "shoe_size_man": false,
+        "shoe_size_woman": false,
+        "slug": "bullpadel-yondo",
+        "rating": null,
+        "image": "yondotroja_420x_fDwC7to.jpeg",
+        "category": [
+            5,
+            15
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 36,
+    "fields": {
+        "sku": "10033",
+        "name": "Adidas Courtjam W",
+        "description": "The shoes for you who want to be on your toes. Now you can dominate the paddle court with high comfort. The forefoot is made of ventilating mesh material and keeps the foot cool throughout the match. A responsive midsole with Adidas Bounce technology provides energy when shooting and shock absorption when trampling. The midfoot provides stability in any change of direction. The sole of the shoes is patterned herringbone to withstand all the stresses during the paddle match",
+        "specification": "",
+        "price": "89.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": true,
+        "slug": "adidas-courtjam-w",
+        "rating": null,
+        "image": "sko_420x.jpeg",
+        "category": [
+            3,
+            12
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 37,
+    "fields": {
+        "sku": "10035",
+        "name": "Adidas Gamecourt M",
+        "description": "The most comfortable shoe from adidas, designed for you to dominate the paddle court. Now you can enhance your game without having to leave your comfort zone. The adidas Gamecourt upper is in mash material to keep your shoes cool throughout the match. The upper of the shoe has a supporting TPU that is shaped to your foot for a comfortable and fixed fit. \r\nThe shoe has a Cloudfoam midsole that cushions every step, all so that you can dominate with the highest comfort on the track. The sole of the shoes is patterned herringbone to withstand all the stresses during the paddle match",
+        "specification": "",
+        "price": "109.00",
+        "cloth_size": false,
+        "shoe_size_man": true,
+        "shoe_size_woman": false,
+        "slug": "adidas-gamecourt-m",
+        "rating": null,
+        "image": "adidaspadelshoe1_1_420x.jpeg",
+        "category": [
+            3,
+            11
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 38,
+    "fields": {
+        "sku": "10034",
+        "name": "Adidas Gamecourt W",
+        "description": "The most comfortable shoe from adidas, designed for you to dominate the paddle court. Now you can enhance your game without having to leave your comfort zone. The adidas Gamecourt upper is in mash material to keep your shoes cool throughout the match. The upper of the shoe has a supporting TPU that is shaped to your foot for a comfortable and fixed fit. \r\nThe shoe has a Cloudfoam midsole that cushions every step, all so that you can dominate with the highest comfort on the track. The sole of the shoes is patterned herringbone to withstand all the stresses during the paddle match",
+        "specification": "",
+        "price": "109.00",
+        "cloth_size": false,
+        "shoe_size_man": false,
+        "shoe_size_woman": true,
+        "slug": "adidas-gamecourt-w",
+        "rating": null,
+        "image": "gamecourtw_420x.jpeg",
+        "category": [
+            3,
+            12
+        ]
+    }
+},
+{
+    "model": "products.product",
+    "pk": 39,
+    "fields": {
+        "sku": "10036",
+        "name": "Bullpadel Hack Fly M",
+        "description": "Bullpadel Hack Hybrid Fly is Paquito Navarro's competition shoe with Hybrid sole that is 100% specially developed for just paddle. The sole is divided in the middle with one half consisting of a herringbone pattern and the other half with \"stop points\". This means that the shoe is very suitable for both the older artificial turf with straight fibers (and relatively much sand on the surface) and the newer \"curl grass\" (with significantly less sand) which is used on the World Padel Tour, among other things.",
+        "specification": "",
+        "price": "139.00",
+        "cloth_size": false,
+        "shoe_size_man": true,
+        "shoe_size_woman": false,
+        "slug": "bullpadel-hack-fly-m",
+        "rating": null,
+        "image": "hackhybrid_420x.jpeg",
+        "category": [
+            3,
+            11
+        ]
+    }
+}
+]
