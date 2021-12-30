@@ -123,6 +123,7 @@
 
     .toast-body {
         padding-top: 0.50rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -139,9 +140,4 @@
     .padelshoes-picture {
         height: 150px;
     }
-
-    /* .custom-toast {
-        margin-bottom: 1rem;
-        max-width: 400px !important;
-    } */
 }
