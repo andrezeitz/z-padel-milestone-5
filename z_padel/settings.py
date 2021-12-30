@@ -114,7 +114,7 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = '/'
 
-WSGI_APPLICATION = 'z-padel.wsgi.application'
+WSGI_APPLICATION = 'z_padel.wsgi.application'
 
 
 # Database

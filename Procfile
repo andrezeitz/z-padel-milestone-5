@@ -1,1 +1,1 @@
-web: gunicorn z-padel.wsgi:application
+web: gunicorn z_padel.wsgi:application
