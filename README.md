@@ -1,5 +1,5 @@
 # Z Padel
-Z Padel is a B2C business selling padel equipment to the avarge padel tennis player. We have products from all the major padel brands so the user is able to find the correct equipment. We sell everything from rackets to cloth and have a lot of different sizes to fit everyrone.
+Z Padel is a B2C business selling padel equipment to the avarge padel tennis player. We have products from all the major padel brands so the user is able to find the correct equipment. We sell everything from rackets to cloth and have a lot of different sizes to fit everyone.
 
 This website can not be used as a template for a business since it's a project for educational purposes.
 
@@ -61,10 +61,11 @@ Live website: [Z Padel](https://z-padel.herokuapp.com/)
   * I can get an order confirmation when someone is making a purchase
 
 * I planned the project [here](https://github.com/andrezeitz/z-padel/projects/1)
+
 ## Design
 
 ### Fonts
-I have chosen Lato for the header and logo as it is easy to read and has sufficient contrast to the main body font. The small caps style is used by Roboto that I feel look very clean in the quiz.
+I have chosen Lato for the headers as it is easy to read and has sufficient contrast to the main body font. Roboto for all other text.
 
 ### Colors
 The site features complementary Blue Crayola Forest Green Web, Pacific Blue, white and black to create a good contrast and improve readability.
@@ -76,9 +77,11 @@ The colors chosen are:
 
 #### Desktop
 
+<img width="698" alt="WEB" src="https://user-images.githubusercontent.com/85236391/147922980-ef5683d9-9647-4777-9a3e-68ec68b2da39.png">
 
 #### Mobile
 
+<img width="696" alt="MOBILE" src="https://user-images.githubusercontent.com/85236391/147923016-761bbe79-8b11-4963-b383-79cc32be64f2.png">
 
 ## Technologies
 
@@ -105,34 +108,21 @@ The colors chosen are:
 All colors was checked in a contrast checker and pass the test.
 
 
-
 ## Features
 The website has the following features:
 ### Navigation bar
-Navigation bar is visible on the top of the website with a logo that is clickable to update the site. When someone is logged in the navigation bar will change so the user can see there username and a logout button om the right top side. The registration and login links will also disappear once logged in. The navigation links will collapse on smaller screens.
-
-
 
 ### Home
-The home page contains a big hero picture with a "Book an Appointment" button on it. On smaller screen the button will be under the hero picture to fit better.
-It also have information about the company like how the work and how focus on quality is very important.
 
+### Products
 
+### Cart
 
-### Services
-The service page contains a table with all the treatments the company is doing and price information about each service.
+### Checkout
 
+### Checkout Success
 
-
-
-
-### Registration/Login
-This links are visible in the top right corner of the navigation bar if there is no user logged in to the page.
-
-
-### User/Logout
-The user that is logged in to the site will be visable in the top right corner and under it will be a log out link.
-
+### Account
 
 ### Footer
 The footer contains the opening hours and contact information about the company.
