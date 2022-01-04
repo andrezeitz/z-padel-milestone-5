@@ -5,6 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col text-center">
+            <!-- Order success container -->
             <h3 class="text-center mb-4 mt-4">THANK YOU!</h3>
             <hr>
             <p>Your order was created on: <span class="blue-text">{{ order.date }}</span></p>
@@ -20,6 +21,7 @@
                         <h6 class="success-header">Items you ordered:</h6>
                     </div>
                 </div>
+                <!-- Items ordered -->
                 {% for item in order.lineitems.all %}
                 <div class="row">
                     <div class="col">
@@ -30,6 +32,7 @@
                     </div>
                 </div>
                 {% endfor %}
+                <!-- Total Price -->
                 <div class="row">
                     <div class="col mt-2">
                         <span class="success-text font-weight-bold">Total: </span>
@@ -41,32 +44,38 @@
                         <h6 class="success-header">We will deliver to:</h6>
                     </div>
                 </div>
+                <!-- Delivery -->
                 <div class="row">
                     <div class="col">
+                        <!-- Name -->
                         <span class="success-text font-weight-bold">Name: </span>
                         <span class="success-text"> {{ order.full_name }}</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
+                        <!-- Adress -->
                         <span class="success-text font-weight-bold">Address: </span>
                         <span class="success-text"> {{ order.street_address }}</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
+                        <!-- Postal Code -->
                         <span class="success-text font-weight-bold">Postal Code: </span>
                         <span class="success-text"> {{ order.postcode }}</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
+                        <!-- City -->
                         <span class="success-text font-weight-bold">City: </span>
                         <span class="success-text"> {{ order.city }}</span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
+                        <!-- Phone Number -->
                         <span class="success-text font-weight-bold">Phone Number: </span>
                         <span class="success-text"></span> {{ order.phone_number }}</span>
                     </div>
