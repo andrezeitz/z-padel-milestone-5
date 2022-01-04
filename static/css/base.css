@@ -76,7 +76,7 @@ body {
 }
 
 .nav-link:hover {
-    border-bottom: 3px solid black;
+    border-bottom: 2px solid #007bff
 }
 
 .dropdown-menu {

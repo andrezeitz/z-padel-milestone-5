@@ -64,3 +64,24 @@ select option[value=""] {
     margin: 0;
     height: 100%;
 }
+
+/* Success Checkout */
+
+.success-header {
+    text-transform: uppercase;
+    color: #007bff;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.order-confirmation {
+    text-align: center;
+}
+
+.item-success-text {
+    padding: 0 5px 0 5px;
+}
+
+.blue-text {
+    color: #007bff;
+}
