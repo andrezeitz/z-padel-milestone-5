@@ -34,7 +34,7 @@ class Order(models.Model):
         """
         self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
         if self.order_total < settings.FREE_SHIPPING:
-            self.delivery_cost = self.order_total * 10
+            self.delivery_cost = self.order_total
         else:
             self.delivery_cost = 0
         self.grand_total = self.order_total + self.delivery_cost
