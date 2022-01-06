@@ -13,6 +13,7 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
+    selected_category = ""
 
     if request.GET:
         if 'sort' in request.GET:
@@ -29,6 +30,8 @@ def all_products(request):
             products = products.order_by(sortkey)
 
         if 'category' in request.GET:
+            print(request.GET['category'])
+            selected_category = request.GET['category']
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
@@ -46,6 +49,7 @@ def all_products(request):
 
     context = {
         'products': products,
+        'selected_category': selected_category,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
@@ -66,13 +70,14 @@ def all_products(request):
 #     return render(request, 'products/product_detail.html', context)
 
 
-def product_detail(request, slug):
+def product_detail(request, selected_category, slug):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, slug=slug)
 
     context = {
         'product': product,
+        'selected_category': selected_category
     }
 
     return render(request, 'products/product_detail.html', context)
