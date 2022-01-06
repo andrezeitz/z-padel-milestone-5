@@ -9,8 +9,13 @@
             <h3 class="text-center mb-4 mt-4">THANK YOU!</h3>
             <hr>
             <p>Your order was created on: <span class="blue-text">{{ order.date }}</span></p>
-            <p>Your order number is: <span class="blue-text">{{ order.order_number }}</span></p>
+            <p>Your order number: <span class="blue-text">{{ order.order_number }}</span></p>
             <p>We'll email you an order confirmation in a couple of minutes.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col text-center mb-2 mt-2">
+            <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg">Keep Shopping</a>
         </div>
     </div>
     <div class="row">
@@ -26,17 +31,23 @@
                 <div class="row">
                     <div class="col">
                         <span class="item-success-text font-weight-bold">
-                            {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}
+                            <span class="blue-text">{{ item.quantity }}</span> {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}
                         </span>
-                        <span class="item-success-text">{{ item.quantity }} <span class="blue-text">@ </span> €{{ item.product.price }}</span>
+                        <span class="item-success-text"><span class="blue-text"> / </span> €{{ item.product.price }}</span>
                     </div>
                 </div>
                 {% endfor %}
                 <!-- Total Price -->
                 <div class="row">
-                    <div class="col mt-2">
+                    <div class="col mt-3">
+                        <span class="success-text font-weight-bold">Delivery: </span>
+                        <span class="success-text"> €{{ order.delivery_cost }}</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
                         <span class="success-text font-weight-bold">Total: </span>
-                            <span class="success-text"> €{{ order.grand_total }}</span>
+                        <span class="success-text"> €{{ order.grand_total }}</span>
                     </div>
                 </div>
                 <div class="row">

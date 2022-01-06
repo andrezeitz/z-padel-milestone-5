@@ -78,9 +78,9 @@ select option[value=""] {
     text-align: center;
 }
 
-.item-success-text {
+/* .item-success-text {
     padding: 0 5px 0 5px;
-}
+} */
 
 .blue-text {
     color: #007bff;

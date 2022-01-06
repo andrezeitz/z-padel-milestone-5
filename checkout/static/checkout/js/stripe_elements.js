@@ -69,9 +69,9 @@ form.addEventListener('submit', function(ev) {
                     name: $.trim(form.full_name.value),
                     phone: $.trim(form.phone_number.value),
                     email: $.trim(form.email.value),
-                    adress:{
-                        street: $.trim(form.street_address.value),
-                        postcode: $.trim(form.postcode.value),
+                    address:{
+                        line1: $.trim(form.street_address.value),
+                        postal_code: $.trim(form.postcode.value),
                         city: $.trim(form.city.value),
                     }
                 }
@@ -79,9 +79,9 @@ form.addEventListener('submit', function(ev) {
             shipping: {
                 name: $.trim(form.full_name.value),
                 phone: $.trim(form.phone_number.value),
-                adress:{
-                    street: $.trim(form.street_address.value),
-                    postcode: $.trim(form.postcode.value),
+                address:{
+                    line1: $.trim(form.street_address.value),
+                    postal_code: $.trim(form.postcode.value),
                     city: $.trim(form.city.value),
                 }
             },    
