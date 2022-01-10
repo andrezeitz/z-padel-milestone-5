@@ -1,22 +1,24 @@
 <div class="toast custom-toast rounded-0 border-top-0" data-autohide="false">
-    <div class="arrow-up arrow-warning"></div>
-    <div class="w-100 toast-capper bg-warning"></div>
+    <div class="arrow-up arrow-success"></div>
+    <div class="w-100 toast-capper bg-success"></div>
     <div class="toast-header bg-white text-dark">
-        <i class="far fa-check-circle text-success uppercase"></i> <h6 class="success-topic mr-auto"> Deleted from your bag!</h6>
+        <i class="far fa-check-circle text-success uppercase"></i> <h6 class="toast-topic mr-auto"> Added to your bag!</h6>
         <button type="button" class="ml-2 mb-1 close text-dark" data-dismiss="toast" aria-label="Close">
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
     <div class="toast-body bg-white">
-        {% if not on_profile_page %}
+        {% if grand_total and not on_profile_page %}
         <div class="bag-notification-wrapper">
             <div class="row">
                 <div class="col-3">
                     <img class="w-100" src="{{ product.image.url }}" alt="{{ product.name }}">
                 </div>
-                <div class="col">
-                        <p class="my-0 mt-md-2">{{ product.name }}</p>
-                        <p class="my-0">€ {{ product.price }}</p>                        
+                <div class="col mt-md-2">
+                    <span class="product-name-link">
+                        {{ product.name }}
+                    </span>
+                    <p class="my-0"> € {{ product.price }}</p>                        
                 </div>
                 <hr class="mt-1 mb-3">
             </div>
@@ -29,5 +31,5 @@
             </a>
         {% endif %}
     </div>
-    <div class="w-100 toast-capper bg-warning"></div>
+    <div class="w-100 toast-capper bg-success"></div>
 </div>

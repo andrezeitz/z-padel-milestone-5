@@ -27,12 +27,12 @@
                                 </div>
                             </td>
                             <!-- Product name and size if product has size -->
-                            <td width="170">
+                            <td width="200">
                                 <h6>
-                                    <a href="{{ selected_category }}/{{ product.slug }}" class="product-name-link">
+                                    <span class="product-name-link my-0">
                                         {{ item.product.name }}
-                                    </a>
-                                    <p class="my-0 mt-md-1">
+                                    </span>
+                                    <p class="my-0">
                                         {% if item.product.cloth_size or item.product.shoe_size_man or item.product.shoe_size_woman %}
                                         Size: {{ item.size|upper }}
                                         {% endif %}

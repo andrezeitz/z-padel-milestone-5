@@ -30,7 +30,6 @@ def all_products(request):
             products = products.order_by(sortkey)
 
         if 'category' in request.GET:
-            print(request.GET['category'])
             selected_category = request.GET['category']
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -56,18 +55,6 @@ def all_products(request):
     }
 
     return render(request, 'products/products.html', context)
-
-
-# def product_detail(request, product_id):
-#     """ A view to show individual product details """
-
-#     product = get_object_or_404(Product, pk=product_id)
-
-#     context = {
-#         'product': product,
-#     }
-
-#     return render(request, 'products/product_detail.html', context)
 
 
 def product_detail(request, selected_category, slug):

@@ -28,9 +28,9 @@
                                                 <!-- Product name and size if product has size -->
                                                 <td width="200">
                                                     <h6>
-                                                        <a href="{{ selected_category }}/{{ product.slug }}" class="product-name-link">
+                                                        <span class="product-name-link">
                                                             {{ item.product.name }}
-                                                        </a>
+                                                        </span>
                                                         <p class="my-0 mt-md-1 size-text">
                                                             {% if item.product.cloth_size or item.product.shoe_size_man or item.product.shoe_size_woman %}
                                                             Size: {{ item.size|upper }}

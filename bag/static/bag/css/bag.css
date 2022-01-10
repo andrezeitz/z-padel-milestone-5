@@ -18,6 +18,10 @@
     padding: 1.25rem 0.75rem 0 0.75rem;
 }
 
+.product-name-link {
+    color: #007bff;
+}
+
 .checkout-container {
     padding: 20px;
     text-transform: uppercase;
