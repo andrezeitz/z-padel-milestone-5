@@ -23,4 +23,9 @@ class UserProfileForm(forms.ModelForm):
 
         self.fields['default_name'].widget.attrs['autofocus'] = True
         for field in self.fields:
+            if self.fields[field].required:
+                placeholder = f'{placeholders[field]} *'
+            else:
+                placeholder = placeholders[field]
+                self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].label = False
