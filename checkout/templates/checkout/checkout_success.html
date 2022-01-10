@@ -1,22 +1,35 @@
 {% extends "base.html" %}
 {% load static %}
+{% load bag_tools %}
 
 {% block content %}
 <div class="container">
     <div class="row">
         <div class="col text-center">
             <!-- Order success container -->
+            {% if from_profile %}
+            <h3 class="text-center mb-4 mt-4">ORDER SUMMARY!</h3>
+            {% else %}
             <h3 class="text-center mb-4 mt-4">THANK YOU!</h3>
+            {% endif %}
             <hr>
             <p>Your order was created on: <span class="blue-text">{{ order.date }}</span></p>
             <p>Your order number: <span class="blue-text">{{ order.order_number }}</span></p>
+            {% if from_checkout %}
             <p>We'll email you an order confirmation in a couple of minutes.</p>
+            {% endif %}
         </div>
     </div>
     <div class="row">
+        {% if from_profile %}
+        <div class="col text-center mb-2 mt-2">
+            <a href="{% url 'profile' %}" class="btn btn-outline-dark btn-lg">Back to Profile</a>
+        </div>
+        {% else %}
         <div class="col text-center mb-2 mt-2">
             <a href="{% url 'home' %}" class="btn btn-outline-dark btn-lg">Keep Shopping</a>
         </div>
+        {% endif %}
     </div>
     <div class="row">
         <div class="col">
@@ -31,9 +44,14 @@
                 <div class="row">
                     <div class="col">
                         <span class="item-success-text font-weight-bold">
-                            <span class="blue-text">{{ item.quantity }}</span> {{ item.product.name }}{% if item.product_size %} - Size {{ item.product.size|upper }}{% endif %}
+                            {{ item.quantity }}<span class="blue-text"> x</span> {{ item.product.name }}
                         </span>
-                        <span class="item-success-text"><span class="blue-text"> / </span> €{{ item.product.price }}</span>
+                        <span class="small">
+                            {% if item.product_size %}
+                                Size - {{ item.product_size|upper }}
+                            {% endif %}
+                        </span>
+                        <span class="item-success-text"><span class="blue-text"> / </span> €{{ item.product.price | calc_subtotal:item.quantity }}</span>
                     </div>
                 </div>
                 {% endfor %}
