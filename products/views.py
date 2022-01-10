@@ -77,7 +77,7 @@ def product_detail(request, selected_category, slug):
 
     context = {
         'product': product,
-        'selected_category': selected_category
+        'selected_category': selected_category,
     }
 
     return render(request, 'products/product_detail.html', context)
