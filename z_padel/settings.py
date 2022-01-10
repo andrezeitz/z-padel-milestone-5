@@ -138,6 +138,9 @@ else:
         }
     }
 
+# DATABASES = {
+#     'default': dj_database_url.parse('postgres://nrsxggpcawtejy:722079e49a20881b03ca2050c6cc187b3efa51fffe952882b728d51c3ba644e8@ec2-34-250-92-138.eu-west-1.compute.amazonaws.com:5432/ddlo4eh24bsprd')
+# }
 
 
 
