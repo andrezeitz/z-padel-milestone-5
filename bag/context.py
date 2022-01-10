@@ -2,6 +2,8 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+from decimal import Decimal
+
 
 def bag_contents(request):
 
@@ -33,7 +35,7 @@ def bag_contents(request):
                 })
 
     if total < settings.FREE_SHIPPING:
-        delivery = 10
+        delivery = total * Decimal(settings.STANDARD_DELIVERY_FEE/100)
     else:
         delivery = 0
 
@@ -48,4 +50,4 @@ def bag_contents(request):
         'grand_total': grand_total,
     }
 
-    return context 
+    return context
