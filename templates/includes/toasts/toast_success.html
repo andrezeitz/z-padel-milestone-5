@@ -15,7 +15,7 @@
                     <img class="w-100" src="{{ product.image.url }}" alt="{{ product.name }}">
                 </div>
                 <div class="col mt-md-2">
-                    <a href="{{ product.get_absolute_url }}" class="product-name my-0">
+                    <a href="{{ selected_category }}/{{ product.slug }}" class="product-name my-0">
                         {{ product.name }}
                     </a>
     
