@@ -81,8 +81,16 @@
                             <!-- User account -->
                             <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
+                                    {% if request.user.is_authenticated %}
+                                    <div class="blue-text"><i class="fas fa-user fa-lg"></i></div>
+                                    {% else %}
                                     <div><i class="fas fa-user fa-lg"></i></div>
+                                    {% endif %}
+                                    {% if request.user.is_authenticated %}
+                                    <p class="my-0 account-link">{{ user }} <i class="fas fa-angle-down"></i></p>
+                                    {% else %}
                                     <p class="my-0 account-link">Account <i class="fas fa-angle-down"></i></p>
+                                    {% endif %}
                                 </div>
                             </a>
                             <div class="dropdown-menu border-0" aria-labelledby="user-options">
