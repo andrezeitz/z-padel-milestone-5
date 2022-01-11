@@ -22,19 +22,20 @@ class StripeWH_Handler:
         Will send the user a confirmation email after purcase
         """
         customer_email = order.email
+
         subject = render_to_string(
             'checkout/confirmation_emails/confirmation_email_subject.txt',
             {'order': order})
         body = render_to_string(
             'checkout/confirmation_emails/confirmation_email_body.txt',
-            {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+            {'order': order, 'contact_email': 'support@z-padel.com'})
 
         send_mail(
             subject,
             body,
-            settings.DEFAULT_FROM_EMAIL,
+            'swe_zeitz@hotmail.com',
             [customer_email]
-        )  
+        )
 
     def handle_event(self, event):
         """
