@@ -35,7 +35,7 @@ def bag_contents(request):
                 })
 
     if total < settings.FREE_SHIPPING:
-        delivery = total * Decimal(settings.STANDARD_DELIVERY_FEE/100)
+        delivery = total * Decimal(settings.STANDARD_DELIVERY_FEE / 100)
         free_delivery_delta = settings.FREE_SHIPPING - total
     else:
         delivery = 0
