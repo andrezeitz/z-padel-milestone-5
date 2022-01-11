@@ -1,1 +1,1 @@
-Thank you for your Order {{ order.order_number }}
+Your order has been received! ({{ order.order_number }})
