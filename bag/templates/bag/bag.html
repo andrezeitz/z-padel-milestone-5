@@ -113,9 +113,19 @@
                         </div>
                         <div class="products-content">
                             <span>Total:</span>
-                                <!-- Total price for bag -->
-                                <h3 class="font-bold">€ {{ total|floatformat:2 }}</h3>
-                            </div>
+                            <!-- Total price for bag -->
+                            <h3 class="font-bold">€{{ grand_total | floatformat:2 }}</h3>
+                            <hr>
+                            <span>Subtotal:</span>
+                            <h5 class="font-bold">€{{ total | floatformat:2 }}</h5>
+                            <span>Delivery:</span>
+                            <h5 class="font-bold">€{{ delivery | floatformat:2 }}</h5>
+                            {% if free_delivery_delta > 0 %}
+                                <p class="mb-1 small text-danger">
+                                    Spend €{{ free_delivery_delta }} more and get free delivery!
+                                </p>
+                            {% endif %}
+                        </div>
                     </div>
                     <!-- Support number -->
                     <div class="support-container">

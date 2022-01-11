@@ -36,8 +36,10 @@ def bag_contents(request):
 
     if total < settings.FREE_SHIPPING:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_FEE/100)
+        free_delivery_delta = settings.FREE_SHIPPING - total
     else:
         delivery = 0
+        free_delivery_delta = 0
 
     grand_total = delivery + total
 
@@ -47,6 +49,7 @@ def bag_contents(request):
         'product_count': product_count,
         'delivery': delivery,
         'free_shipping': settings.FREE_SHIPPING,
+        'free_delivery_delta': free_delivery_delta,
         'grand_total': grand_total,
     }
 

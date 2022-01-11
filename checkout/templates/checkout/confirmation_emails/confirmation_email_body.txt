@@ -1,48 +1,28 @@
 Hello {{ order.full_name }},
 
-Thank you for your order at [Z Padel](https://z-padel.herokuapp.com/).
+Thank you for your order at Z Padel.
 
 We are happy to inform you that your order has been confirmed and will be send to you in 1-3 business days.
 
-Your order number is [{{ order.order_number }}](https://z-padel.herokuapp.com/profile/order_history/{{ order.order_number }}/)
+Your order number is {{ order.order_number }}
 
 Below you will find shipping and order information.
 
-<h4>Deliver to:</h4>
+Delivery to:
 {{ order.full_name }}
 {{ order.street_address }}
-{{ order.postal_code }}
+{{ order.postcode }}
 {{ order.city }}
 
-<h4>Order:</h4>
+Order Summary:
 Order Date: {{ order.date }}
 
 Order Total: €{{ order.order_total }}
 Delivery: €{{ order.delivery_cost }}
-Total: €{{ order.grand_total }}
+Grand Total: €{{ order.grand_total }}
 
+If you have any questions, feel free to contact us at {{ contact_email }}.
 We hope you will be happy with your order.
 
 With kind regards
-Z Padel
-
-
-
-Order Number: {{ order.order_number }}
-Order Date: {{ order.date }}
-
-Order Total: €{{ order.order_total }}
-Delivery: €{{ order.delivery_cost }}
-Total: €{{ order.grand_total }}
-
-Your order will be shipped to {{ order.street_address }} in {{ order.city }}.
-
-We've got your phone number on file as {{ order.phone_number }}.
-
-If you have any questions, feel free to contact us at {{ contact_email }}.
-
-Thank you for your order!
-
-Sincerely,
-
 Z Padel
