@@ -22,7 +22,6 @@ class Product(models.Model):
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     description = models.TextField()
-    specification = models.TextField(null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     cloth_size = models.BooleanField(default=False, null=True, blank=True)
     shoe_size_man = models.BooleanField(default=False, null=True, blank=True)

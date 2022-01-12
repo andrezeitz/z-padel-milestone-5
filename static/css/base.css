@@ -116,7 +116,7 @@ body {
 /* Footer */
 
 footer {
-    /* background: rgb(243, 243, 243) !important; */
+    background: rgb(243, 243, 243) !important;
     height: 100px;
     flex-shrink: 0;
 }
