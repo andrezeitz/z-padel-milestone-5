@@ -150,11 +150,15 @@
     }
 
     .home-hero {
-        height: 400px;
+        height: 350px;
     }
 
     .hero-text {
-        font-size: 1.5rem
+        font-size: 1.2rem
+    }
+
+    .shop-now-button {
+        padding: 8px;
     }
 
     .padel-items-topic {
