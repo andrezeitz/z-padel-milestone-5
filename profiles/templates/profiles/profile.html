@@ -18,7 +18,7 @@
                 <form class="mt-2" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn btn-dark float-right">UPDATE PROFILE</button>
+                <button class="btn btn btn-dark float-right update-profile-btn">UPDATE PROFILE</button>
                 </form>
             </div>
             <div class="col-12 col-lg-8">
@@ -37,7 +37,7 @@
                                     </td>
                                     <td>{{ order.date }}</td>
                                     <td>
-                                        <ul class="list-unstyled">
+                                        <ul class="list-unstyled profile-products">
                                             {% for item in order.lineitems.all %}
                                                     <li>
                                                     {{ item.quantity }} <span class="blue-text"> x</span> {{ item.product.name }} {{ item.size|upper }}

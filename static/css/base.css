@@ -116,9 +116,13 @@ body {
 /* Footer */
 
 footer {
-    background: rgb(243, 243, 243) !important;
+    /* background: rgb(243, 243, 243) !important; */
     height: 100px;
     flex-shrink: 0;
+}
+
+.footer-container {
+    background: rgb(243, 243, 243) !important;
 }
 
 .footer-topic {
@@ -246,5 +250,17 @@ footer {
     .free-delivery {
         font-size: 11.5px;
         margin: 0 10px 0 10px;
+    }
+
+    .navbar-expand-lg {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .footer-social,
+    .footer-contact {
+        border-bottom: 1px solid black;
+        padding-bottom: 15px;
     }
 }

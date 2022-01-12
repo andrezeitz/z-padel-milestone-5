@@ -97,6 +97,10 @@
     margin: 2.5rem 0 2.5rem 0;
 }
 
+.referralBadge {
+    padding: 10px;
+}
+
 @media (max-width: 991px) {
     .home-hero {
         padding-top: 5px;
@@ -124,9 +128,13 @@
     .toast-body {
         padding-top: 0.50rem;
     }
+
+    .padel-items-text {
+        font-size: 1rem;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .padelrack-picture,
     .padelballs-picture,
     .padelshoes-picture {
@@ -139,5 +147,34 @@
     .padelballs-picture,
     .padelshoes-picture {
         height: 150px;
+    }
+
+    .home-hero {
+        height: 400px;
+    }
+
+    .hero-text {
+        font-size: 1.5rem
+    }
+
+    .padel-items-topic {
+        font-size: 1.3rem;
+    }
+
+    .padel-items-text {
+        font-size: 0.75rem;
+    }
+
+    .category-pictures {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #mc-embedded-subscribe {
+        padding-bottom: 5px;
+    }
+
+    .card-img-top {
+        padding: 0 6rem 0 6rem;
     }
 }

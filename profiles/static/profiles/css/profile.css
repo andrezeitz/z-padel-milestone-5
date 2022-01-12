@@ -5,3 +5,14 @@
 #profile-update-form input::placeholder {
     color: #aab7c4;
 }
+
+@media (max-width: 575px) {
+    .profile-products {
+        display: none;
+    }
+
+    .update-profile-btn {
+        margin-bottom: 0.5rem;
+        float: none !important;
+    }
+}
