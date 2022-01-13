@@ -74,8 +74,17 @@ def add_product(request):
     """
     Will add a product to the database from the site
     """
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "The product was added to the database!")
+            return redirect(reverse('add_product'))
+    else:
+        form = ProductForm()
+                
     form = ProductForm()
-    
+
     context = {
         'form': form
     }

@@ -19,16 +19,16 @@ class Category(models.Model):
 
 class Product(models.Model):
     category = models.ManyToManyField('Category', blank=True)
-    sku = models.CharField(max_length=254, null=True, blank=True)
+    sku = models.CharField(max_length=5, null=False, unique=False)
     name = models.CharField(max_length=254)
+    slug = models.SlugField(max_length=50, null=False, unique=True)
     description = models.TextField()
     price = models.DecimalField(max_digits=6, decimal_places=2)
     cloth_size = models.BooleanField(default=False, null=True, blank=True)
     shoe_size_man = models.BooleanField(default=False, null=True, blank=True)
     shoe_size_woman = models.BooleanField(default=False, null=True, blank=True)
-    slug = models.SlugField(max_length=200, unique=True, null=True, blank=True)
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    image = models.ImageField(null=True, blank=True)
+    image = models.ImageField(null=False)
 
     def __str__(self):
         return self.name
