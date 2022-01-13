@@ -65,8 +65,33 @@
     color: white;
 }
 
+.add-product-container {
+    width: 40%
+}
+
+#id_category,
+#id_cloth_size,
+#id_shoe_size_man,
+#id_shoe_size_woman {
+    text-align: center;
+}
+
+#id_image {
+    text-align-last: center;
+}
+
+@media (max-width: 991px){
+    .add-product-container {
+        width: 60%;
+    }
+}
+
 @media (max-width: 575px) {
     .product-name {
         align-self: center;
+    }
+
+    .add-product-container {
+        width: 80%;
     }
 }
