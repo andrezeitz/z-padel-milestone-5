@@ -8,11 +8,14 @@
         <div class="row">
             <div class="col-12 col-sm-6 col-lg-4 offset-lg-2">
                 <div class="breadcrumb">
+                {% for category in product.categories.all %}
                     <ol class="breadcrumb mt-md-5">
                       <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-                      <li class="breadcrumb-item"><a href="{% url 'products' %}?category=get_selected_category"></a>{{ category.friendly_name }}</li>
+                      <li class="breadcrumb-item"><a href="{% url 'products' %}?category={{ product.category }}">{{ category.name }}</li>
+                      <li class="breadcrumb-item"><a href="{% url 'products' %}?category={{ product.category.field_in_category }}">{{ product.category.field_in_category }}</li>
                       <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
                     </ol>
+                {% endfor %}    
                 </div>
                 <!-- Product image -->
                 <div class="image-container">

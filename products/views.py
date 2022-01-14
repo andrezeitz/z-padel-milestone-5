@@ -44,7 +44,7 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
-    current_sorting = f'{sort}_{direction}'        
+    current_sorting = f'{sort}_{direction}'
 
     context = {
         'products': products,
@@ -57,14 +57,15 @@ def all_products(request):
     return render(request, 'products/products.html', context)
 
 
-def product_detail(request, selected_category, slug):
+def product_detail(request, slug):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, slug=slug)
+    # product = get_object_or_404(Product, pk=product_id)
 
     context = {
         'product': product,
-        'selected_category': selected_category,
+        # 'selected_category': selected_category,
     }
 
     return render(request, 'products/product_detail.html', context)
@@ -90,3 +91,37 @@ def add_product(request):
     }
 
     return render(request, 'products/add_product.html', context)
+
+
+def edit_product(request, product_id):
+    """ 
+    Will edit a product in the database
+    """
+
+    product = get_object_or_404(Product, pk=product_id)
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES, instance=product)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated product!')
+            return redirect(reverse('edit_product', args=[product.id]))
+    else:
+        form = ProductForm(instance=product)
+
+    context = {
+        'form': form,
+        'product': product,
+    }
+
+    return render(request, 'products/edit_product.html', context)
+
+
+def delete_product(request, product_id):
+    """
+    Will delete a product from the database
+    """
+
+    product = get_object_or_404(Product, pk=product_id)
+    product.delete()
+    messages.success(request, 'Product deleted!')
+    return redirect(reverse('home'))
