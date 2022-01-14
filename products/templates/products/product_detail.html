@@ -8,15 +8,14 @@
         <div class="row">
             <div class="col-12 col-sm-6 col-lg-4 offset-lg-2">
                 <div class="breadcrumb">
-                {% for category in product.categories.all %}
-                    <ol class="breadcrumb mt-md-5">
-                      <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-                      <li class="breadcrumb-item"><a href="{% url 'products' %}?category={{ product.category }}">{{ category.name }}</li>
-                      <li class="breadcrumb-item"><a href="{% url 'products' %}?category={{ product.category.field_in_category }}">{{ product.category.field_in_category }}</li>
-                      <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
-                    </ol>
-                {% endfor %}    
-                </div>
+                        <ol class="breadcrumb mt-md-5">
+                          <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                          {% for category in product.categories.all %}
+                          <li class="breadcrumb-item"><a href="{% url 'products' %}?category={{ category.name }}">{{ category.name }}</li>
+                          {% endfor %}    
+                          <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
+                        </ol>
+                    </div>
                 <!-- Product image -->
                 <div class="image-container">
                         <a href="{{ product.image.url }}" target="_blank">
@@ -94,6 +93,8 @@
                 <!-- Product description text -->  
                 <div class="product-description-container">
                     <p class="mt-3">{{ product.description }} {{ category.category_text }}</p>
+                    <a class="text-blue" href="{% url 'edit_product' product.id %}">Edit</a>
+                    <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                 </div>
             </div>
         </div>
