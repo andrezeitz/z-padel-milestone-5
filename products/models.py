@@ -18,7 +18,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    category = models.ManyToManyField('Category', blank=True)
+    category = models.ManyToManyField('Category', blank=True, related_name='categories')
     sku = models.CharField(max_length=5, null=False, unique=False)
     name = models.CharField(max_length=254)
     slug = models.SlugField(max_length=50, null=False, unique=True)

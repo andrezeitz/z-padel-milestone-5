@@ -1,8 +1,9 @@
 .breadcrumb {
     background: white;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding: 0;
     margin: 0;
+    margin-left: 120px !important;
 }
 
 .breadcrumb-item {
@@ -16,6 +17,10 @@
 
 .product-filter-price {
     text-align: center;
+}
+
+.admin-products {
+    margin-top: 10px;
 }
 
 .form-input {

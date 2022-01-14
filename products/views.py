@@ -63,9 +63,11 @@ def product_detail(request, slug):
 
     product = get_object_or_404(Product, slug=slug)
     # product = get_object_or_404(Product, pk=product_id)
-
+    product_cate = product.category.all()
+    
     context = {
         'product': product,
+        'categories': product_cate,
         # 'selected_category': selected_category,
     }
 

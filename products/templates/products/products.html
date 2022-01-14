@@ -6,6 +6,13 @@
     <div class="container">
         <!-- If using the search field--> 
         {% if search_term %}
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <ol class="breadcrumb mt-md-5">
+              <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{ search_term }}</li>
+            </ol>
+        </div>
         <!-- Search header --> 
         <h2 class="product-header mt-5">Search for {{ search_term }}</h2>
         <div class="row">
@@ -34,6 +41,13 @@
         {% endif %}
         <!-- If using a category -->
         {% for category in current_categories %}
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <ol class="breadcrumb mt-md-5">
+              <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{ category.friendly_name }}</li>
+            </ol>
+        </div>
             <!-- Category name --> 
             <h2 class="product-header mt-5">{{ category.friendly_name }}</h2>
             <div class="row">
