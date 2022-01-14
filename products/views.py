@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q
 from .models import Product, Category
@@ -13,7 +14,7 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
-    selected_category = ""
+    # selected_category = ""
 
     if request.GET:
         if 'sort' in request.GET:
@@ -30,7 +31,7 @@ def all_products(request):
             products = products.order_by(sortkey)
 
         if 'category' in request.GET:
-            selected_category = request.GET['category']
+            # selected_category = request.GET['category']
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
@@ -48,7 +49,7 @@ def all_products(request):
 
     context = {
         'products': products,
-        'selected_category': selected_category,
+        # 'selected_category': selected_category,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
@@ -71,10 +72,14 @@ def product_detail(request, slug):
     return render(request, 'products/product_detail.html', context)
 
 
+@login_required
 def add_product(request):
     """
     Will add a product to the database from the site
     """
+    if not request.user.is_superuser:
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -93,10 +98,13 @@ def add_product(request):
     return render(request, 'products/add_product.html', context)
 
 
+@login_required
 def edit_product(request, product_id):
     """ 
     Will edit a product in the database
     """
+    if not request.user.is_superuser:
+        return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
@@ -116,10 +124,13 @@ def edit_product(request, product_id):
     return render(request, 'products/edit_product.html', context)
 
 
+@login_required
 def delete_product(request, product_id):
     """
     Will delete a product from the database
     """
+    if not request.user.is_superuser:
+        return redirect(reverse('home'))
 
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
