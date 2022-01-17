@@ -101,6 +101,46 @@
     padding: 10px;
 }
 
+/* Reviews */
+
+.quote blockquote {
+    padding: 0px;
+    border: 0;
+    margin: 0;
+    font-size: 14px;
+    font-style: italic;
+    border-radius: 8px;
+}
+  
+.quote blockquote p {
+    color: #fff;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+  
+.quote.green blockquote {
+    background-color: #007bff;;
+}
+  
+.quote.dark blockquote {
+    background-color: #555;
+}
+  
+.quote-footer h4 {
+    font-size: 18px;
+    margin-bottom: 4px;
+    text-align: center;
+}
+  
+.quote-footer p {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
+}
+
 @media (max-width: 991px) {
     .home-hero {
         padding-top: 5px;
