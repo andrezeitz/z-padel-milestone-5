@@ -103,6 +103,12 @@
 
 /* Reviews */
 
+.review-topic {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
 .quote blockquote {
     padding: 0px;
     border: 0;
@@ -139,6 +145,11 @@
     font-style: italic;
     font-size: 14px;
     text-align: center;
+}
+
+.star-rating {
+    text-align-last: center;
+    padding-bottom: 10px;
 }
 
 @media (max-width: 991px) {
@@ -201,7 +212,8 @@
         padding: 8px;
     }
 
-    .padel-items-topic {
+    .padel-items-topic,
+    .review-topic {
         font-size: 1.3rem;
     }
 
