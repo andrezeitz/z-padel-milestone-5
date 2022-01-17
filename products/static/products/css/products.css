@@ -1,13 +1,11 @@
 .breadcrumb {
     background: white;
-    /* text-transform: uppercase; */
     padding: 0;
     margin: 0;
-    margin-left: 120px !important;
 }
 
 .breadcrumb-item {
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .product-header {

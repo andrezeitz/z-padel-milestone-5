@@ -1,19 +1,21 @@
 {% extends "base.html" %}
 {% load static %}
-{% load products_tools %}
 
 
 {% block content %}
     <div class="container-fluid">
-        <div class="row">
-            <div class="breadcrumb">
-                <ol class="breadcrumb mt-5">
-                  <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
-                  {% for category in categories %}
-                  <li class="breadcrumb-item"><a href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a></li>
-                  {% endfor %}  
-                  <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
-                </ol>
+        <div class="container">
+            <div class="row">
+                <!-- Breadcrumb --> 
+                <div class="breadcrumb">
+                    <ol class="breadcrumb mt-5">
+                    <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                    {% for category in categories %}
+                    <li class="breadcrumb-item"><a href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a></li>
+                    {% endfor %}  
+                    <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
+                    </ol>
+                </div>
             </div>
         </div>
         <div class="row">

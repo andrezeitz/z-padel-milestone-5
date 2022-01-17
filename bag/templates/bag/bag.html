@@ -3,11 +3,17 @@
 {% load bag_tools %}
 
 {% block content %}
-    <div class="container mt-md-5">
+    <div class="container">
         <div class="wrapper wrapper-content">
             <div class="row">
                 <div class="col-12 col-lg-9">
                     {% if bag_items %}
+                    <div class="breadcrumb">
+                        <ol class="breadcrumb mt-5">
+                          <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Cart</li>
+                        </ol>
+                    </div>
                         <!-- Added products to the bag -->
                         <div class="bag-container">
                             <div class="products-title">
@@ -107,7 +113,7 @@
                     {% endif %}   
                 <!-- Cart summary and support -->    
                 <div class="col-12 col-lg-3">
-                    <div class="total-container">
+                    <div class="total-container mt-5">
                         <div class="products-title">
                             <h5 class="items-in-cart">Cart Summary</h5>
                         </div>
