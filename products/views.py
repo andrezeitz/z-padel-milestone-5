@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Q
-from .models import Product, Category
+from .models import Product, Category, Review
 from .forms import ProductForm
 
 
@@ -14,7 +14,6 @@ def all_products(request):
     categories = None
     sort = None
     direction = None
-    # selected_category = ""
 
     if request.GET:
         if 'sort' in request.GET:
@@ -31,7 +30,6 @@ def all_products(request):
             products = products.order_by(sortkey)
 
         if 'category' in request.GET:
-            # selected_category = request.GET['category']
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
@@ -49,7 +47,6 @@ def all_products(request):
 
     context = {
         'products': products,
-        # 'selected_category': selected_category,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
@@ -62,16 +59,25 @@ def product_detail(request, slug):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, slug=slug)
-    # product = get_object_or_404(Product, pk=product_id)
     product_cate = product.category.all()
     
     context = {
         'product': product,
         'categories': product_cate,
-        # 'selected_category': selected_category,
     }
 
     return render(request, 'products/product_detail.html', context)
+
+
+def review_rate(request, slug):
+    if request.method == "GET":
+        product_id = request.GET.get('product_id')
+        product = Product.objects.get(id=product_id)
+        comment = request.GET.get('comment')
+        rate = request.GET.get('rate')
+        user = request.user
+        Review(user=user, product=product, comment=comment, rate=rate).save()
+        return redirect(request.GET.get('url'))
 
 
 @login_required
