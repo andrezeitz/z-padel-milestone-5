@@ -171,4 +171,8 @@
     .review-container {
         width: 100%;
     }
+
+    .breadcrumb-item {
+        font-size: 12px;
+    }
 }
