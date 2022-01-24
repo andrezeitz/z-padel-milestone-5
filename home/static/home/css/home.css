@@ -149,7 +149,8 @@
 
 .star-rating {
     text-align: center;
-    padding-bottom: 10px;
+    height: 30px;
+    align-items: center;
 }
 
 @media (max-width: 991px) {

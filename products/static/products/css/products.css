@@ -83,7 +83,7 @@
     text-align-last: center;
 }
 
-/* Review */
+/* Leave a review */
 
 .review-container {
     width: 60%;
@@ -93,31 +93,26 @@
     float: left;
     margin-top: 0.5rem;
 }
+
 .rate:not(:checked) > input {
-    /* position:absolute;
-    top:-9999px; */
     display: none;
 }
+
 .rate:not(:checked) > label {
     float:right;
-    /* width:1em;
-    overflow:hidden;
-    white-space:nowrap; */
     cursor:pointer;
     font-size:25px;
-    /* color:#ccc; */
 }
-/* .rate:not(:checked) > label:before {
-    content: '★ ';
-} */
 
 .rate > input:checked ~ label {
     color: #ffc700;    
 }
+
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
     color: #deb217;  
 }
+
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
 .rate > input:checked ~ label:hover,
@@ -130,18 +125,37 @@
     margin-top: 0.5rem;
 }
 
-.fa-star {
+.review-heading > .fa-star {
     float: right;
 }
 
-.fa-star.checked {
+.review-heading > .fa-star.checked {
     color: #ffc700;
-   
+}
+
+.review-h5 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.btn-review {
+    color: black;
+    border: 2px solid black;
+    
+}
+    
+.btn-review:hover {
+    background: black;
+    color: white;
 }
 
 @media (max-width: 991px){
     .add-product-container {
         width: 60%;
+    }
+
+    .review-container {
+        width: 80%;
     }
 }
 
@@ -152,5 +166,9 @@
 
     .add-product-container {
         width: 80%;
+    }
+
+    .review-container {
+        width: 100%;
     }
 }

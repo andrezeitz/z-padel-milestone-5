@@ -200,8 +200,12 @@
         </footer>
         {% block postloadjs %}
         <script type="text/javascript">
+
             $('.toast').toast('show');
-            $().toast(options)
+            $('.toast').duration(8000);
+        var toast = {
+            duration: 1000,
+        }
         </script>
         {% endblock %}
     </body>

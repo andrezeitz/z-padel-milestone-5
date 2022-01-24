@@ -104,49 +104,17 @@
                 <div class="product-description-container">
                     <p class="mt-3">{{ product.description }}</p>
                 </div>
-                
-                <!-- Review -->
-                    <!-- <div class="row" id="review-box">
-                        <div class="col-md-12">
-                            <form method="GET" action="{% url 'review_rate' product.id %}" class="review-form">
-                                {% csrf_token %}
-                                <h5>Let us know what you think about this product!</h5>
-                                <input type="hidden" name="product_id" id="product_id" value="{{product.id}}">
-                                <input type="hidden" name="url" value="{{ request.path }}">
-                                <textarea class="form-control animated" id="new-review" name="comment" placeholder="Enter your review here..." rows="5"></textarea>
-                                <div class="rate">
-                                    <input type="radio" id="star-5" name="rate" value="5" />
-                                    <label for="star-5" class="fas fa-star"></label>
-                                    <input type="radio" id="star-4" name="rate" value="4" />
-                                    <label for="star-4" class="fas fa-star"></label>
-                                    <input type="radio" id="star-3" name="rate" value="3" />
-                                    <label for="star-3" class="fas fa-star"></label>
-                                    <input type="radio" id="star-2" name="rate" value="2" />
-                                    <label for="star-2" class="fas fa-star"></label>
-                                    <input type="radio" id="star-1" name="rate" value="1" />
-                                    <label for="star-1" class="fas fa-star"></label>
-                                </div>
-                                <div class="text-right mt-1">
-                                    {% if request.user.is_authenticated or request.user.is_superuser %}
-                                    <button class="btn btn-success" type="submit">Save</button>
-                                    {% else %}
-                                    <p class="login-text"><a href="{% url 'account_login' %}">Login</a> to write a review</p>
-                                    {% endif %}
-                                </div>
-                            </form>
-                        </div>
-                    </div> -->
-                </div>
             </div>
-            <div class="container review-container">
+        </div>
+        <!-- Reviews -->  
+        <div class="container review-container">
             <div class="row" id="review-box">
                 <div class="col-md-12">
                     <form method="GET" action="{% url 'review_rate' product.id %}" class="review-form">
                         {% csrf_token %}
-                        <h5>Let us know what you think about this product!</h5>
+                        <h5 class="review-h5">Leave a review!</h5>
                         <input type="hidden" name="product_id" id="product_id" value="{{product.id}}">
                         <input type="hidden" name="url" value="{{ request.path }}">
-                        <!-- <p class="blue-text">{{ user }}</p> -->
                         <textarea class="form-control animated" id="new-review" name="comment" placeholder="Enter your review here..." rows="3" required></textarea>
                         <div class="rate">
                             <input type="radio" id="star-5" name="rate" value="5" />
@@ -158,12 +126,11 @@
                             <input type="radio" id="star-2" name="rate" value="2" />
                             <label for="star-2" class="fas fa-star"></label>
                             <input type="radio" id="star-1" name="rate" value="1" />
-                            <!-- <label for="star-1" title="text">1 star</label> -->
                             <label for="star-1" class="fas fa-star"></label>
                         </div>
                         <div class="text-right mt-1">
                             {% if request.user.is_authenticated or request.user.is_superuser %}
-                            <button class="btn btn-success" type="submit">Save</button>
+                            <button class="btn btn-review" type="submit">Save</button>
                             {% else %}
                             <p class="login-text"><a href="{% url 'account_login' %}">Login</a> to write a review</p>
                             {% endif %}
@@ -173,9 +140,11 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                        <h5>Reviews</h5>
+                    {% if reviews %}
+                        <h5 class="review-h5">Reviews</h5>
                         <hr>
-                        {% for review in reviews %}
+                    {% endif %}
+                    {% for review in reviews %}
                         <div class="review-heading">
                             <span class="blue-text">{{ review.user.username }}</span>
                             <span> {{ review.created_at }} </span>
@@ -188,10 +157,10 @@
                         <div class="review-body mt-2">
                             <p>{{ review.comment }}</p>
                         </div>
-                        {% endfor %}
+                        <hr>
+                    {% endfor %}
                 </div>
             </div>
-        </div>
         </div>
     </div>
 {% endblock %}
