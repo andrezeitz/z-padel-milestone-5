@@ -60,10 +60,13 @@ def product_detail(request, slug):
 
     product = get_object_or_404(Product, slug=slug)
     product_cate = product.category.all()
+    product_review = Product.objects.get(slug=slug)
+    review = Review.objects.filter(product=product_review)
     
     context = {
         'product': product,
         'categories': product_cate,
+        'reviews': review,
     }
 
     return render(request, 'products/product_detail.html', context)
