@@ -39,10 +39,10 @@
         {% endblock %}
 
         {% block favicon %}
-            <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon.ico">
-            <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon-32x32.png">
-            <link rel="icon" type="image/png" sizes="16x16" href='/media/favicon-16x16.png'>
-            <link rel="manifest" href="/media/site.webmanifest">
+            <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon_io/favicon.ico' %}">
+            <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon_io/favicon-32x32.png' %}">
+            <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon_io/favicon-16x16.png' %}">
+            <link rel="manifest" href="{% static 'favicon_io/site.webmanifest' %}">
         {% endblock %}
 
         {% block extra_js %}
@@ -203,12 +203,7 @@
         </footer>
         {% block postloadjs %}
         <script type="text/javascript">
-
             $('.toast').toast('show');
-            $('.toast').duration(8000);
-        var toast = {
-            duration: 1000,
-        }
         </script>
         {% endblock %}
     </body>
