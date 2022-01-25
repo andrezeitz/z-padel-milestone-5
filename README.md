@@ -5,9 +5,13 @@ This website can not be used as a template for a business since it's a project f
 
 Live website: [Z Padel](https://z-padel.herokuapp.com/)
 
+<img width="1024" alt="responsivee" src="https://user-images.githubusercontent.com/85236391/150960476-622e86e2-2a3b-4ac4-9974-d2179d0dbb74.png">
+
 ## Table of Contents
 
 * [UX (User Experience)](#ux-user-experience)
+  * [Target Audience](#target-audience)
+  * [Business Goals](#business-goals)
   * [User Stories](#user-stories)
   * [Site Owner Goals](#site-owner-goals)
 * [Design](#design)
@@ -147,15 +151,43 @@ All colors was checked in a contrast checker and pass the test.
 
 ## Features
 The website has the following features:
+
 ### Navigation bar
+
+* The navbar is included on all templates. On the desktop version the logo is located at the top center and take the user to the home page if clicked. The navbar has a search bar to the left for quick access to specific products and to the right is a profile dropdown menu and the cart. The profile dropdown show the name of the user if logged in and the font awesome icon will change color from black to blue. The cart will show the shopper how many items in the cart and also the total price for all of them. The font awesome icon will change to green when there is something in the cart. All the links have a black font colour and a blue under border colour when hovered over which match the colour scheme of the site. Each link within the navbar are linked to all the correct product categories.
+
+<img width="1013" alt="Skärmavbild 2022-01-25 kl  11 36 11" src="https://user-images.githubusercontent.com/85236391/150961180-e9b0e335-9690-438c-977a-27f2f694d136.png">
+
+* On the mobile version the home logo have been changed to a home font awesome icon to fit better, search and profile buttons work as dropdown. On the left is a dropdown list for all product categorys and to the right is still the cart.
+
+<img width="482" alt="Skärmavbild 2022-01-25 kl  11 36 47" src="https://user-images.githubusercontent.com/85236391/150961192-918da63f-158e-437d-8a83-718e934e2253.png">
 
 ### Home
 
+* The home page is displayed with a big hero picture of a padel rack to let the customer really understand what kind of website it is. Under the picture is our "Most visited categorys". It display 3 big pictures that work like buttons and will expand and get a bit darker when hovering over them. The categorys are Padel racks, padel balls and padel shoes. After that is a email subscription field that let user subscribe to our newsletter. Last is 3 different reviews from customers that like the site.
+
+
+
 ### Products
+
+* Each product category page has it's own information on the top of the page. First there is bredcrumb to each navigate on the site. On the right side there is a "Sort By" button that works as a dropdown to let the shopper sort the products after price low to high or high to low. They can also sort for oldest to newest or newest to oldest product. Under is the products displayed with picture, name and price. The pictures work as a link to the specific product.
+
+
+### Product Details
+
+* On the top left side there will still be breadcrumb so the shopper can easy go back to the category page they just came from. Under it will be a big picture of the product. On the right side is the name and price once again and also a quantiy box so the shopper can choose how many products they would like to buy. If the product has sizes it will be displayed also. Under there is a box "Buy now" button to add the product to the cart and some additional description about the product. On the bottom of the page is a review textbox that will let the customers review the product with a text and choose between 0-5 stars. After the review is saved it will be showed under with the profile name, date of the review, how many stars and the text. You will have to be logged in to be able to write a review. If you are not logged in the "save" button will not be visable and instead ask the customer to login with a link to the login page.
 
 ### Cart
 
+* Inside of the cart the shopper will see all the products added to the cart. They will be able to change the quantity easy by just change number in the quantity box and press the update button. If they would like to delete a product from the cart they can easily do so by clicking on the red trash can. On the right side is a cart summary with the total price, sub price and delivery cost. If the shopper still hasn’t come up to free delivery a red text will be displayed and say how much more they will have to shop to get free delivery. Finally there is a support phone number if the shopper has any problem and a big "Checkout" button that will only be displayed if there is something in the cart.
+
+<img width="1130" alt="Skärmavbild 2022-01-25 kl  12 36 34" src="https://user-images.githubusercontent.com/85236391/150972477-c2ae2086-51a3-4846-9314-412ee32ed827.png">
+
 ### Checkout
+
+* The checkout page is the last step for the shopper. On the left side is all the field the shopper will need to fill out to complete the order. If the customer is logged in once they have completed this step the information will be stored in the profil for later purchases. Under is the card details field that will be required to checkout. If the card details is wrong a red text will be displayed to let the customer know something is wrong. On the right side is all the products and a summary of sub total, delivery and total price.
+
+<img width="1136" alt="Skärmavbild 2022-01-25 kl  12 48 59" src="https://user-images.githubusercontent.com/85236391/150972430-02ee17c7-a24b-4c67-898b-9d4813e718ed.png">
 
 ### Checkout Success
 
