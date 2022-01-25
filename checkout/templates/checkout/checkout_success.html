@@ -13,15 +13,19 @@
             <h3 class="text-center mb-4 mt-4">THANK YOU!</h3>
             {% endif %}
             <hr>
-            <p>Your order was created on: <span class="blue-text">{{ order.date }}</span></p>
-            <p>Your order number: <span class="blue-text">{{ order.order_number }}</span></p>
+            <p>Order was created on: <span class="blue-text">{{ order.date }}</span></p>
+            <p>Order number: <span class="blue-text">{{ order.order_number }}</span></p>
             {% if from_checkout %}
             <p>We'll email you an order confirmation in a couple of minutes.</p>
             {% endif %}
         </div>
     </div>
     <div class="row">
-        {% if from_profile %}
+        {% if request.user.is_superuser %}
+        <div class="col text-center mb-2 mt-2">
+            <a href="{% url 'admin' %}" class="btn btn-outline-dark btn-lg">Back to All Orders</a>
+        </div>
+        {% elif from_profile %}
         <div class="col text-center mb-2 mt-2">
             <a href="{% url 'profile' %}" class="btn btn-outline-dark btn-lg">Back to Profile</a>
         </div>
@@ -36,7 +40,7 @@
             <div class="order-confirmation">
                 <div class="row">
                     <div class="col">
-                        <h6 class="success-header">Items you ordered:</h6>
+                        <h6 class="success-header">Items ordered:</h6>
                     </div>
                 </div>
                 <!-- Items ordered -->
@@ -70,7 +74,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h6 class="success-header">We will deliver to:</h6>
+                        <h6 class="success-header">Deliver to:</h6>
                     </div>
                 </div>
                 <!-- Delivery -->

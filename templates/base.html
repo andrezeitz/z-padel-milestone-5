@@ -42,7 +42,7 @@
             <link rel="apple-touch-icon" sizes="180x180" href="/media/favicon.ico">
             <link rel="icon" type="image/png" sizes="32x32" href="/media/favicon-32x32.png">
             <link rel="icon" type="image/png" sizes="16x16" href='/media/favicon-16x16.png'>
-            <link rel="manifest" href="/media/favicon.ico">
+            <link rel="manifest" href="/media/site.webmanifest">
         {% endblock %}
 
         {% block extra_js %}
@@ -105,9 +105,12 @@
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
                                         <a href="{% url 'add_product' %}" class="dropdown-item">Management</a>
+                                        <a href="{% url 'admin' %}" class="dropdown-item">All Orders</a>
                                     {% endif %}
-                                    <!-- User profile-->    
+                                    <!-- User profile-->
+                                    {% if not request.user.is_superuser %}
                                     <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                    {% endif %}
                                     <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                                 {% else %}
                                     <!-- Register -->    

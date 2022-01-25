@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <hr>
+                <h3 class="text-center mb-4 mt-4">ALL BOOKINGS</h3>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h6 class="text-center mb-2 mt-2">ORDER HISTORY</h6>
+                <hr>
+                <div class="order-history table-responsive">
+                    <table class="table table-sm table-borderless">
+                        <tbody>
+                            {% for order in orders %}
+                                <tr>
+                                    <td>
+                                        <a href="{% url 'order_history' order.order_number %}"
+                                        title="{{ order.order_number }}">
+                                            {{ order.order_number|truncatechars:6 }}
+                                        </a>
+                                    </td>
+                                    <td>{{ order.date }}</td>
+                                    <td>
+                                        <p class="admin-order-text">{{ order.full_name }}</p>
+                                        <p class="admin-order-text">{{ order.email }}</p>
+                                        <p class="admin-order-text">{{ order.phone_number }}</p>
+                                    </td>
+                                    <td>
+                                        <ul class="list-unstyled profile-products">
+                                            {% for item in order.lineitems.all %}
+                                                    <li>
+                                                    {{ item.quantity }} <span class="blue-text"> x</span> {{ item.product.name }} {{ item.size|upper }}
+                                                    <span class="small">
+                                                        {% if item.product_size %}
+                                                            Size - {{ item.product_size|upper }}
+                                                        {% endif %}
+                                                    </span>
+                                                    </li>
+                                            {% endfor %}
+                                        </ul>
+                                    </td>
+                                    <td>€{{ order.grand_total }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+{% endblock %}

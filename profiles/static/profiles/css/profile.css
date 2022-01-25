@@ -6,6 +6,10 @@
     color: #aab7c4;
 }
 
+.admin-order-text {
+    margin-bottom: 0 !important;
+}
+
 @media (max-width: 575px) {
     .profile-products {
         display: none;

@@ -1,8 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 from .models import UserProfile
+from checkout.models import OrderLineItem
 from .forms import UserProfileForm
 from checkout.models import Order
 
@@ -28,6 +29,22 @@ def profile(request):
     }
 
     return render(request, 'profiles/profile.html', context)
+
+
+@login_required
+def admin_profile(request):
+    """ Display the admin profile. """
+    if not request.user.is_superuser:
+        return redirect(reverse('home'))
+
+    orders = Order.objects.all()
+
+    context = {
+        'orders': orders,
+        'on_profile_page': True,
+    }
+
+    return render(request, 'profiles/admin.html', context)
 
 
 def order_history(request, order_number):

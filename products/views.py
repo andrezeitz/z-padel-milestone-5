@@ -73,6 +73,9 @@ def product_detail(request, slug):
 
 
 def review_rate(request, slug):
+    """
+    Function to be able to get the review information
+    """
     if request.method == "GET":
         product_id = request.GET.get('product_id')
         product = Product.objects.get(id=product_id)
