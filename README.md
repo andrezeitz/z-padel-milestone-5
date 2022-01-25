@@ -162,20 +162,36 @@ The website has the following features:
 
 <img width="482" alt="Skärmavbild 2022-01-25 kl  11 36 47" src="https://user-images.githubusercontent.com/85236391/150961192-918da63f-158e-437d-8a83-718e934e2253.png">
 
+### Toast
+
+* Toast message will be displayed when you add, edit and delete a product. It will also show a success message when logged in/out or add a new product.
+
+![Skärmavbild 2022-01-25 kl  14 47 12](https://user-images.githubusercontent.com/85236391/150988795-3bf9756d-dcf4-471a-8664-ba83fc399515.png)
+![Skärmavbild 2022-01-25 kl  14 47 33](https://user-images.githubusercontent.com/85236391/150988801-8b5271a7-2189-48ce-a6a3-e6472328c4ea.png)
+![Skärmavbild 2022-01-25 kl  14 47 47](https://user-images.githubusercontent.com/85236391/150988807-bf782e2c-d572-41be-ac52-52d5db060f39.png)
+
 ### Home
 
 * The home page is displayed with a big hero picture of a padel rack to let the customer really understand what kind of website it is. Under the picture is our "Most visited categorys". It display 3 big pictures that work like buttons and will expand and get a bit darker when hovering over them. The categorys are Padel racks, padel balls and padel shoes. After that is a email subscription field that let user subscribe to our newsletter. Last is 3 different reviews from customers that like the site.
 
-
+![Skärmavbild 2022-01-25 kl  14 36 03](https://user-images.githubusercontent.com/85236391/150986900-c504cc52-8d9e-4dc0-96c0-1547fd9e0a85.png)
+![Skärmavbild 2022-01-25 kl  14 36 13](https://user-images.githubusercontent.com/85236391/150986915-ba46fd5d-bc09-4d41-92a9-1da1eadb10d5.png)
 
 ### Products
 
 * Each product category page has it's own information on the top of the page. First there is bredcrumb to each navigate on the site. On the right side there is a "Sort By" button that works as a dropdown to let the shopper sort the products after price low to high or high to low. They can also sort for oldest to newest or newest to oldest product. Under is the products displayed with picture, name and price. The pictures work as a link to the specific product.
 
+From categories:
+![Skärmavbild 2022-01-25 kl  14 37 03](https://user-images.githubusercontent.com/85236391/150987022-ae0fb412-865e-4742-8400-7626116ca2d0.png)
+
+From search:
+![Skärmavbild 2022-01-25 kl  14 37 45](https://user-images.githubusercontent.com/85236391/150987244-607649bd-39d8-47af-93d5-22bb5e25f879.png)
 
 ### Product Details
 
 * On the top left side there will still be breadcrumb so the shopper can easy go back to the category page they just came from. Under it will be a big picture of the product. On the right side is the name and price once again and also a quantiy box so the shopper can choose how many products they would like to buy. If the product has sizes it will be displayed also. Under there is a box "Buy now" button to add the product to the cart and some additional description about the product. On the bottom of the page is a review textbox that will let the customers review the product with a text and choose between 0-5 stars. After the review is saved it will be showed under with the profile name, date of the review, how many stars and the text. You will have to be logged in to be able to write a review. If you are not logged in the "save" button will not be visable and instead ask the customer to login with a link to the login page.
+
+![Skärmavbild 2022-01-25 kl  14 40 31](https://user-images.githubusercontent.com/85236391/150987578-a2148ba0-1000-459f-9c36-55888498753b.png)
 
 ### Cart
 
@@ -195,7 +211,6 @@ The website has the following features:
 
 <img width="777" alt="Skärmavbild 2022-01-25 kl  13 26 57" src="https://user-images.githubusercontent.com/85236391/150977273-9c135baf-bf8f-47b7-a016-b513d7900242.png">
 
-
 ### Email confirmation
 
 * After each order made you will receive a order confirmation by email aswell. It will look like this:
@@ -211,6 +226,12 @@ Inside your profile you will see on the left field where you can update your per
 ### Product Management 
 
 This page is secured only for admin to access from the profile dropdown. Here you can easy add new products to the database. When you are logged in as Admin you will also see a edit and delete button on each product to be able to edit or delete them.
+
+Add product page:
+
+![Skärmavbild 2022-01-25 kl  14 43 24](https://user-images.githubusercontent.com/85236391/150988077-68e03ff1-f1d0-47fb-94c7-676f08e1fcfa.png)
+
+Edit and delete buttons form admin on each product:
 
 <img width="296" alt="Skärmavbild 2022-01-25 kl  13 45 22" src="https://user-images.githubusercontent.com/85236391/150979358-0927d976-c2ed-48b1-bc4e-8d0289bda436.png">
 
@@ -242,6 +263,7 @@ The site is optimized for all screen sizes and tested with a Macbook Pro 13" and
 I use media queries to make everything look and feel good on mobile devices.
 
 ### Issues found during site development
+
 1. I had a problem to get the slug-field to work properly on all pages. When I tried to add it from a current categories it would work from all category pages but not the search page.
 
 ##### Solution:
@@ -251,6 +273,7 @@ Instead of just using the product_details view to display the slug I made a func
 <img width="479" alt="Skärmavbild 2022-01-25 kl  13 48 08" src="https://user-images.githubusercontent.com/85236391/150979864-489835fa-f13f-4c86-bc9b-c6af5f50183a.png">
 
 2. I had this problem where "sum" was not defined.
+
 <img width="391" alt="NameError at checkout" src="https://user-images.githubusercontent.com/85236391/150980102-bcee1a35-ea65-496f-b7c1-573d4332d064.png">
 
 ##### Solution:
@@ -266,9 +289,11 @@ Import sum inside checkout.models
 Found the bug in checkout.models that I had put * 10 to the total amount when it should be devided by 100 to calculate the correct delivery fee.
 
 Wrong:
+
 ![def update total(self)](https://user-images.githubusercontent.com/85236391/150981504-e205c8a9-e228-4174-be3e-fb3f7dab457e.png)
 
 Correct:
+
 <img width="592" alt="Skärmavbild 2022-01-25 kl  14 01 33" src="https://user-images.githubusercontent.com/85236391/150981654-933804b0-7449-4eed-80af-d27499ed1f7a.png">
 
 4. Problem to connect the webhook to the site and get status 400 message.
@@ -396,3 +421,11 @@ How to clone this repository.
 * Press Enter to create your local clone.
 
 ## Credits
+
+* How to modify the toast from [here](https://www.cssscript.com/pure-javascript-library-clean-toast-notifications-prophet-js/)
+* How to use many-to-many fields [here](https://docs.djangoproject.com/en/3.2/topics/db/models/#many-to-many-relationships)
+* How to use extra fields on many-to-many relationship [here](https://docs.djangoproject.com/en/3.2/topics/db/models/#extra-fields-on-many-to-many-relationships)
+* How to create review stars [here](https://www.w3schools.com/howto/howto_css_star_rating.asp)
+* How to make breadcrumb with bootstrap [here](https://getbootstrap.com/docs/4.1/components/breadcrumb/)
+
+I would like to give a special thank you to Maria Hynes for her mentorship during this course. She has been a great mentor along the way.
