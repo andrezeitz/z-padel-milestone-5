@@ -191,10 +191,34 @@ The website has the following features:
 
 ### Checkout Success
 
-### Account
+* The checkout success ia a simple page displaying your last order. It will show on what date you did the order, your order number and wich products you ordered. On the bottom it will show where the order will be shipped and how much the total order was. This page will also be able to display again later if you was logged in when the order was made since all order will be saved in your profile.
+
+<img width="777" alt="Skärmavbild 2022-01-25 kl  13 26 57" src="https://user-images.githubusercontent.com/85236391/150977273-9c135baf-bf8f-47b7-a016-b513d7900242.png">
+
+
+### Email confirmation
+
+* After each order made you will receive a order confirmation by email aswell. It will look like this:
+
+<img width="687" alt="Skärmavbild 2022-01-25 kl  13 31 01" src="https://user-images.githubusercontent.com/85236391/150977447-fbb3334d-037f-465b-a75e-76e3822e6466.png">
+
+### Profile
+
+Inside your profile you will see on the left field where you can update your personal information. If you already have made a purchase the field will already have saved your information. If you would like to update any you can do so by clicking on the "Update Profile" button. On the right side you will see all orders you have made. If you click on the order number you will see a more detailed page with your order.
+
+<img width="1142" alt="Skärmavbild 2022-01-25 kl  13 34 59" src="https://user-images.githubusercontent.com/85236391/150978292-f2caf6bd-ebc3-46ca-a1a8-d09e1687f2eb.png">
+
+### Product Management 
+
+This page is secured only for admin to access from the profile dropdown. Here you can easy add new products to the database. When you are logged in as Admin you will also see a edit and delete button on each product to be able to edit or delete them.
+
+<img width="296" alt="Skärmavbild 2022-01-25 kl  13 45 22" src="https://user-images.githubusercontent.com/85236391/150979358-0927d976-c2ed-48b1-bc4e-8d0289bda436.png">
 
 ### Footer
 
+The footer is sticky on the bottom of all pages. It display our social media platforms, contact information and shipping details. 
+
+<img width="1087" alt="Skärmavbild 2022-01-25 kl  13 40 51" src="https://user-images.githubusercontent.com/85236391/150978713-26ecb2a4-c005-428a-b48f-a59b6fc5fd24.png">
 
 ## Testing
 
@@ -204,17 +228,13 @@ The website has the following features:
 ### HTML
 The W3C Markup Validation Service was used to validate the HTML page of the project. No errors or warnings to show.
 
-##### Home Page
-
 
 ### CSS
 The W3C CSS Validation Service was used to validate the CSS file used for the project. No errors or warnings to show.
 
 
-
 ### Python
 The PEP8 Online Check was used to validate all Python code. No errors or warnings to show
-
 
 
 ### Different Screen Size
@@ -222,11 +242,50 @@ The site is optimized for all screen sizes and tested with a Macbook Pro 13" and
 I use media queries to make everything look and feel good on mobile devices.
 
 ### Issues found during site development
-1. I had a problem to get the slug-field to work properly.
+1. I had a problem to get the slug-field to work properly on all pages. When I tried to add it from a current categories it would work from all category pages but not the search page.
 
 ##### Solution:
 
-2. 
+Instead of just using the product_details view to display the slug I made a function inside of the product models that look like this.
+
+<img width="479" alt="Skärmavbild 2022-01-25 kl  13 48 08" src="https://user-images.githubusercontent.com/85236391/150979864-489835fa-f13f-4c86-bc9b-c6af5f50183a.png">
+
+2. I had this problem where "sum" was not defined.
+<img width="391" alt="NameError at checkout" src="https://user-images.githubusercontent.com/85236391/150980102-bcee1a35-ea65-496f-b7c1-573d4332d064.png">
+
+##### Solution:
+
+Import sum inside checkout.models
+
+3. If delivery was not free it would price the delivery a lot more then expected.
+ 
+![Order number](https://user-images.githubusercontent.com/85236391/150981434-dd500749-f09e-41f7-affc-acf40473adcc.png)
+
+##### Solution:
+
+Found the bug in checkout.models that I had put * 10 to the total amount when it should be devided by 100 to calculate the correct delivery fee.
+
+Wrong:
+![def update total(self)](https://user-images.githubusercontent.com/85236391/150981504-e205c8a9-e228-4174-be3e-fb3f7dab457e.png)
+
+Correct:
+<img width="592" alt="Skärmavbild 2022-01-25 kl  14 01 33" src="https://user-images.githubusercontent.com/85236391/150981654-933804b0-7449-4eed-80af-d27499ed1f7a.png">
+
+4. Problem to connect the webhook to the site and get status 400 message.
+
+![payment_intent created](https://user-images.githubusercontent.com/85236391/150981812-866ed198-86c4-4b4a-80ed-81cd6d86a9a0.png)
+
+##### Solution:
+
+![import env](https://user-images.githubusercontent.com/85236391/150981855-ea38ef3a-d2e5-499e-a48a-f3de7750b4a9.png)
+
+Had to import the env file in to the settings so it would read the secret wh password correct.
+
+5. Problem to get the handle_payment_intent_succeeded to read the billing information and adress from the shopper.
+
+##### Solution
+
+I had the light verion of jQuery so it would not work correct. After adding the full version everything worked perfectly.
 
 ## Deployment
 
