@@ -146,13 +146,18 @@
                     {% endif %}
                     {% for review in reviews %}
                         <div class="review-heading">
-                            <p class="blue-text admin-order-text"><i class="far fa-user"></i> {{ review.user.username }}</p>
-                            <p class="admin-order-text">{{ review.created_at }}</p>
                             <i class="fa fa-star {% if review.rate > 4 %} checked {% endif %}"></i>
                             <i class="fa fa-star {% if review.rate > 3 %} checked {% endif %}"></i>
                             <i class="fa fa-star {% if review.rate > 2 %} checked {% endif %}"></i>
                             <i class="fa fa-star {% if review.rate > 1 %} checked {% endif %}"></i>
                             <i class="fa fa-star {% if review.rate > 0 %} checked {% endif %}"></i>
+                            <p class="blue-text admin-order-text"><i class="far fa-user"></i> {{ review.user.username }}</p>
+                            <p class="admin-order-text">{{ review.created_at }}</p>
+                            <!-- <i class="fa fa-star {% if review.rate > 4 %} checked {% endif %}"></i>
+                            <i class="fa fa-star {% if review.rate > 3 %} checked {% endif %}"></i>
+                            <i class="fa fa-star {% if review.rate > 2 %} checked {% endif %}"></i>
+                            <i class="fa fa-star {% if review.rate > 1 %} checked {% endif %}"></i>
+                            <i class="fa fa-star {% if review.rate > 0 %} checked {% endif %}"></i> -->
                         </div>
                         <div class="review-body mt-2">
                             <p>{{ review.comment }}</p>
