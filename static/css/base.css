@@ -137,8 +137,7 @@ footer {
     text-align: center;
 }
 
-.fa-facebook,
-.fa-instagram {
+.fa-facebook {
     color: black;
     font-size: 25px;
     padding: 0 5px 0 5px;
@@ -146,11 +145,6 @@ footer {
 
 .fa-facebook:hover {
     color: rgb(15, 15, 252);
-    transform: scale(1.35);
-}
-
-.fa-instagram:hover {
-    color: #d60d49;
     transform: scale(1.35);
 }
 
@@ -261,7 +255,7 @@ footer {
 @media (max-width: 575px) {
     .footer-social,
     .footer-contact {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid rgb(199 199 199);
         padding-bottom: 15px;
     }
 }
