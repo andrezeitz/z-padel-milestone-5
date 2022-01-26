@@ -76,7 +76,7 @@ The target audience for this site are for people who want to be able to buy pade
   * I can add a product so that I can update with new items
   * I can edit a product so that I can change product price, descriptions and other criteria
   * I can delete a product so that I can remove it from the store and it will no longer be able to purchase
-  * I can get an order confirmation when someone is making a purchase
+  * I can see all bookings made on the site
 
 * I planned the project [here](https://github.com/andrezeitz/z-padel/projects/1)
 
@@ -337,6 +337,57 @@ I use SendGrid as email provider to be able to send out the verification email a
 
 ## Testing
 
+### User Stories
+As a shopper:
+
+1. I can view a different kind of products so that I can select something to buy
+  * Result: TEST PASSED 
+2. I can see individual product details so that I can take a closer look on price, information, pictures and different sizes
+  * Result: TEST PASSED
+3. I can easy see how much the current shoppingbag will cost so that I can see if I can afford everything
+  * Result: TEST PASSED
+4. I can select size and quantity of product so that I can choose the correct size and how many I want to buy
+  * Result: TEST PASSED
+5. I can see what I have in my shoppingbag so that I can see how much I will spend on my purchase
+  * Result: TEST PASSED
+6. I can change the quantity of individual items in my bag so that I can easy make a change to the products before checkout
+  * Result: TEST PASSED
+7. I can enter my credit card so that I can pay for my items
+  * Result: TEST PASSED
+8. I can get an order confirmation after purchase is successful so that I can see so everything is correct
+  * Result: TEST PASSED
+9. I can get a email confirmation on my purchase so that I can know that my order was completed successful
+  * Result: TEST PASSED
+10.  I can read reviews about different products so that I can decide if this product is good or bad
+  * Result: TEST PASSED
+
+As a user:
+
+1. I can register for an account so that I can have a personal account
+  * Result: TEST PASSED 
+2. I can login and out of my account so that I can access my private account
+  * Result: TEST PASSED 
+3. I can recover my password if i forget it so that I can get back in to my account
+  * Result: TEST PASSED 
+4. I can have a personalized profile so that I can see my old order history
+  * Result: TEST PASSED 
+5. I can search for different products so that I can find what I'm looking for
+  * Result: TEST PASSED 
+6.  I can choose a specific category of product so that I can easily find the best product in that category
+  * Result: TEST PASSED 
+7. I can review a product so that other people can get better information about a product
+  * Result: TEST PASSED
+
+As a site owner
+1. I can add a product so that I can update with new items
+  * Result: TEST PASSED 
+2. I can edit a product so that I can change product price, descriptions and other criteria
+  * Result: TEST PASSED 
+3. I can delete a product so that I can remove it from the store and it will no longer be able to purchase
+  * Result: TEST PASSED
+4. I can see all bookings made on the site
+  * Result: TEST PASSED
+
 ### Functionality
 
 #### Home Page
@@ -408,7 +459,7 @@ I use SendGrid as email provider to be able to send out the verification email a
 * Cancel button will lead the user to the home page.
 * Save button will save the product to the database.
 
-### Sign Up / Login Page
+#### Sign Up / Login Page
 * The correct form is displayed for each page.
 * The sign up form allows the user to sign up using their email and password.
 * The user will receive a confirmation email to connect the email.
