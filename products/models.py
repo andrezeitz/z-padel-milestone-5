@@ -29,8 +29,6 @@ class Product(models.Model):
     cloth_size = models.BooleanField(default=False, null=True, blank=True)
     shoe_size_man = models.BooleanField(default=False, null=True, blank=True)
     shoe_size_woman = models.BooleanField(default=False, null=True, blank=True)
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True,
-                                 blank=True)
     image = models.ImageField(null=False)
 
     def __str__(self):
