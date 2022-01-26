@@ -333,9 +333,9 @@ Edit and delete buttons form admin on each product:
 
 ### Footer
 
-The footer is sticky on the bottom of all pages. It display our facebook page, contact information and shipping details. 
+The footer is sticky on the bottom of all pages. It display our facebook page, contact information, shipping details and privacy policy.
 
-<img width="1087" alt="Skärmavbild 2022-01-25 kl  13 40 51" src="https://user-images.githubusercontent.com/85236391/150978713-26ecb2a4-c005-428a-b48f-a59b6fc5fd24.png">
+![new footer](https://user-images.githubusercontent.com/85236391/151232271-73c34dad-65e2-4bed-a426-7fdfdb344c1c.png)
 
 ### 403, 404 and 500 error page
 
@@ -500,7 +500,7 @@ As a site owner
 
 #### The Footer
 * The footer is fixed to the bottom of all content.
-* Facebook link in the footer is connected to the correct pages.
+* Facebook and privacy link in the footer is connected to the correct pages.
 * The footer is fully responsive and will change to a mobile version when the screen is too small.
 
 ### Code Validation
