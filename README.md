@@ -98,6 +98,89 @@ The following features are must have for this site to function, and are correlat
 * Add, edit and delete product as admin
 * Review a product
 
+## Structure
+Below is a description of the structure of the site. Note: The navbar and footer are included on all templates.
+
+### Database Schema
+
+#### User Model
+The user model used for this site comes from django.contrib.auth.models
+
+During development, the database used was SQLite which is the default database for Django. Once the site was deployed to Heroku, the database was migrated to PostgreSQL.
+
+#### Home App
+
+##### HTML
+
+index.html
+* This is the home page of the site, it display a big hero picture, our most visited categorys with links to them, a mailchimp email subscription to our newsletter and reviews from some customers.
+
+#### Product App
+
+##### HTML
+
+products.html
+* This is the main page for all products, user can filter this page with categorys or search to more easy find the product they are looking for.
+
+product_detail.html
+* This is the more detailed product page for each product. Here you can see more information about the product, add it to the cart and also write reviews about the product.
+
+add_product.html
+* This page is only for admin to be able to add new products to the database.
+
+edit_product.html
+* This page is only for admin to be able to edit a product from the database.
+
+##### Models
+
+Category
+* It stores the categories for the products.
+
+Product
+* It stores all the products.
+
+Review
+* It stores the reviews for each product.
+
+#### Bag App
+
+##### HTML
+
+bag.html
+* This is the page for the cart. Each item added will displayed here where you also will be able to update or delete a product. Users can also continue securely to checkout.
+
+#### Checkout App
+
+##### HTML
+
+checkout.html
+* This is the page for the checkout. It's the final step before the user can pay for their products. It shows all the products added and total price. It also askes the user for billing information which will be stored in the database for future use. There's a stripe input that will take the credit card information. It also has a button to pay.
+
+checkout_success.html
+* This page displays a success message after the user has successfully paid for their products. It also displays the order number, order date, the products and price.
+
+##### Model
+Order
+* It stores the order information of each order and is created when the user completes the checkout.
+
+OrderLineItem
+* Contains information about each product that's added to the cart.
+
+#### Profiles App
+
+##### HTML
+
+profiles.html
+* Displays the user's profile. It shows the users billing information and their previously orders.
+
+admin.html
+* This page is only for admin. It display all orders made on the site with order number, name, email, phone number and the products.
+
+##### Model
+
+UserProfile
+* Securely stores the user's billing information. It's used to store the user's billing information and pass it to the checkout form to speed up the purchase process.
+
 ## Design
 
 ### Fonts
@@ -133,6 +216,7 @@ The colors chosen are:
 * [Gitpod](https://www.gitpod.io/)
 * [Django](https://www.djangoproject.com/)
 * [Heroku](https://www.heroku.com/home)
+* [jQuery](https://jquery.com/)
 * [Postgres](https://www.postgresql.org/)
 * [Bootstrap](https://www.bootstrap.com/)
 * [AWS](https://aws.amazon.com/)
@@ -140,7 +224,7 @@ The colors chosen are:
 * [Font Awesome](https://fontawesome.com/)
 * [W3C HTML Validation](https://validator.w3.org/)
 * [H3C CSS Validation](https://jigsaw.w3.org/css-validator/validator.html.en)
-* [http://pep8online.com/](http://pep8online.com/)
+* [pep8online](http://pep8online.com/)
 * [Am I responsive](http://ami.responsivedesign.is/)
 * [WebAim](https://webaim.org/resources/contrastchecker/)
 
@@ -219,9 +303,15 @@ From search:
 
 ### Profile
 
-Inside your profile you will see on the left field where you can update your personal information. If you already have made a purchase the field will already have saved your information. If you would like to update any you can do so by clicking on the "Update Profile" button. On the right side you will see all orders you have made. If you click on the order number you will see a more detailed page with your order.
+This page is only for users. Inside your profile you will see on the left field where you can update your personal information. If you already have made a purchase the field will already have saved your information. If you would like to update any you can do so by clicking on the "Update Profile" button. On the right side you will see all orders you have made. If you click on the order number you will see a more detailed page with your order.
 
 <img width="1142" alt="Skärmavbild 2022-01-25 kl  13 34 59" src="https://user-images.githubusercontent.com/85236391/150978292-f2caf6bd-ebc3-46ca-a1a8-d09e1687f2eb.png">
+
+### Admin Profile
+
+This page is only for admin instead of the profile page. It will display all orders made from the site with booking number, date, full information about the user and the items ordered.
+
+![Skärmavbild 2022-01-26 kl  00 10 21](https://user-images.githubusercontent.com/85236391/151147416-1b986eae-7701-48cd-ac23-6de24edf5515.png)
 
 ### Product Management 
 
@@ -240,6 +330,10 @@ Edit and delete buttons form admin on each product:
 The footer is sticky on the bottom of all pages. It display our social media platforms, contact information and shipping details. 
 
 <img width="1087" alt="Skärmavbild 2022-01-25 kl  13 40 51" src="https://user-images.githubusercontent.com/85236391/150978713-26ecb2a4-c005-428a-b48f-a59b6fc5fd24.png">
+
+### Email Provider
+
+I use SendGrid as email provider to be able to send out the verification email and the confirmation email after a user has made an order.
 
 ## Testing
 
