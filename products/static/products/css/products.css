@@ -13,12 +13,20 @@
     text-transform: uppercase;
 }
 
+.image-container {
+    max-width: 450px;
+}
+
 .product-filter-price {
     text-align: center;
 }
 
 .admin-products {
     margin-top: 10px;
+}
+
+.hr-mobile {
+    display: none;
 }
 
 .form-input {
@@ -173,6 +181,14 @@
     }
 
     .breadcrumb-item {
-        font-size: 12px;
+        font-size: 11px;
+    }
+
+    .hr-mobile {
+        display: block;
+    }
+
+    .hr-desktop {
+        display: none;
     }
 }

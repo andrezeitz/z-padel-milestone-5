@@ -84,13 +84,14 @@
                                 <a href="{{ product.get_absolute_url }}">
                                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                                 </a>
-                                <hr>
+                                <hr class="hr-desktop">
                                 <div class="product-name">
                                      <!-- Product name --> 
                                     <p class="mb-0">{{ product.name }}</p>
                                     <!-- Product price --> 
                                     <p class="lead mb-0 text-left font-weight-bold">€ {{ product.price }}</p>
                                 </div>
+                                <hr class="hr-mobile">
                             </div>
                         </div>
                     {% endfor %}

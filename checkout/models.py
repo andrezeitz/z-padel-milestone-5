@@ -30,6 +30,9 @@ class Order(models.Model):
     stripe_pid = models.CharField(max_length=254, null=False,
                                   blank=False, default='')
 
+    class Meta:
+        ordering = ["-date"]
+
     def _generate_order_number(self):
         """
         Generate a random, unique order number using UUID
@@ -41,7 +44,7 @@ class Order(models.Model):
         Update grand total each time a line item is added,
         accounting for delivery costs.
         """
-        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0
+        self.order_total = self.lineitems.aggregate(Sum('lineitem_total'))['lineitem_total__sum'] or 0 # noqa
         if self.order_total < settings.FREE_SHIPPING:
             self.delivery_cost = self.order_total * settings.DELIVERY_FEE / 100
         else:
