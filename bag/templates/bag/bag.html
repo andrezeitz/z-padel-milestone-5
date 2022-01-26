@@ -7,13 +7,13 @@
         <div class="wrapper wrapper-content">
             <div class="row">
                 <div class="col-12 col-lg-9">
-                    {% if bag_items %}
                     <div class="breadcrumb">
                         <ol class="breadcrumb mt-5">
-                          <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                          <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fas fa-home"></i></a></li>
                           <li class="breadcrumb-item active" aria-current="page">Cart</li>
                         </ol>
                     </div>
+                    {% if bag_items %}
                         <!-- Added products to the bag -->
                         <div class="bag-container">
                             <div class="products-title">
