@@ -146,8 +146,8 @@
                     {% endif %}
                     {% for review in reviews %}
                         <div class="review-heading">
-                            <span class="blue-text">{{ review.user.username }}</span>
-                            <span> {{ review.created_at }} </span>
+                            <p class="blue-text admin-order-text"><i class="far fa-user"></i> {{ review.user.username }}</p>
+                            <p class="admin-order-text">{{ review.created_at }}</p>
                             <i class="fa fa-star {% if review.rate > 4 %} checked {% endif %}"></i>
                             <i class="fa fa-star {% if review.rate > 3 %} checked {% endif %}"></i>
                             <i class="fa fa-star {% if review.rate > 2 %} checked {% endif %}"></i>
