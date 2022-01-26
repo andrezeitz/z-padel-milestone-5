@@ -337,6 +337,12 @@ The footer is sticky on the bottom of all pages. It display our facebook page, c
 
 <img width="1087" alt="Skärmavbild 2022-01-25 kl  13 40 51" src="https://user-images.githubusercontent.com/85236391/150978713-26ecb2a4-c005-428a-b48f-a59b6fc5fd24.png">
 
+### 403, 404 and 500 error page
+
+This page will be displayed from the templates folder when matching error occurs.
+
+![Skärmavbild 2022-01-26 kl  15 49 48](https://user-images.githubusercontent.com/85236391/151186987-e6adc4b9-9071-4b04-ab7e-f62eae8dc2bd.png)
+
 ### Email Provider
 
 I use SendGrid as email provider to be able to send out the verification email and the confirmation email after a user has made an order.
@@ -350,7 +356,7 @@ I created a facebook pages called Z Padel and it's live right now and connected 
 
 ## Testing
 
-### User Stories
+### Testing User Stories
 As a shopper:
 
 1. I can view a different kind of products so that I can select something to buy
@@ -464,6 +470,10 @@ As a site owner
 * The correct information is displayed.
 * All bookings is showed here with the correct name, email and phone numbers.
 * Order number is clickable and will let the admin see the full order.
+
+### Error Pages
+* I only test the 404 page but the structure is the same as the other pages and they're all in the right directory.
+* The "Go back" button leads the user to the home page.
 
 #### Add/Edit Products
 * The correct form is displayed for each page.
