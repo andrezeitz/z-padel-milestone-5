@@ -337,20 +337,117 @@ I use SendGrid as email provider to be able to send out the verification email a
 
 ## Testing
 
+### Functionality
+
+#### Home Page
+* All the correct images are connected to the correct products.
+* The pictures are responsive and change to a mobile version when the screen is too small.
+* The mailchimp subscription is responsive and change to a mobile version when the screen is to small.
+* Site reviews are responsive and have the correct review stars.
+
+#### Product Page
+* Image is connected to the correct products.
+* All the correct information is displayed.
+* All products are responsive and get fewer colums on smaller screens.
+* When searched in the search bar the correct search fiels show up to display what they search for.
+* All categories is connected to the correct category text.
+* Sort by is working when customer comes from categories or search.
+
+#### Product Details Page
+* All the correct information is displayed.
+* The product details page is responsive and changes to a mobile version when the screen is too small.
+* All breadcrumb are correct for each product.
+* When clicking the "Buy now" button a toast success message will be visable
+* Reviews show reviews from users for that specific product.
+* The user can only leave a review if they are logged in.
+* The user need to write something in the review box but can choose 0-5 stars.
+* If there are no reviews the review topic will be hidden.
+
+#### Cart Page
+* Total adds correctly if more than on product is added.
+* The cart page is responsive and changes to a mobile version when the screen is too small.
+* The "Checkout" button leads the user to the checkout page.
+* The "Contine shopping" button leads the user to the home page.
+* The "Update" button update the quantity of each product.
+* The "Remove" button removes the product from the cart.
+* Toast messages will show when products are updated or removed.
+* When no products are in the cart there is a text saying there are no products in the cart and checkout button is not visable.
+
+#### Checkout Page
+* The checkout page is responsive and changes to a mobile version when the screen is too small.
+* The order summary is correct and displays the correct information.
+* Checkout form is correctly displayed to the user and auto fills the correct information if it was saved to the database.
+* Default stripe card is used for payments and have no issues.
+* Payment won't be processed if the form is not filled out correctly, errors will be displayed.
+* Payment won't be processed if the card details are incorrect, errors will be displayed.
+* The "Back to bag" button leads the user to the cart page.
+* The "Checkout" button leads the user to the checkout success page.
+
+#### Checkout Success Page
+* The correct information is displayed.
+* The user will see a button that will redirect to the home page.
+* If the user is coming from the profile page the user will see a button that will redirect to the profile page.
+* If the admin checking the order from the admin profile page the admin will see a button to take him back to all orders.
+
+#### Profile Page
+* The profile page is responsive and changes to a mobile version when the screen is too small.
+* The correct information is displayed.
+* Updated information is saved to the database and displayed the next time the user goes to the checkout page.
+* All orders the user have made will be saved in order history.
+* Order number is clickable and will display the detailed order.
+
+#### Admin Profile Page
+* The correct information is displayed.
+* All bookings is showed here with the correct name, email and phone numbers.
+* Order number is clickable and will let the admin see the full order.
+
+#### Add/Edit Products
+* The correct form is displayed for each page.
+* Removing an image will remove the image from the product.
+* Adding an image will add the image to the product.
+* Cancel button will lead the user to the home page.
+* Save button will save the product to the database.
+
+### Sign Up / Login Page
+* The correct form is displayed for each page.
+* The sign up form allows the user to sign up using their email and password.
+* The user will receive a confirmation email to connect the email.
+* The user is able to get a new password in there email if they forget it.
+* The login form allows the user to login using their email and password.
+* The user can only sign up if the email is not already in use.
+
+#### The Navigation Bar
+* The nav bar is fixed to the top of the screen and is always visible.
+* The nav bar is responsive and will change to a mobile version when the screen is too small.
+* All links in the nav bar are connected to the correct pages.
+* The drop down menus are responsive and are always visible.
+* The search bar is responsive and functional.
+* All links change bottom border color when hovered over them.
+
+#### The Footer
+* The footer is fixed to the bottom of all content.
+* Links in the footer are connected to the correct pages.
+* The footer is fully responsive and will change to a mobile version when the screen is too small.
 
 ### Code Validation
 
 ### HTML
 The W3C Markup Validation Service was used to validate the HTML page of the project. No errors or warnings to show.
 
+![Skärmavbild 2022-01-26 kl  12 53 12](https://user-images.githubusercontent.com/85236391/151158655-97dedce0-6cee-4918-b9c1-762fad8b745f.png)
 
 ### CSS
 The W3C CSS Validation Service was used to validate the CSS file used for the project. No errors or warnings to show.
 
+![Skärmavbild 2022-01-26 kl  12 51 23](https://user-images.githubusercontent.com/85236391/151158486-4abfd1c1-cfa0-4716-aeaa-c5331d8271e1.png)
 
 ### Python
 The PEP8 Online Check was used to validate all Python code. No errors or warnings to show
 
+PLEASE NOTE: Warnings and errors were given on most pages due to template logic being used. Certain files failed PEP* due to base code set by Django.
+
+### Security
+All pages were tested with a basic account without any special permissions to make sure that no special features were available. Attempt to access a page that requires special permissions will result in a 403 error or a redirect to the login page.
 
 ### Different Screen Size
 The site is optimized for all screen sizes and tested with a Macbook Pro 13" and iPhone 13 Pro.
