@@ -14,6 +14,9 @@ Live website: [Z Padel](https://z-padel.herokuapp.com/)
   * [Business Goals](#business-goals)
   * [User Stories](#user-stories)
   * [Site Owner Goals](#site-owner-goals)
+* [Scope](#scope)
+* [Structure](#structure)
+  * [Database Schema](#database-schema)
 * [Design](#design)
   * [Fonts](#fonts)
   * [Colors](#colors)
@@ -24,12 +27,15 @@ Live website: [Z Padel](https://z-padel.herokuapp.com/)
   * [Contrast Checker](#contrast-checker)
 * [Features](#features)
 * [Testing](#testing)
+  * [Test User Stories](#test-user-stories)
+  * [Functionality](#functionality)
   * [Code Validation](#code-validation)
   * [HTML](#html)
   * [CSS](#css)
   * [Python](#python)
+  * [Security](#security)
   * [Different Screen Size](#different-screen-size)
-* [Issues found during site development](#issues-found-during-site-development)
+  * [Issues found during site development](#issues-found-during-site-development)
 * [Deployment](#deployment)
   * [Heroku](#heroku)
   * [AWS-S3](#aws-s3)
@@ -327,13 +333,20 @@ Edit and delete buttons form admin on each product:
 
 ### Footer
 
-The footer is sticky on the bottom of all pages. It display our social media platforms, contact information and shipping details. 
+The footer is sticky on the bottom of all pages. It display our facebook page, contact information and shipping details. 
 
 <img width="1087" alt="Skärmavbild 2022-01-25 kl  13 40 51" src="https://user-images.githubusercontent.com/85236391/150978713-26ecb2a4-c005-428a-b48f-a59b6fc5fd24.png">
 
 ### Email Provider
 
 I use SendGrid as email provider to be able to send out the verification email and the confirmation email after a user has made an order.
+
+### Facebook Page
+
+I created a facebook pages called Z Padel and it's live right now and connected inside the footer. If the page would be deleted since it's not a real business I will post a print here.
+
+<img width="1554" alt="facebook sida" src="https://user-images.githubusercontent.com/85236391/151178485-93f28df9-4e13-4d20-a5a9-f0755f9236e9.png">
+
 
 ## Testing
 
@@ -477,7 +490,7 @@ As a site owner
 
 #### The Footer
 * The footer is fixed to the bottom of all content.
-* Links in the footer are connected to the correct pages.
+* Facebook link in the footer is connected to the correct pages.
 * The footer is fully responsive and will change to a mobile version when the screen is too small.
 
 ### Code Validation
