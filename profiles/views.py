@@ -3,7 +3,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 from .models import UserProfile
-from checkout.models import OrderLineItem
 from .forms import UserProfileForm
 from checkout.models import Order
 

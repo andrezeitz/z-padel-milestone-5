@@ -5,13 +5,17 @@ from products.models import Product
 
 
 def view_bag(request):
-    """ View to return bag page"""
+    """
+    View to return bag page
+    """
 
     return render(request, 'bag/bag.html')
 
 
 def add_to_bag(request, item_id):
-    """ Add a product to bag"""
+    """
+    Add a product to bag
+    """
 
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -23,7 +27,7 @@ def add_to_bag(request, item_id):
     if 'shoe_size_man' in request.POST:
         size = request.POST['shoe_size_man']
     if 'shoe_size_woman' in request.POST:
-        size = request.POST['shoe_size_woman']           
+        size = request.POST['shoe_size_woman']
     bag = request.session.get('bag', {})
 
     if size:
@@ -40,13 +44,15 @@ def add_to_bag(request, item_id):
         else:
             bag[item_id] = quantity
 
-    messages.warning(request, f'{product.name} added to cart')        
+    messages.warning(request, f'{product.name} added to cart')
     request.session['bag'] = bag
     return redirect(redirect_url)
 
 
 def adjust_bag(request, item_id):
-    """ Adjust a product in the bag"""
+    """
+    Adjust a product in the bag
+    """
 
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -68,14 +74,16 @@ def adjust_bag(request, item_id):
             bag[item_id] = quantity
         else:
             bag.pop(item_id)
-            
+
     messages.info(request, f'{product.name} was updated')
     request.session['bag'] = bag
     return redirect(reverse('view_bag'))
 
 
 def remove_from_bag(request, item_id):
-    """Remove the item from the shopping bag"""
+    """
+    Remove the item from the shopping bag
+    """
 
     product = Product.objects.get(pk=item_id)
     size = None
@@ -89,8 +97,8 @@ def remove_from_bag(request, item_id):
             bag.pop(item_id)
     else:
         bag.pop(item_id)
-    
+
     messages.error(request, f'{product.name} was removed from cart')
     request.session['bag'] = bag
-    
+
     return redirect(reverse('view_bag'))

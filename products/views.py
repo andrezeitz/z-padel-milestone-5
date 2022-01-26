@@ -37,11 +37,11 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request, "No search criteria entered!")
                 return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
-            products = products.filter(queries)
+
+            querie = Q(name__icontains=query) | Q(description__icontains=query)
+            products = products.filter(querie)
 
     current_sorting = f'{sort}_{direction}'
 
@@ -62,7 +62,7 @@ def product_detail(request, slug):
     product_cate = product.category.all()
     product_review = Product.objects.get(slug=slug)
     review = Review.objects.filter(product=product_review)
-    
+
     context = {
         'product': product,
         'categories': product_cate,
@@ -102,7 +102,7 @@ def add_product(request):
             return redirect(reverse('add_product'))
     else:
         form = ProductForm()
-                
+
     form = ProductForm()
 
     context = {
@@ -114,7 +114,7 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ 
+    """
     Will edit a product in the database
     """
     if not request.user.is_superuser:
