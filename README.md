@@ -27,7 +27,7 @@ Live website: [Z Padel](https://z-padel.herokuapp.com/)
   * [Contrast Checker](#contrast-checker)
 * [Features](#features)
 * [Testing](#testing)
-  * [Test User Stories](#test-user-stories)
+  * [Test User Stories](#testing-user-stories)
   * [Functionality](#functionality)
   * [Code Validation](#code-validation)
   * [HTML](#html)
@@ -38,7 +38,7 @@ Live website: [Z Padel](https://z-padel.herokuapp.com/)
   * [Issues found during site development](#issues-found-during-site-development)
 * [Deployment](#deployment)
   * [Heroku](#heroku)
-  * [AWS-S3](#aws-s3)
+  * [AWS S3](#aws-s3)
   * [Cloning](#cloning)
 * [Credits](#credits)
 
@@ -109,21 +109,21 @@ Below is a description of the structure of the site. Note: The navbar and footer
 
 ### Database Schema
 
-#### User Model
+### User Model
 The user model used for this site comes from django.contrib.auth.models
 
 During development, the database used was SQLite which is the default database for Django. Once the site was deployed to Heroku, the database was migrated to PostgreSQL.
 
-#### Home App
+### Home App
 
-##### HTML
+#### HTML
 
 index.html
 * This is the home page of the site, it display a big hero picture, our most visited categorys with links to them, a mailchimp email subscription to our newsletter and reviews from some customers.
 
-#### Product App
+### Product App
 
-##### HTML
+#### HTML
 
 products.html
 * This is the main page for all products, user can filter this page with categorys or search to more easy find the product they are looking for.
@@ -137,27 +137,51 @@ add_product.html
 edit_product.html
 * This page is only for admin to be able to edit a product from the database.
 
-##### Models
+#### Models
 
 Category
 * It stores the categories for the products.
+```
+name = models.CharField(max_length=254)
+friendly_name = models.CharField(max_length=254, null=True, blank=True)
+category_text = models.TextField(null=True, blank=True)
+```
 
 Product
 * It stores all the products.
+```
+category = models.ManyToManyField('Category', blank=True, related_name='categories')
+sku = models.CharField(max_length=5, null=False, unique=False)
+name = models.CharField(max_length=254)
+slug = models.SlugField(max_length=50, null=False, unique=True)
+description = models.TextField()
+price = models.DecimalField(max_digits=6, decimal_places=2)
+cloth_size = models.BooleanField(default=False, null=True, blank=True)
+shoe_size_man = models.BooleanField(default=False, null=True, blank=True)
+shoe_size_woman = models.BooleanField(default=False, null=True, blank=True)
+image = models.ImageField(null=False)
+```
 
 Review
 * It stores the reviews for each product.
+```
+user = models.ForeignKey(User, on_delete=models.CASCADE)
+product = models.ForeignKey(Product, on_delete=models.CASCADE, default=True)
+comment = models.TextField(max_length=250)
+rate = models.IntegerField(default=0, null=True)
+created_at = models.DateTimeField(auto_now_add=True)
+```
 
-#### Bag App
+### Bag App
 
-##### HTML
+#### HTML
 
 bag.html
 * This is the page for the cart. Each item added will displayed here where you also will be able to update or delete a product. Users can also continue securely to checkout.
 
-#### Checkout App
+### Checkout App
 
-##### HTML
+#### HTML
 
 checkout.html
 * This is the page for the checkout. It's the final step before the user can pay for their products. It shows all the products added and total price. It also askes the user for billing information which will be stored in the database for future use. There's a stripe input that will take the credit card information. It also has a button to pay.
@@ -165,16 +189,40 @@ checkout.html
 checkout_success.html
 * This page displays a success message after the user has successfully paid for their products. It also displays the order number, order date, the products and price.
 
-##### Model
+#### Model
 Order
 * It stores the order information of each order and is created when the user completes the checkout.
+```
+order_number = models.CharField(max_length=32, null=False, editable=False)
+user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL, null=True, blank=True, related_name='orders')
+full_name = models.CharField(max_length=50, null=False, blank=False)
+email = models.EmailField(max_length=254, null=False, blank=False)
+phone_number = models.CharField(max_length=20, null=False, blank=False)
+postcode = models.CharField(max_length=20, null=False, blank=False)
+city = models.CharField(max_length=40, null=False, blank=False)
+street_address = models.CharField(max_length=80, null=False, blank=False)
+date = models.DateTimeField(auto_now_add=True)
+delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
+order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+original_bag = models.TextField(null=False, blank=False, default='')
+stripe_pid = models.CharField(max_length=254, null=False,
+blank=False, default='')
+```
 
 OrderLineItem
 * Contains information about each product that's added to the cart.
+```
+order = models.ForeignKey(Order, null=False, blank=False, on_delete=models.CASCADE, related_name='lineitems')
+product = models.ForeignKey(Product, null=False, blank=False, on_delete=models.CASCADE)
+product_size = models.CharField(max_length=2, null=True, blank=True)
+quantity = models.IntegerField(null=False, blank=False, default=0)
+lineitem_total = models.DecimalField(max_digits=6, decimal_places=2, null=False, blank=False, editable=False)
+```
 
-#### Profiles App
+### Profiles App
 
-##### HTML
+#### HTML
 
 profiles.html
 * Displays the user's profile. It shows the users billing information and their previously orders.
@@ -182,10 +230,18 @@ profiles.html
 admin.html
 * This page is only for admin. It display all orders made on the site with order number, name, email, phone number and the products.
 
-##### Model
+#### Model
 
 UserProfile
 * Securely stores the user's billing information. It's used to store the user's billing information and pass it to the checkout form to speed up the purchase process.
+```
+user = models.OneToOneField(User, on_delete=models.CASCADE)
+default_full_name = models.CharField(max_length=254, null=True, blank=True)
+default_phone_number = models.CharField(max_length=20, null=True, blank=True)
+default_street_address = models.CharField(max_length=80, null=True, blank=True)
+default_postcode = models.CharField(max_length=20, null=True, blank=True)
+default_city = models.CharField(max_length=40, null=True, blank=True)
+```
 
 ## Design
 
@@ -618,7 +674,7 @@ The program is set to be deployed automatically after each push from gitpod.
 8. Now you can create your requirements.txt file by typing pip freeze > requirements.txt
 9. Create a Procfile file by typing touch Procfile
 
-### AWS-S3
+### AWS S3
 
 #### How to set up AWS S3:
 1. Go to AWS and login to your account. If you don't have an account, create one. If you have to create an account be mindful that you will need to enter your card details, no billing will occur unless you go over the free tier limit.
@@ -632,6 +688,25 @@ The program is set to be deployed automatically after each push from gitpod.
 3. The section below will allow you to select "Host a static website", Select "Host a static website" and then scroll down to the index "Document inputs"
 4. In the input field, enter the home file which is the "index.html" file and in the error field, enter "error.html".
 5. Leave the redirection rules empty and click on "Save changes".
+
+#### Setting up the Permissions
+1. Next, go to the permissions tab. Scroll down to the bottom of the page and click edit the "Cross-Origin Resource Sharing (CORS)" section.
+2. Add the following lines:
+```
+[{
+  "AllowedHeaders": ["
+  Authorization"
+  ],
+  "AllowedMethods": [
+    "Get"
+    ],
+  "AllowedOrigins": [
+    "*"
+    ],
+  "ExposeHeaders": [],
+}]
+```
+3. Save the changes. Navigate to "Bucket Policy" section and click "edit".
 
 #### Generating A Bucket Policy
 1. Click on the "Policy Generator" button. Select "S3 Bucket Policy" from the dropdown list.
@@ -655,7 +730,25 @@ The program is set to be deployed automatically after each push from gitpod.
 5. Click "Create Policy" and click on the JSON tab, and select "Import Managed Policy".
 6. Search for "AmazonS3FullAccess" and select it, then Import".
 7. Copy your ARN and place it in the code twice (the second time with /*).
-8. Select "Next: Tags", "Next: Review", Enter a name and click on "Create Policy".
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:*",
+                "s3-object-lambda:*"
+            ],
+            "Resource": [
+                "arn:aws:s3:::YOUR-ARN",
+                "arn:aws:s3:::YOUR-ARN/*"
+            ]
+        }
+    ]
+}
+```
+9. Select "Next: Tags", "Next: Review", Enter a name and click on "Create Policy".
 
 #### Attaching the Group Policy
 1. Go to "User Groups", under "Access Management". Click on the your newly created group and go over to the "Permissions" tab
