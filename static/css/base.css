@@ -3,6 +3,7 @@ html, body {
 }
 
 /* Body to keep footer as sticky */
+
 body {
     color: black;
     font-family: 'Lato';
@@ -11,6 +12,7 @@ body {
 }
 
 /* To keep footer as sticky */
+
 .main-bg {
     flex: 1 0 auto;
     margin-bottom: 1rem;
@@ -164,6 +166,8 @@ footer {
     font-size: 17px;
     padding-right: 5px;
 }
+
+/* Toast */
 
 .toast {
     max-width: 300px !important;

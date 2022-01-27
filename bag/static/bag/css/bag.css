@@ -71,4 +71,8 @@
     .picture-td {
         display: none;
     }
+
+    .btn-lg {
+        font-size: 1rem;
+    }
 }

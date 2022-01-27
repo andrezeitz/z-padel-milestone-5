@@ -1,3 +1,5 @@
+/* Breadcrumb Product */
+
 .breadcrumb {
     background: white;
     padding: 0;
@@ -7,6 +9,8 @@
 .breadcrumb-item {
     font-size: 15px;
 }
+
+/* Product */
 
 .product-header {
     margin: 1rem 0 1rem 0;

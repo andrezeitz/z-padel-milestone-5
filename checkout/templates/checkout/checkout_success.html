@@ -20,6 +20,7 @@
             {% endif %}
         </div>
     </div>
+    <!-- Button -->
     <div class="row">
         {% if request.user.is_superuser %}
         <div class="col text-center mb-2 mt-2">
@@ -59,25 +60,26 @@
                     </div>
                 </div>
                 {% endfor %}
-                <!-- Total Price -->
+                <!-- Delivery -->
                 <div class="row">
                     <div class="col mt-3">
                         <span class="success-text font-weight-bold">Delivery: </span>
                         <span class="success-text"> €{{ order.delivery_cost }}</span>
                     </div>
                 </div>
+                <!-- Total Price -->
                 <div class="row">
                     <div class="col">
                         <span class="success-text font-weight-bold">Total: </span>
                         <span class="success-text"> €{{ order.grand_total }}</span>
                     </div>
                 </div>
+                <!-- Delivery -->
                 <div class="row">
                     <div class="col">
                         <h6 class="success-header">Deliver to:</h6>
                     </div>
                 </div>
-                <!-- Delivery -->
                 <div class="row">
                     <div class="col">
                         <!-- Name -->
