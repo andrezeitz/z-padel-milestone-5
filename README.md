@@ -46,7 +46,7 @@ Live website: [Z Padel](https://z-padel.herokuapp.com/)
 
 ### Target Audience
 
-The target audience for this site are for people who want to be able to buy padel equipment to a good price. It's easy for shoppers to read reviews from real customers on each product to really be sure the product is good or not. The site target all kind of people, it dosen't matter if you are an experianced padel player or if you just started your journey. Everyone is welcomed.
+The target audience for this site are for people who want to be able to buy padel equipment to a good price. It's easy for shoppers to read reviews from real customers on each product to really be sure the product is good or not. The site target all kind of people, it doesn't matter if you are an experienced padel player or if you just started your journey. Everyone is welcomed.
 
 ### Business Goals
 
@@ -59,9 +59,9 @@ The target audience for this site are for people who want to be able to buy pade
 * As a shopper
   * I can view a different kind of products so that I can select something to buy
   * I can see individual product details so that I can take a closer look on price, information, pictures and different sizes
-  * I can easy see how much the current shoppingbag will cost so that I can see if I can afford everything
+  * I can easy see how much the current shopping bag will cost so that I can see if I can afford everything
   * I can select size and quantity of product so that I can choose the correct size and how many I want to buy
-  * I can see what I have in my shoppingbag so that I can see how much I will spend on my purchase
+  * I can see what I have in my shopping bag so that I can see how much I will spend on my purchase
   * I can change the quantity of individual items in my bag so that I can easy make a change to the products before checkout
   * I can enter my credit card so that I can pay for my items
   * I can get an order confirmation after purchase is successful so that I can see so everything is correct
@@ -70,7 +70,7 @@ The target audience for this site are for people who want to be able to buy pade
 
 * As a user
   * I can register for an account so that I can have a personal account
-  * I can login and out of my account so that I can access my private account
+  * I can log in and out of my account so that I can access my private account
   * I can recover my password if i forget it so that I can get back in to my account
   * I can have a personalized profile so that I can see my old order history
   * I can search for different products so that I can find what I'm looking for
@@ -108,6 +108,12 @@ The following features are must have for this site to function, and are correlat
 Below is a description of the structure of the site. Note: The navbar and footer are included on all templates.
 
 ### Database Schema
+<details>
+<summary>Details</summary>
+<br>
+
+![Skärmavbild 2022-01-27 kl  11 46 32](https://user-images.githubusercontent.com/85236391/151344880-68b262f5-cb24-49e2-8773-8d244bd03e9f.png)
+</details>
 
 ### User Model
 The user model used for this site comes from django.contrib.auth.models
@@ -119,14 +125,14 @@ During development, the database used was SQLite which is the default database f
 #### HTML
 
 index.html
-* This is the home page of the site, it display a big hero picture, our most visited categorys with links to them, a mailchimp email subscription to our newsletter and reviews from some customers.
+* This is the home page of the site, it displays a big hero picture, our most visited categories with links to them, a mailchimp email subscription to our newsletter and reviews from some customers.
 
 ### Product App
 
 #### HTML
 
 products.html
-* This is the main page for all products, user can filter this page with categorys or search to more easy find the product they are looking for.
+* This is the main page for all products, user can filter this page with categories or search to easier find the product they are looking for.
 
 product_detail.html
 * This is the more detailed product page for each product. Here you can see more information about the product, add it to the cart and also write reviews about the product.
@@ -184,7 +190,7 @@ bag.html
 #### HTML
 
 checkout.html
-* This is the page for the checkout. It's the final step before the user can pay for their products. It shows all the products added and total price. It also askes the user for billing information which will be stored in the database for future use. There's a stripe input that will take the credit card information. It also has a button to pay.
+* This is the page for the checkout. It's the final step before the user can pay for their products. It shows all the products added and total price. It also ask the user for billing information which will be stored in the database for future use. There's a stripe input that will take the credit card information. It also has a button to pay.
 
 checkout_success.html
 * This page displays a success message after the user has successfully paid for their products. It also displays the order number, order date, the products and price.
@@ -228,7 +234,7 @@ profiles.html
 * Displays the user's profile. It shows the users billing information and their previously orders.
 
 admin.html
-* This page is only for admin. It display all orders made on the site with order number, name, email, phone number and the products.
+* This page is only for admin. It displays all orders made on the site with order number, name, email, phone number and the products.
 
 #### Model
 
@@ -304,7 +310,7 @@ The website has the following features:
 
 <img width="1013" alt="Skärmavbild 2022-01-25 kl  11 36 11" src="https://user-images.githubusercontent.com/85236391/150961180-e9b0e335-9690-438c-977a-27f2f694d136.png">
 
-* On the mobile version the home logo have been changed to a home font awesome icon to fit better, search and profile buttons work as dropdown. On the left is a dropdown list for all product categorys and to the right is still the cart.
+* On the mobile version the home logo have been changed to a home font awesome icon to fit better, search and profile buttons work as dropdown. On the left is a dropdown list for all product categories and to the right is still the cart.
 
 <img width="482" alt="Skärmavbild 2022-01-25 kl  11 36 47" src="https://user-images.githubusercontent.com/85236391/150961192-918da63f-158e-437d-8a83-718e934e2253.png">
 
@@ -318,14 +324,14 @@ The website has the following features:
 
 ### Home
 
-* The home page is displayed with a big hero picture of a padel rack to let the customer really understand what kind of website it is. Under the picture is our "Most visited categorys". It display 3 big pictures that work like buttons and will expand and get a bit darker when hovering over them. The categorys are Padel racks, padel balls and padel shoes. After that is a email subscription field that let user subscribe to our newsletter. Last is 3 different reviews from customers that like the site.
+* The home page is displayed with a big hero picture of a padel rack to let the customer really understand what kind of website it is. Under the picture is our "Most visited category". It displays 3 big pictures that work like buttons and will expand and get a bit darker when hovering over them. The categories are Padel racks, padel balls and padel shoes. After that is a email subscription field that let user subscribe to our newsletter. Last is 3 different reviews from customers that like the site.
 
 ![Skärmavbild 2022-01-25 kl  14 36 03](https://user-images.githubusercontent.com/85236391/150986900-c504cc52-8d9e-4dc0-96c0-1547fd9e0a85.png)
 ![Skärmavbild 2022-01-25 kl  14 36 13](https://user-images.githubusercontent.com/85236391/150986915-ba46fd5d-bc09-4d41-92a9-1da1eadb10d5.png)
 
 ### Products
 
-* Each product category page has it's own information on the top of the page. First there is bredcrumb to each navigate on the site. On the right side there is a "Sort By" button that works as a dropdown to let the shopper sort the products after price low to high or high to low. They can also sort for oldest to newest or newest to oldest product. Under is the products displayed with picture, name and price. The pictures work as a link to the specific product.
+* Each product category page has its own information on the top of the page. First there is bredcrumb to each navigate on the site. On the right side there is a "Sort By" button that works as a dropdown to let the shopper sort the products after price low to high or high to low. They can also sort for oldest to newest or newest to oldest product. Under is the products displayed with picture, name and price. The pictures work as a link to the specific product.
 
 From categories:
 ![Skärmavbild 2022-01-25 kl  14 37 03](https://user-images.githubusercontent.com/85236391/150987022-ae0fb412-865e-4742-8400-7626116ca2d0.png)
@@ -335,7 +341,7 @@ From search:
 
 ### Product Details
 
-* On the top left side there will still be breadcrumb so the shopper can easy go back to the category page they just came from. Under it will be a big picture of the product. On the right side is the name and price once again and also a quantiy box so the shopper can choose how many products they would like to buy. If the product has sizes it will be displayed also. Under there is a box "Buy now" button to add the product to the cart and some additional description about the product. On the bottom of the page is a review textbox that will let the customers review the product with a text and choose between 0-5 stars. After the review is saved it will be showed under with the profile name, date of the review, how many stars and the text. You will have to be logged in to be able to write a review. If you are not logged in the "save" button will not be visable and instead ask the customer to login with a link to the login page.
+* On the top left side there will still be breadcrumb so the shopper can easy go back to the category page they just came from. Under it will be a big picture of the product. On the right side is the name and price once again and also a quantity box so the shopper can choose how many products they would like to buy. If the product has sizes it will be displayed as well. Under there is a box "Buy now" button to add the product to the cart and some additional description about the product. On the bottom of the page is a review text box that will let the customers review the product with a text and choose between 0-5 stars. After the review is saved it will be showed under with the profile name, date of the review, how many stars and the text. You will have to be logged in to be able to write a review. If you are not logged in the "save" button will not be visible and instead ask the customer to login with a link to the login page.
 
 ![Skärmavbild 2022-01-25 kl  14 40 31](https://user-images.githubusercontent.com/85236391/150987578-a2148ba0-1000-459f-9c36-55888498753b.png)
 
@@ -353,7 +359,7 @@ From search:
 
 ### Checkout Success
 
-* The checkout success ia a simple page displaying your last order. It will show on what date you did the order, your order number and wich products you ordered. On the bottom it will show where the order will be shipped and how much the total order was. This page will also be able to display again later if you was logged in when the order was made since all order will be saved in your profile.
+* The checkout success is a simple page displaying your last order. It will show on what date you did the order, your order number and which products you ordered. On the bottom it will show where the order will be shipped and how much the total order was. This page will also be able to display again later if you was logged in when the order was made since all order will be saved in your profile.
 
 <img width="777" alt="Skärmavbild 2022-01-25 kl  13 26 57" src="https://user-images.githubusercontent.com/85236391/150977273-9c135baf-bf8f-47b7-a016-b513d7900242.png">
 
@@ -393,7 +399,7 @@ The footer is sticky on the bottom of all pages. It display our facebook page, c
 
 ![new footer](https://user-images.githubusercontent.com/85236391/151232271-73c34dad-65e2-4bed-a426-7fdfdb344c1c.png)
 
-### 403, 404 and 500 error page
+### 403, 404 and 500 error pages
 
 This page will be displayed from the templates folder when matching error occurs.
 
@@ -403,12 +409,17 @@ This page will be displayed from the templates folder when matching error occurs
 
 I use SendGrid as email provider to be able to send out the verification email and the confirmation email after a user has made an order.
 
+### Webhooks from Stripe
+
+I use webhooks from Stripe and everyone is working and showing a 200 status messages.
+
+![Skärmavbild 2022-01-27 kl  12 06 35](https://user-images.githubusercontent.com/85236391/151347018-4a3cac37-3b11-4ac3-b25a-4d34b19b414a.png)
+
 ### Facebook Page
 
 I created a facebook pages called Z Padel and it's live right now and connected inside the footer. If the page would be deleted since it's not a real business I will post a print here.
 
 <img width="1554" alt="facebook sida" src="https://user-images.githubusercontent.com/85236391/151178485-93f28df9-4e13-4d20-a5a9-f0755f9236e9.png">
-
 
 ## Testing
 
@@ -483,7 +494,7 @@ As a site owner
 * All the correct information is displayed.
 * The product details page is responsive and changes to a mobile version when the screen is too small.
 * All breadcrumb are correct for each product.
-* When clicking the "Buy now" button a toast success message will be visable
+* When clicking the "Buy now" button a toast success message will be visible
 * Reviews show reviews from users for that specific product.
 * The user can only leave a review if they are logged in.
 * The user need to write something in the review box but can choose 0-5 stars.
@@ -493,11 +504,11 @@ As a site owner
 * Total adds correctly if more than on product is added.
 * The cart page is responsive and changes to a mobile version when the screen is too small.
 * The "Checkout" button leads the user to the checkout page.
-* The "Contine shopping" button leads the user to the home page.
+* The "Continue shopping" button leads the user to the home page.
 * The "Update" button update the quantity of each product.
 * The "Remove" button removes the product from the cart.
 * Toast messages will show when products are updated or removed.
-* When no products are in the cart there is a text saying there are no products in the cart and checkout button is not visable.
+* When no products are in the cart there is a text saying there are no products in the cart and checkout button is not visible.
 
 #### Checkout Page
 * The checkout page is responsive and changes to a mobile version when the screen is too small.
@@ -607,7 +618,7 @@ Import sum inside checkout.models
 
 ##### Solution:
 
-Found the bug in checkout.models that I had put * 10 to the total amount when it should be devided by 100 to calculate the correct delivery fee.
+Found the bug in checkout.models that I had put * 10 to the total amount when it should be divided by 100 to calculate the correct delivery fee.
 
 Wrong:
 
