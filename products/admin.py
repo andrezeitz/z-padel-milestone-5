@@ -25,7 +25,9 @@ class CategoryAdmin(admin.ModelAdmin):
 class ReviewAdmin(admin.ModelAdmin):
     list_display = (
         'id',
+        'created_at',
         'user',
+        'product',
         'rate',
     )
     readonly_fields = (
