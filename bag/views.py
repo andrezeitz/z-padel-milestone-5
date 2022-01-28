@@ -16,7 +16,6 @@ def add_to_bag(request, item_id):
     """
     Add a product to bag
     """
-
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     redirect_url = request.POST.get('redirect_url')
@@ -53,7 +52,6 @@ def adjust_bag(request, item_id):
     """
     Adjust a product in the bag
     """
-
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
     size = None
@@ -84,7 +82,6 @@ def remove_from_bag(request, item_id):
     """
     Remove the item from the shopping bag
     """
-
     product = Product.objects.get(pk=item_id)
     size = None
     if 'product_size' in request.POST:

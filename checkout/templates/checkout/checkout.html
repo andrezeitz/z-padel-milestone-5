@@ -23,43 +23,43 @@
         <div class="col-12 col-lg-6 order-lg-last mb-5">
             <h6 class="items-in-cart">Order Summary ({{ product_count }} items)</h6>
             {% for item in bag_items %}
-            <div class="products-content">
-                <div class="table-responsive">
-                    <table class="table shoping-cart-table">
-                        <tbody>
-                            <!-- Product image -->
-                        <tr>
-                            <td width="100" style="padding: 0 0.75rem 0 0.75rem;">
-                                <div class="cart-product-imitation">
-                                    <img class="img-fluid rounded" src="{{ item.product.image.url }}">
-                                </div>
-                            </td>
-                            <!-- Product name and size if product has size -->
-                            <td width="200">
-                                <h6>
-                                    <span class="product-name-link my-0">
-                                        {{ item.product.name }}
-                                    </span>
-                                    <p class="my-0">
-                                        {% if item.product.cloth_size or item.product.shoe_size_man or item.product.shoe_size_woman %}
-                                        Size: {{ item.size|upper }}
-                                        {% endif %}
-                                    </p>
-                                </h6>
-                            </td>
-                            <!-- Product price -->
-                            <td width="80">
-                                <p>Qty: {{ item.quantity }}</p>
-                            </td>
-                            <!-- Product total price -->
-                            <td>
-                                <h6 class="price-item">€{{ item.product.price | calc_subtotal:item.quantity }}</h6>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
+                <div class="products-content">
+                    <div class="table-responsive">
+                        <table class="table shoping-cart-table">
+                            <tbody>
+                                <!-- Product image -->
+                            <tr>
+                                <td width="100" style="padding: 0 0.75rem 0 0.75rem;">
+                                    <div class="cart-product-imitation">
+                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                    </div>
+                                </td>
+                                <!-- Product name and size if product has size -->
+                                <td width="200">
+                                    <h6>
+                                        <span class="product-name-link my-0">
+                                            {{ item.product.name }}
+                                        </span>
+                                        <p class="my-0">
+                                            {% if item.product.cloth_size or item.product.shoe_size_man or item.product.shoe_size_woman %}
+                                            Size: {{ item.size|upper }}
+                                            {% endif %}
+                                        </p>
+                                    </h6>
+                                </td>
+                                <!-- Product price -->
+                                <td width="80">
+                                    <p>Qty: {{ item.quantity }}</p>
+                                </td>
+                                <!-- Product total price -->
+                                <td>
+                                    <h6 class="price-item">€{{ item.product.price | calc_subtotal:item.quantity }}</h6>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
-            </div>
             {% endfor %}
         <hr>
         <!-- Total price -->

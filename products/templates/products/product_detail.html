@@ -11,7 +11,7 @@
                     <ol class="breadcrumb mt-5">
                     <li class="breadcrumb-item"><a href="{% url 'home' %}"><i class="fas fa-home"></i></a></li>
                     {% for category in categories %}
-                    <li class="breadcrumb-item"><a href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a></li>
+                        <li class="breadcrumb-item"><a href="{% url 'products' %}?category={{ category.name }}">{{ category.friendly_name }}</a></li>
                     {% endfor %}  
                     <li class="breadcrumb-item active" aria-current="page">{{ product.name }}</li>
                     </ol>
@@ -35,10 +35,10 @@
                     <p class="lead mb-0 text-left font-weight-bold">€ {{ product.price }}</p>
                     <!-- Admin buttons-->
                     {% if request.user.is_superuser %}
-                    <div class="admin-products">
-                        <a class="btn btn-outline-primary p-1 mr-1" href="{% url 'edit_product' product.id %}">Edit</a>
-                        <a class="btn btn-outline-danger p-1" href="{% url 'delete_product' product.id %}">Delete</a>
-                    </div>
+                        <div class="admin-products">
+                            <a class="btn btn-outline-primary p-1 mr-1" href="{% url 'edit_product' product.id %}">Edit</a>
+                            <a class="btn btn-outline-danger p-1" href="{% url 'delete_product' product.id %}">Delete</a>
+                        </div>
                     {% endif %}
                     <hr class="w-100 mb-1">
                 </div>
@@ -129,9 +129,9 @@
                         </div>
                         <div class="text-right mt-1">
                             {% if request.user.is_authenticated or request.user.is_superuser %}
-                            <button class="btn btn-review" type="submit">Save</button>
+                                <button class="btn btn-review" type="submit">Save</button>
                             {% else %}
-                            <p class="login-text"><a href="{% url 'account_login' %}">Login</a> to write a review</p>
+                                <p class="login-text"><a href="{% url 'account_login' %}">Login</a> to write a review</p>
                             {% endif %}
                         </div>
                     </form>
@@ -141,7 +141,7 @@
             <div class="row">
                 <div class="col-md-12">
                     {% if reviews %}
-                    <h5 class="review-h5">Reviews</h5>
+                        <h5 class="review-h5">Reviews</h5>
                         <hr>
                     {% endif %}
                     {% for review in reviews %}
