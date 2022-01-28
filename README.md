@@ -292,7 +292,7 @@ The colors chosen are:
 * [Font Awesome](https://fontawesome.com/)
 * [W3C HTML Validation](https://validator.w3.org/)
 * [H3C CSS Validation](https://jigsaw.w3.org/css-validator/validator.html.en)
-* [pep8online](http://pep8online.com/)
+* [PEP8](http://pep8online.com/)
 * [Am I responsive](http://ami.responsivedesign.is/)
 * [WebAim](https://webaim.org/resources/contrastchecker/)
 
@@ -422,6 +422,8 @@ I created a facebook pages called Z Padel and it's live right now and connected 
 <img width="1554" alt="facebook sida" src="https://user-images.githubusercontent.com/85236391/151178485-93f28df9-4e13-4d20-a5a9-f0755f9236e9.png">
 
 ## Testing
+
+My testing was continuous through this build and not just all in one go at the end. See below for my validation testing results which I carried out when my code was finished, but all through my development as I came across various issues and challenges I was testing, updating and committing my code to make things work they way they should.
 
 ### Testing User Stories
 As a shopper:
@@ -627,6 +629,8 @@ Wrong:
 Correct:
 
 <img width="592" alt="Skärmavbild 2022-01-25 kl  14 01 33" src="https://user-images.githubusercontent.com/85236391/150981654-933804b0-7449-4eed-80af-d27499ed1f7a.png">
+
+![Skärmavbild 2022-01-27 kl  15 53 15](https://user-images.githubusercontent.com/85236391/151384944-9c4fbf03-7c3d-47e2-a9d3-18d8e33019bd.png)
 
 4. Problem to connect the webhook to the site and get status 400 message.
 
