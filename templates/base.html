@@ -3,6 +3,7 @@
 <!doctype html>
 <html lang="en">
     <head>
+        <!-- Meta -->
         {% block meta %}
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <meta charset="utf-8">
@@ -14,16 +15,13 @@
                  content="Padel, padelrackets, padelballs, padelshoes, bullpadel, head, adidas,
                  starvie, online, fast delivery, free delivery">
         {% endblock %}
-
-        {% block extra_meta %}
-        {% endblock %}
-
+        <!-- Core CSS -->
         {% block corecss %}
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
             <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
             <link rel="stylesheet" href="{% static 'css/base.css' %}">
         {% endblock %}
-
+        <!-- Extra CSS -->
         {% block extra_css %}
             <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
             <link rel="stylesheet" href="{% static 'products/css/products.css' %}">
@@ -33,7 +31,7 @@
             <!-- Mailchimp Signup Form -->
             <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7_dtp.css" rel="stylesheet" type="text/css">
         {% endblock %}
-
+        <!-- Core JS -->
         {% block corejs %}
             <script src="https://kit.fontawesome.com/e4388115d8.js" crossorigin="anonymous"></script>
             <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -43,15 +41,12 @@
             <!-- Stripe -->
             <script src="https://js.stripe.com/v3/"></script>
         {% endblock %}
-
+        <!-- Favicon -->
         {% block favicon %}
             <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon_io/favicon.ico' %}">
             <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon_io/favicon-32x32.png' %}">
             <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon_io/favicon-16x16.png' %}">
             <link rel="manifest" href="{% static 'favicon_io/site.webmanifest' %}">
-        {% endblock %}
-
-        {% block extra_js %}
         {% endblock %}
 
         <title>Z Padel{% block extra_title %}{% endblock %}</title>
